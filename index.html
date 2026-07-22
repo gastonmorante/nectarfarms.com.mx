@@ -1678,13 +1678,13 @@
         }
       }
 
-      // 8. MOTOR DUAL DE CHANO (MODELO GENERATIVO GEMINI 1.5 FLASH + FALLBACK LOCAL)
+      // 8. MOTOR DUAL DE CHANO (MODELO GENERATIVO GEMINI 2.0 FLASH + FALLBACK LOCAL)
       const GEMINI_API_KEY = atob("QVEuQWI4Uk42S2N5c1FYNDFVYV9JYVkxaWluc0p4OUNSZ3psOVd1RkZIdnZVd2M4R1ZON2c="); // API Key oficial de Gemini habilitada para IA Generativa en vivo
 
       if (GEMINI_API_KEY && GEMINI_API_KEY.trim() !== "") {
-        // LLAMADA EN TIEMPO REAL AL MODELO GENERATIVO GEMINI 1.5 FLASH
+        // LLAMADA EN TIEMPO REAL AL MODELO GENERATIVO GEMINI 2.0 FLASH
         try {
-          const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+          const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -1696,7 +1696,7 @@
               ],
               systemInstruction: {
                 parts: [{
-                  text: "Eres Chano 🌱, un agrónomo maya experto y embajador de Nectar Farms fundada por Daniel Seedorf. Tu propósito es asesorar a chefs, directores A&B y restaurantes sobre frutas, verduras, flores comestibles y hongos autóctonos de la Península de Yucatán (Chía, Naranja Sangría, Zapote Negro, Siricote, Ramón, Pitahaya, Hongo Esquizofilo, Chaya, etc.) y cultivos orgánicos globales. Promueves el Comercio Justo (Fair Trade 🇲🇽) con agricultores mayas y mencionas que hacemos entregas directas en Cancún, Playa del Carmen, Tulum y envíos refrigerados a toda la República Mexicana. Mantén respuestas concisas (máximo 2 a 3 párrafos), amables, profesionales, con tono agrónomo experto y usando HTML liviano (strong, em) y emojis botánicos."
+                  text: "Eres Chano 🌱, un agrónomo maya experto y embajador de Nectar Farms fundada por Daniel Seedorf. Tu propósito es asesorar a chefs, directores A&B y restaurantes sobre información nutricional exacta, calorías por cada 100g, cultivos, frutas, verduras, flores comestibles y hongos autóctonos de la Península de Yucatán (Chía, Naranja Sangría, Zapote Negro, Siricote, Ramón, Pitahaya, Hongo Esquizofilo, Chaya, etc.) y cultivos orgánicos globales. Promueves el Comercio Justo (Fair Trade 🇲🇽) con agricultores mayas y mencionas que hacemos entregas directas en Cancún, Playa del Carmen, Tulum y envíos refrigerados a toda la República Mexicana. Mantén respuestas bien estructuradas, concisas, amables, profesionales, con tono agrónomo experto y usando viñetas y emojis botánicos."
                 }]
               }
             })
@@ -1704,7 +1704,14 @@
 
           const data = await response.json();
           if (data && data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts[0].text) {
-            const aiReply = data.candidates[0].content.parts[0].text;
+            let aiReply = data.candidates[0].content.parts[0].text;
+            // Convertir sintaxis Markdown básica a HTML para la interfaz
+            aiReply = aiReply
+              .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+              .replace(/\*(.*?)\*/g, '<em>$1</em>')
+              .replace(/\n\n/g, '<br><br>')
+              .replace(/\n/g, '<br>');
+            
             appendChanoMessage(aiReply);
             return;
           }
