@@ -181,6 +181,15 @@
         filter: blur(14px);
       }
     }
+
+    /* Custom Scrollbar para el Chatbot Chano */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
   </style>
 </head>
 <body class="bg-brandCream text-brandCharcoal font-sans antialiased selection:bg-brandGreen/20">
@@ -547,8 +556,85 @@
     </section>
   </main>
 
+  <!-- BOTÓN FLOTANTE DE WHATSAPP (ABAJO DERECHA) -->
+  <a href="https://wa.me/5215565427022?text=Hola%20Nectar%20Farms,%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informes%20sobre%20sus%20productos%20org%C3%A1nicos%20aut%C3%B3ctonos%20y%20precios%20para%20restaurantes." 
+     target="_blank" 
+     rel="noopener" 
+     class="fixed bottom-5 right-5 z-40 bg-[#25D366] hover:bg-[#20ba59] text-white px-4 py-3 rounded-full shadow-2xl flex items-center gap-2.5 transition-all duration-300 hover:scale-105 border border-white/20 group"
+     aria-label="Contactar por WhatsApp a Nectar Farms">
+    <div class="relative flex items-center justify-center">
+      <span class="absolute w-3 h-3 bg-white rounded-full animate-ping opacity-75"></span>
+      <svg class="w-6 h-6 fill-current relative z-10" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.035 3.774 3.778-1.005zm10.741-6.721c-.244-.122-1.441-.711-1.664-.792-.224-.082-.387-.122-.55.122-.163.245-.632.793-.774.956-.143.163-.285.184-.529.061-.244-.122-1.034-.381-1.97-1.216-.728-.649-1.22-1.451-1.363-1.696-.143-.245-.015-.377.107-.498.11-.11.244-.285.367-.428.122-.143.163-.245.244-.408.082-.163.041-.306-.02-.428-.061-.122-.55-1.325-.754-1.815-.198-.479-.4-.414-.55-.422-.143-.008-.306-.01-.469-.01-.163 0-.428.061-.652.306-.224.245-.856.836-.856 2.039 0 1.203.876 2.365.998 2.529.122.163 1.725 2.635 4.179 3.692.584.252 1.04.402 1.396.514.587.186 1.121.16 1.543.097.471-.07 1.441-.59 1.644-1.16.203-.57.203-1.058.143-1.16-.062-.102-.225-.163-.469-.285z"/>
+      </svg>
+    </div>
+    <span class="text-xs font-semibold tracking-wide hidden sm:inline">WhatsApp Lead</span>
+  </a>
+
+  <!-- BOTÓN FLOTANTE DEL CHATBOT CHANO (ABAJO IZQUIERDA) -->
+  <div id="chano-widget-container" class="fixed bottom-5 left-5 z-50">
+    <!-- BOTÓN TOGGLE DE CHANO -->
+    <button id="chano-toggle-btn" onclick="toggleChanoChat()" class="bg-brandDarkGreen hover:bg-brandGreen text-brandCream p-2.5 sm:px-4 sm:py-3 rounded-full shadow-2xl flex items-center gap-3 transition-all duration-300 hover:scale-105 border border-brandCream/20 group">
+      <div class="relative w-9 h-9 rounded-full overflow-hidden border-2 border-brandGreen shadow-inner flex-shrink-0">
+        <img src="img/chano_avatar.webp" alt="Avatar Chano IA Agrónoma Nectar Farms" class="w-full h-full object-cover">
+        <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-brandGreen rounded-full border border-white"></span>
+      </div>
+      <div class="text-left hidden sm:block">
+        <span class="block text-xs font-bold leading-none text-brandCream">Chano 🌱</span>
+        <span class="text-[10px] text-brandGreen font-medium block pt-0.5">IA Agrónoma • En línea</span>
+      </div>
+    </button>
+
+    <!-- VENTANA DEL CHAT DE CHANO (GLASSMORPHISM) -->
+    <div id="chano-chat-modal" class="hidden absolute bottom-14 left-0 w-[330px] sm:w-[380px] h-[490px] bg-brandCream/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-brandCharcoal/15 flex flex-col overflow-hidden transition-all duration-300">
+      <!-- HEADER DEL CHAT -->
+      <div class="bg-brandDarkGreen text-brandCream p-3.5 flex justify-between items-center shadow-md">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full overflow-hidden border-2 border-brandGreen shadow-md flex-shrink-0">
+            <img src="img/chano_avatar.webp" alt="Chano IA" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-sm leading-tight">Chano 🌱</h4>
+            <span class="text-[10px] text-brandGreen font-medium block">Asistente Virtual & Bioconservación Maya</span>
+          </div>
+        </div>
+        <button onclick="toggleChanoChat()" class="text-brandCream/70 hover:text-brandCream text-2xl font-bold p-1 leading-none">&times;</button>
+      </div>
+
+      <!-- ÁREA DE MENSAJES (SCROLL) -->
+      <div id="chano-messages" class="flex-1 p-4 overflow-y-auto space-y-3.5 text-xs text-brandCharcoal">
+        <!-- MENSAJE DE BIENVENIDA INICIAL -->
+        <div class="flex gap-2.5 items-start">
+          <img src="img/chano_avatar.webp" class="w-7 h-7 rounded-full object-cover flex-shrink-0 mt-1 border border-brandGreen">
+          <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-brandCharcoal/5 leading-relaxed space-y-2">
+            <p>¡Hola! Soy <strong>Chano</strong>, tu asistente agrónomo de Nectar Farms 🌱. Me especializo en frutas, verduras, flores comestibles y hongos de la Península de Yucatán y del mundo.</p>
+            <p class="text-brandDarkGreen font-semibold">Para darte una atención personalizada y enviar cotizaciones directas a tu cocina, ¿podrías compartirme tu <strong>Nombre Completo</strong>, <strong>Teléfono</strong> y <strong>Correo Electrónico</strong>?</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHIPS DE PREGUNTAS RÁPIDAS -->
+      <div id="chano-chips-container" class="px-3 py-2 bg-brandCharcoal/5 flex gap-1.5 overflow-x-auto text-[10px] border-t border-brandCharcoal/10 no-scrollbar">
+        <button onclick="sendQuickChip('¿Qué beneficios tiene la Chía?')" class="bg-white hover:bg-brandGreen/10 border border-brandCharcoal/15 px-2.5 py-1 rounded-full whitespace-nowrap transition-colors">🌾 Chía</button>
+        <button onclick="sendQuickChip('¿Para qué sirve la Naranja Sangría?')" class="bg-white hover:bg-brandGreen/10 border border-brandCharcoal/15 px-2.5 py-1 rounded-full whitespace-nowrap transition-colors">🍊 Naranja Sangría</button>
+        <button onclick="sendQuickChip('¿Cómo se cosecha el Hongo Esquizofilo?')" class="bg-white hover:bg-brandGreen/10 border border-brandCharcoal/15 px-2.5 py-1 rounded-full whitespace-nowrap transition-colors">🍄 Hongo Esquizofilo</button>
+        <button onclick="sendQuickChip('¿Cómo funciona el Comercio Justo?')" class="bg-white hover:bg-brandGreen/10 border border-brandCharcoal/15 px-2.5 py-1 rounded-full whitespace-nowrap transition-colors">🇲🇽 Comercio Justo</button>
+      </div>
+
+      <!-- BARRA DE ENTRADA / INPUT -->
+      <div class="p-3 bg-white border-t border-brandCharcoal/10 flex gap-2 items-center">
+        <input id="chano-input" type="text" placeholder="Escribe tu mensaje a Chano..." onkeypress="handleChanoKeyPress(event)" class="flex-1 text-xs px-3.5 py-2.5 rounded-full border border-brandCharcoal/15 focus:outline-none focus:ring-2 focus:ring-brandGreen/40">
+        <button onclick="sendChanoMessage()" class="bg-brandDarkGreen hover:bg-brandGreen text-white p-2 rounded-full shadow transition-all flex-shrink-0">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER RESPONSIVO -->
-  <footer class="bg-brandCharcoal text-brandCream/60 text-xs py-10 sm:py-12 px-4 sm:px-6 border-t border-brandCream/10">
+  <footer class="bg-brandCharcoal text-brandCream/60 text-xs py-10 sm:py-12 px-4 sm:px-6 border-t border-brandCream/10 pb-24 sm:pb-12">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
       <div class="flex flex-col sm:flex-row items-center gap-4">
         <img src="logo.svg" alt="Nectar Organic Farms Marca Registrada" class="h-10 sm:h-12 w-auto object-contain opacity-90 brightness-200">
@@ -1188,6 +1274,177 @@
         submitBtn.disabled = false;
         submitBtn.innerText = "REGISTRAR EN NECTAR FARMS";
       }
+    }
+
+    // 7. LÓGICA DE INTERACCIÓN Y CONOCIMIENTO DEL CHATBOT CHANO IA
+    let chanoLead = {
+      name: "",
+      phone: "",
+      email: "",
+      leadSent: false
+    };
+
+    function toggleChanoChat() {
+      const modal = document.getElementById('chano-chat-modal');
+      if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.getElementById('chano-input').focus();
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function handleChanoKeyPress(event) {
+      if (event.key === 'Enter') {
+        sendChanoMessage();
+      }
+    }
+
+    function sendQuickChip(text) {
+      document.getElementById('chano-input').value = text;
+      sendChanoMessage();
+    }
+
+    function appendChanoMessage(text, isUser = false) {
+      const container = document.getElementById('chano-messages');
+      const msgDiv = document.createElement('div');
+      msgDiv.className = isUser ? "flex justify-end" : "flex gap-2.5 items-start";
+
+      if (isUser) {
+        msgDiv.innerHTML = `
+          <div class="bg-brandDarkGreen text-brandCream p-3 rounded-2xl rounded-tr-none shadow-sm max-w-[85%] leading-relaxed font-normal">
+            ${text}
+          </div>
+        `;
+      } else {
+        msgDiv.innerHTML = `
+          <img src="img/chano_avatar.webp" class="w-7 h-7 rounded-full object-cover flex-shrink-0 mt-1 border border-brandGreen">
+          <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-brandCharcoal/5 max-w-[85%] leading-relaxed space-y-2 font-light">
+            ${text}
+          </div>
+        `;
+      }
+
+      container.appendChild(msgDiv);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    async function sendChanoMessage() {
+      const input = document.getElementById('chano-input');
+      const text = input.value.trim();
+      if (!text) return;
+
+      appendChanoMessage(text, true);
+      input.value = "";
+
+      // Si aún no hemos capturado todos los datos del lead
+      if (!chanoLead.leadSent) {
+        // Intentar extraer email
+        const emailMatch = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+        if (emailMatch && !chanoLead.email) {
+          chanoLead.email = emailMatch[0];
+        }
+
+        // Intentar extraer teléfono (7+ dígitos)
+        const phoneMatch = text.match(/\+?\d[\d\s\-]{6,}/);
+        if (phoneMatch && !chanoLead.phone) {
+          chanoLead.phone = phoneMatch[0].trim();
+        }
+
+        // Si no tenemos nombre y la frase no es sólo email/teléfono, tomarla como nombre
+        if (!chanoLead.name && !emailMatch && !phoneMatch) {
+          chanoLead.name = text;
+        }
+
+        // Evaluar si ya tenemos al menos los 3 datos o requerimos solicitar lo que falta
+        if (!chanoLead.name) {
+          setTimeout(() => {
+            appendChanoMessage("¡Excelente! ¿Cuál es tu <strong>Nombre Completo</strong>?");
+          }, 600);
+          return;
+        }
+
+        if (!chanoLead.phone) {
+          setTimeout(() => {
+            appendChanoMessage(`Gusto en saludarte, <strong>${chanoLead.name}</strong>. ¿A qué número de <strong>Teléfono / WhatsApp</strong> podemos contactarte?`);
+          }, 600);
+          return;
+        }
+
+        if (!chanoLead.email) {
+          setTimeout(() => {
+            appendChanoMessage(`¡Gracias! Por último, ¿cuál es tu <strong>Correo Electrónico</strong> para enviarte información técnica de productos?`);
+          }, 600);
+          return;
+        }
+
+        // Al tener los 3 datos, enviar automáticamente el lead a la base de datos
+        if (chanoLead.name && chanoLead.phone && chanoLead.email && !chanoLead.leadSent) {
+          chanoLead.leadSent = true;
+          
+          try {
+            await fetch(WEBHOOK_URL, {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                nombre: chanoLead.name,
+                email: chanoLead.email,
+                telefono: chanoLead.phone,
+                interes: "Lead Capturado por Chano IA",
+                notas: "Lead enviado de forma automática desde la ventana flotante de Chano IA.",
+                origen: "Chatbot Chano"
+              })
+            });
+          } catch(e) { console.error("Error al registrar lead Chano:", e); }
+
+          setTimeout(() => {
+            appendChanoMessage(`
+              <p>¡Perfecto, <strong>${chanoLead.name}</strong>! Tus datos han sido registrados exitosamente en Nectar Farms 🌾.</p>
+              <p class="text-brandDarkGreen font-semibold">Ahora dime, ¿qué dudas tienes sobre nuestras frutas, verduras, flores comestibles o micología?</p>
+            `);
+          }, 700);
+          return;
+        }
+      }
+
+      // 8. MOTOR DE CONOCIMIENTO AGRÓNOMO DE CHANO (RESPUESTAS A PREGUNTAS)
+      setTimeout(() => {
+        const query = text.toLowerCase();
+        let reply = "";
+
+        if (query.includes("chía") || query.includes("chia") || query.includes("omega")) {
+          reply = "La <strong>Chía</strong> (<em>Salvia hispanica</em> / <em>Ch'ía</em>) es una semilla ancestral de la Península rica en Omega-3 (ALA) y mucílago soluble. Al hidratarse crea un gel natural idóneo para emulsiones, vinagretas orgánicas y bebidas típicas.";
+        } else if (query.includes("naranja") || query.includes("sangría") || query.includes("sangria") || query.includes("pak'ál")) {
+          reply = "La <strong>Naranja Sangría</strong> (<em>Citrus x sinensis var. sangria</em> / <em>Pak'ál</em>) es un cítrico autóctono de pulpa roja escarlata muy rica en antocianinas. Es altamente cotizada para adobos gastronómicos, ceviches y coctelería de autor.";
+        } else if (query.includes("hongo") || query.includes("esquizofilo") || query.includes("oreja") || query.includes("x-pikín")) {
+          reply = "El <strong>Hongo Esquizofilo</strong> (<em>Schizophyllum commune</em> / <em>X-pikín ch'o'</em>) es un macrohongo silvestre maya recolectado en troncos de madera dura tras las lluvias estivales. Posee una textura elástica única e intenso sabor terroso umami para tamales y risottos.";
+        } else if (query.includes("zapote")) {
+          reply = "El <strong>Zapote Negro</strong> (<em>Diospyros nigra</em> / <em>Tauch</em>) destaca por su pulpa negra cremosa dulce similar al budín de chocolate. Se consume fresco o en mermeladas y nieves gourmet.";
+        } else if (query.includes("siricote")) {
+          reply = "El <strong>Siricote</strong> (<em>Cordia dodecandra</em> / <em>K'oopté</em>) produce frutos agridulces que tradicionalmente se cocinan en almíbar para los postres tradicionales de Hanal Pixán.";
+        } else if (query.includes("ramón") || query.includes("ramon")) {
+          reply = "El <strong>Ramón</strong> (<em>Brosimum alicastrum</em> / <em>Ox</em>) provee semillas ricas en proteína que se tuestan y muelen para producir harina libre de gluten y sustituto artesanal de café.";
+        } else if (query.includes("pitahaya")) {
+          reply = "La <strong>Pitahaya</strong> (<em>Hylocereus undatus</em> / <em>Wo'</em>) es una cactácea trepadora de fruta rosa/fucsia súper jugosa y dulce, de alta cosecha estival en Quintana Roo y Yucatán.";
+        } else if (query.includes("chaya")) {
+          reply = "La <strong>Chaya</strong> (<em>Cnidoscolus aconitifolius</em>) es la espinaca maya. Posee 3 veces más hierro que la espinaca común. Recuerda que debe hervirse siempre de 15 a 20 minutos antes de consumirla para desactivar glucósidos cianogénicos.";
+        } else if (query.includes("flor") || query.includes("flores")) {
+          reply = "En Nectar Farms cultivamos y recolectamos <strong>flores comestibles</strong> autóctonas e internacionales (flor de calabaza, flor de izote, pensamentos, caléndula, capuchinas y flor de cacao) para decoración y sabor en alta cocina.";
+        } else if (query.includes("verdura") || query.includes("hortaliza") || query.includes("milpa")) {
+          reply = "Suministramos tanto verduras de la milpa tradicional maya (calabaza K'um, camote, frijol ib, yuca y maíz criollo) como hortalizas orgánicas de hoja verde (kale, lechugas, jitomates orgánicos y espárragos).";
+        } else if (query.includes("comercio justo") || query.includes("fair trade") || query.includes("precio") || query.includes("modelo")) {
+          reply = "En <strong>Nectar Farms</strong> practicamos el Comercio Justo (Fair Trade 🇲🇽). Eliminamos intermediarios innecesarios y pagamos un precio ético directo a nuestros productores de la Zona Maya, ofreciendo una alternativa 100% local a los supermercados en Cancún, Playa del Carmen y Tulum.";
+        } else if (query.includes("daniel") || query.includes("seedorf")) {
+          reply = "Daniel Seedorf impulsó Nectar Farms para conectar directamente a los agricultores maya de la región con los chefs más exigentes de la Riviera Maya.";
+        } else {
+          reply = `Como agrónomo de Nectar Farms, conozco a fondo las frutas, verduras, hortalizas, flores comestibles y hongos de Yucatán y del mundo. ¿Te gustaría conocer la disponibilidad de cosecha de algún cultivo en particular?`;
+        }
+
+        appendChanoMessage(reply);
+      }, 700);
     }
   </script>
 </body>
