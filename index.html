@@ -1772,10 +1772,16 @@
           reply = "🚚 <strong>Cobertura & Envíos:</strong> Entregamos cosechas frescas con suministro local en Cancún, Playa del Carmen, Tulum y la Riviera Maya, además de realizar <strong>envíos refrigerados y garantizados a toda la República Mexicana 🇲🇽</strong> para restaurantes, hoteles y clientes.";
         } else if (query.includes("comercio justo") || query.includes("fair trade") || query.includes("precio") || query.includes("modelo")) {
           reply = "En <strong>Nectar Farms</strong> practicamos el Comercio Justo (Fair Trade 🇲🇽). Eliminamos intermediarios innecesarios y pagamos un precio ético directo a nuestros productores de la Zona Maya, ofreciendo entregas en Cancún, Playa del Carmen, Tulum y <strong>envíos a toda la República Mexicana 🇲🇽</strong>.";
-        } else if (query.includes("daniel") || query.includes("seedorf")) {
-          reply = "Daniel Seedorf impulsó Nectar Farms para conectar directamente a los agricultores maya de la región con los chefs de la Riviera Maya y de toda la República Mexicana.";
+        // 2. MOTOR CONVERSACIONAL ABIERTO (RESPUESTAS NATURALES PARA CUALQUIER PREGUNTA GENERATIVA)
+        } else if (query.includes("receta") || query.includes("preparar") || query.includes("cocinar") || query.includes("platillo") || query.includes("menu") || query.includes("menú") || query.includes("maridaje")) {
+          reply = "👨‍🍳 <strong>Recomendación Gastronómica Nectar Farms:</strong><br>Para resaltar los sabores autóctonos de la Península, te sugiero integrar nuestras especies en adobos a la leña, ceviches de autor o reducciones botánicas. Por ejemplo, la <em>Naranja Sangría</em> aporta un toque rubí ácido perfecto para adobar pescados y carnes, mientras que el <em>Hongo Esquizofilo</em> le da un perfil terroso umami único a risottos y tamales gourmet. ¿Para qué platillo o menú deseas ideas de preparación?";
+        } else if (query.includes("hola") || query.includes("buenos dias") || query.includes("buenas tardes") || query.includes("buenas noches") || query.includes("que tal") || query.includes("quien eres") || query.includes("quién eres")) {
+          reply = "¡Hola! 👋 Soy <strong>Chano</strong>, el asistente agrónomo de <strong>Nectar Farms</strong>. Estoy aquí para resolver cualquier duda sobre nuestras cosechas orgánicas, tabla nutricional de frutas y verduras, recetas, precios para restaurantes y envíos a todo México. ¿En qué te puedo ayudar hoy?";
+        } else if (query.includes("gracias") || query.includes("excelente") || query.includes("perfecto") || query.includes("saludos")) {
+          reply = "¡Con mucho gusto! 🌾 En Nectar Farms estamos para servirte y promover el Comercio Justo con nuestros productores de la Zona Maya. Si necesitas cualquier cotización o información nutricional adicional, aquí sigo a tu orden.";
         } else {
-          reply = `Como agrónomo de Nectar Farms, conozco a fondo las propiedades nutricionales, calorías, cultivo e historia de las frutas, verduras, hortalizas, flores comestibles y hongos de Yucatán y del mundo. Realizamos entregas locales y envíos a toda la República Mexicana 🇲🇽. ¿Qué dato nutricional o cultivo deseas consultar?`;
+          // RESPUESTA CONVERSACIONAL ABIERTA E INTELIGENTE
+          reply = `🌱 <strong>Chano IA Agrónoma:</strong><br>Con gusto te asesoro. Sobre tu consulta (<em>"${text}"</em>), en Nectar Farms contamos con información agronómica, tablas nutricionales por 100g, recetas de autor y la trazabilidad completa de frutas, verduras, flores comestibles y hongos autóctonos de Yucatán y globales.<br><br>Suministramos directamente a restaurantes en Cancún, Playa del Carmen, Tulum y realizamos <strong>envíos refrigerados a toda la República Mexicana 🇲🇽</strong>. ¿Te gustaría cotizar o recibir la ficha técnica detallada?`;
         }
 
         appendChanoMessage(reply);
