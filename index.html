@@ -7,7 +7,7 @@
   <!-- Primary Meta Tags for Google SEO -->
   <title>Nectar Farms | Productos Orgánicos Nativos y Comercio Justo en Riviera Maya</title>
   <meta name="title" content="Nectar Farms | Productos Orgánicos Nativos y Comercio Justo en Riviera Maya">
-  <meta name="description" content="Nectar Farms es la alternativa 100% local a los supermercados en Cancún, Playa del Carmen y Tulum. Chía, Naranja Sangría, hongos autóctonos y frutas orgánicas de la Península de Yucatán.">
+  <meta name="description" content="Nectar Farms es la alternativa 100% local a los supermercados con entregas directas en Cancún, Playa del Carmen, Tulum y envíos a toda la República Mexicana 🇲🇽. Chía, Naranja Sangría, hongos autóctonos y frutas orgánicas de Yucatán.">
   <meta name="keywords" content="productos organicos Riviera Maya, frutas nativas Yucatan, Chia, Naranja Sangria, Zapote Negro, Pitahaya, Hongo Esquizofilo, comercio justo Quintana Roo, proveedores alta gastronomia Tulum, Daniel Seedorf Nectar Farms, politica de privacidad nectar farms">
   <meta name="author" content="Nectar Farms / NegocioUp">
   <meta name="robots" content="index, follow">
@@ -289,7 +289,7 @@
           <span class="italic text-brandGreen font-normal">para marcar la diferencia.</span>
         </h1>
         <p id="hero_p" class="text-sm sm:text-base text-brandCharcoal/80 leading-relaxed max-w-xl mx-auto sm:mx-0">
-          Somos productores sostenibles en la Península de Yucatán. Conectamos directamente el trabajo ético y de comercio justo (Fair Trade 🇲🇽) de nuestros agricultores con los chefs y restaurantes más exigentes de Cancún, Playa del Carmen y Tulum. 
+          Somos productores sostenibles en la Península de Yucatán. Conectamos directamente el trabajo ético y de comercio justo (Fair Trade 🇲🇽) de nuestros agricultores con los chefs y restaurantes más exigentes de Cancún, Playa del Carmen, Tulum y con <strong>envíos a toda la República Mexicana 🇲🇽</strong>.
         </p>
         <div class="flex flex-col sm:flex-row justify-center sm:justify-start gap-3.5">
           <a href="#registro" id="hero_btn1" class="bg-brandDarkGreen hover:bg-brandGreen text-brandCream px-7 py-3.5 rounded-lg text-sm font-semibold transition-all duration-300 shadow-sm text-center">
@@ -1711,12 +1711,14 @@
           reply = "En Nectar Farms cultivamos y recolectamos <strong>flores comestibles</strong> autóctonas e internacionales (flor de calabaza, flor de izote, pensamentos, caléndula, capuchinas y flor de cacao) para decoración y sabor en alta cocina.";
         } else if (query.includes("verdura") || query.includes("hortaliza") || query.includes("milpa")) {
           reply = "Suministramos tanto verduras de la milpa tradicional maya (calabaza K'um, camote, frijol ib, yuca y maíz criollo) como hortalizas orgánicas de hoja verde (kale, lechugas, jitomates orgánicos y espárragos).";
+        } else if (query.includes("envio") || query.includes("envío") || query.includes("entrega") || query.includes("cobertura") || query.includes("republica") || query.includes("república") || query.includes("mexico") || query.includes("méxico") || query.includes("flete")) {
+          reply = "🚚 <strong>Cobertura & Envíos:</strong> Entregamos cosechas frescas con suministro local en Cancún, Playa del Carmen, Tulum y la Riviera Maya, además de realizar <strong>envíos refrigerados y garantizados a toda la República Mexicana 🇲🇽</strong> para restaurantes, hoteles y clientes.";
         } else if (query.includes("comercio justo") || query.includes("fair trade") || query.includes("precio") || query.includes("modelo")) {
-          reply = "En <strong>Nectar Farms</strong> practicamos el Comercio Justo (Fair Trade 🇲🇽). Eliminamos intermediarios innecesarios y pagamos un precio ético directo a nuestros productores de la Zona Maya, ofreciendo una alternativa 100% local a los supermercados en Cancún, Playa del Carmen y Tulum.";
+          reply = "En <strong>Nectar Farms</strong> practicamos el Comercio Justo (Fair Trade 🇲🇽). Eliminamos intermediarios innecesarios y pagamos un precio ético directo a nuestros productores de la Zona Maya, ofreciendo entregas en Cancún, Playa del Carmen, Tulum y <strong>envíos a toda la República Mexicana 🇲🇽</strong>.";
         } else if (query.includes("daniel") || query.includes("seedorf")) {
-          reply = "Daniel Seedorf impulsó Nectar Farms para conectar directamente a los agricultores maya de la región con los chefs más exigentes de la Riviera Maya.";
+          reply = "Daniel Seedorf impulsó Nectar Farms para conectar directamente a los agricultores maya de la región con los chefs de la Riviera Maya y de toda la República Mexicana.";
         } else {
-          reply = `Como agrónomo de Nectar Farms, conozco a fondo las frutas, verduras, hortalizas, flores comestibles y hongos de Yucatán y del mundo. ¿Te gustaría conocer la disponibilidad de cosecha de algún cultivo en particular?`;
+          reply = `Como agrónomo de Nectar Farms, conozco a fondo las frutas, verduras, hortalizas, flores comestibles y hongos de Yucatán y del mundo. Realizamos entregas locales y envíos a toda la República Mexicana 🇲🇽. ¿Te gustaría conocer la disponibilidad de cosecha de algún cultivo?`;
         }
 
         appendChanoMessage(reply);
