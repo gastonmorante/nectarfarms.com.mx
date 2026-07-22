@@ -1713,27 +1713,50 @@
         }
       }
 
-      // MOTOR DE RESPUESTA AGRÓNOMO HÍBRIDO (FALLBACK ROBUSTO)
+      // MOTOR DE RESPUESTA AGRÓNOMO HÍBRIDO (FALLBACK ROBUSTO CON CALCULADORA NUTRICIONAL & CALORÍAS)
       setTimeout(() => {
         const query = text.toLowerCase();
         let reply = "";
 
-        if (query.includes("chía") || query.includes("chia") || query.includes("omega")) {
-          reply = "La <strong>Chía</strong> (<em>Salvia hispanica</em> / <em>Ch'ía</em>) es una semilla ancestral de la Península rica en Omega-3 (ALA) y mucílago soluble. Al hidratarse crea un gel natural idóneo para emulsiones, vinagretas orgánicas y bebidas típicas.";
+        // 1. RECONOCEDOR DE CONSULTAS NUTRICIONALES Y CALORÍAS
+        if (query.includes("caloria") || query.includes("caloría") || query.includes("calorias") || query.includes("calorías") || query.includes("nutricion") || query.includes("nutrición") || query.includes("propiedades") || query.includes("beneficios")) {
+          if (query.includes("chía") || query.includes("chia")) {
+            reply = "🥑 <strong>Información Nutricional de la Chía (por cada 100g de semilla seca):</strong><br>• <strong>Calorías:</strong> ~486 kcal<br>• <strong>Proteínas:</strong> 16.5g<br>• <strong>Grasas Saludables (Omega-3 ALA):</strong> 30.7g<br>• <strong>Carbohidratos:</strong> 42.1g (de los cuales 34.4g son fibra soluble/mucílago)<br>• <strong>Micronutrientes:</strong> Altísima concentración de Calcio (631mg), Magnesio y Antioxidantes.";
+          } else if (query.includes("naranja") || query.includes("sangría") || query.includes("sangria") || query.includes("pak'ál")) {
+            reply = "🍊 <strong>Información Nutricional de la Naranja Sangría (por cada 100g):</strong><br>• <strong>Calorías:</strong> ~47 kcal<br>• <strong>Proteínas:</strong> 0.9g<br>• <strong>Carbohidratos:</strong> 11.7g (azúcares naturales del fruto)<br>• <strong>Fibra:</strong> 2.4g<br>• <strong>Antioxidantes:</strong> Rica en Vitamina C (53mg) y Antocianinas (flavonoides rubí).";
+          } else if (query.includes("zapote") || query.includes("tauch")) {
+            reply = "🖤 <strong>Información Nutricional del Zapote Negro (por cada 100g):</strong><br>• <strong>Calorías:</strong> ~79 kcal<br>• <strong>Proteínas:</strong> 1.5g<br>• <strong>Carbohidratos:</strong> 20g<br>• <strong>Fibra:</strong> 3.2g<br>• <strong>Vitamina C:</strong> Posee casi 4 veces más Vitamina C que la naranja convencional (~190mg).";
+          } else if (query.includes("pitahaya") || query.includes("wo'")) {
+            reply = "🌺 <strong>Información Nutricional de la Pitahaya (por cada 100g):</strong><br>• <strong>Calorías:</strong> ~50 kcal<br>• <strong>Proteínas:</strong> 1.1g<br>• <strong>Carbohidratos:</strong> 11g<br>• <strong>Fibra:</strong> 3g<br>• <strong>Propiedades:</strong> Excelente fruto hidratante rico en hierro, fósforo y captina (cardiotónico natural).";
+          } else if (query.includes("hongo") || query.includes("esquizofilo") || query.includes("oreja")) {
+            reply = "🍄 <strong>Información Nutricional del Hongo Esquizofilo (por cada 100g fresco):</strong><br>• <strong>Calorías:</strong> ~35 kcal<br>• <strong>Proteínas:</strong> 3.1g<br>• <strong>Carbohidratos:</strong> 4.5g<br>• <strong>Fibra:</strong> 2.8g<br>• <strong>Propiedades:</strong> Contiene beta-glucanos para el sistema inmune y umami natural rico en glutamatos vegetales.";
+          } else if (query.includes("chaya")) {
+            reply = "🌿 <strong>Información Nutricional de la Chaya (por cada 100g cocida):</strong><br>• <strong>Calorías:</strong> ~42 kcal<br>• <strong>Proteínas:</strong> 5.7g<br>• <strong>Hierro:</strong> 11.4mg (3 veces más que la espinaca)<br>• <strong>Calcio:</strong> 199mg (casi el doble que la leche)<br>• <strong>Vitamina C:</strong> 205mg. <em>Nota: Consumir siempre hervida 15 min.</em>";
+          } else if (query.includes("manzana")) {
+            reply = "🍎 <strong>Información Nutricional de la Manzana (por cada 100g):</strong><br>• <strong>Calorías:</strong> ~52 kcal<br>• <strong>Carbohidratos:</strong> 13.8g<br>• <strong>Fibra:</strong> 2.4g (pectina)<br>• <strong>Propiedades:</strong> Rica en quercetina y antioxidantes reguladores del colesterol.";
+          } else if (query.includes("plátano") || query.includes("platano") || query.includes("banana")) {
+            reply = "🍌 <strong>Información Nutricional del Plátano (por cada 100g):</strong><br>• <strong>Calorías:</strong> ~89 kcal<br>• <strong>Carbohidratos:</strong> 22.8g<br>• <strong>Proteínas:</strong> 1.1g<br>• <strong>Potasio:</strong> 358mg (apoyo energético digestivo y muscular).";
+          } else if (query.includes("aguacate")) {
+            reply = "🥑 <strong>Información Nutricional del Aguacate (por cada 100g):</strong><br>• <strong>Calorías:</strong> ~160 kcal<br>• <strong>Grasas Monoinsaturadas:</strong> 15g (ácido oleico protector cardiovascular)<br>• <strong>Proteínas:</strong> 2g<br>• <strong>Fibra:</strong> 6.7g.";
+          } else {
+            reply = "🍏 <strong>Aporte Calórico y Nutricional de Frutas y Vegetales:</strong><br>En promedio, las frutas frescas aportan entre <strong>40 kcal y 80 kcal por cada 100g</strong> (ricas en agua, fructosa natural y fibra), mientras que las semillas como la Chía o Ramón concentran entre <strong>340 kcal y 480 kcal por 100g</strong> debido a su densidad en proteínas y grasas saludables Omega-3. ¿Deseas conocer la tabla exacta de alguna fruta o hortaliza de nuestro catálogo?";
+          }
+        } else if (query.includes("chía") || query.includes("chia") || query.includes("omega")) {
+          reply = "La <strong>Chía</strong> (<em>Salvia hispanica</em> / <em>Ch'ía</em>) es una semilla ancestral de la Península rica en Omega-3 (ALA) y mucílago soluble. Contiene <strong>486 kcal por cada 100g</strong> y 34g de fibra. Al hidratarse crea un gel natural idóneo para emulsiones, vinagretas orgánicas y bebidas típicas.";
         } else if (query.includes("naranja") || query.includes("sangría") || query.includes("sangria") || query.includes("pak'ál")) {
-          reply = "La <strong>Naranja Sangría</strong> (<em>Citrus x sinensis var. sangria</em> / <em>Pak'ál</em>) es un cítrico autóctono de pulpa roja escarlata muy rica en antocianinas. Es altamente cotizada para adobos gastronómicos, ceviches y coctelería de autor.";
+          reply = "La <strong>Naranja Sangría</strong> (<em>Citrus x sinensis var. sangria</em> / <em>Pak'ál</em>) es un cítrico autóctono de pulpa roja escarlata muy rica en antocianinas (~47 kcal / 100g). Es altamente cotizada para adobos gastronómicos, ceviches y coctelería de autor.";
         } else if (query.includes("hongo") || query.includes("esquizofilo") || query.includes("oreja") || query.includes("x-pikín")) {
-          reply = "El <strong>Hongo Esquizofilo</strong> (<em>Schizophyllum commune</em> / <em>X-pikín ch'o'</em>) es un macrohongo silvestre maya recolectado en troncos de madera dura tras las lluvias estivales. Posee una textura elástica única e intenso sabor terroso umami para tamales y risottos.";
+          reply = "El <strong>Hongo Esquizofilo</strong> (<em>Schizophyllum commune</em> / <em>X-pikín ch'o'</em>) es un macrohongo silvestre maya (~35 kcal / 100g) recolectado en troncos de madera dura tras las lluvias estivales. Posee una textura elástica única e intenso sabor terroso umami para tamales y risottos.";
         } else if (query.includes("zapote")) {
-          reply = "El <strong>Zapote Negro</strong> (<em>Diospyros nigra</em> / <em>Tauch</em>) destaca por su pulpa negra cremosa dulce similar al budín de chocolate. Se consume fresco o en mermeladas y nieves gourmet.";
+          reply = "El <strong>Zapote Negro</strong> (<em>Diospyros nigra</em> / <em>Tauch</em>) destaca por su pulpa negra cremosa dulce similar al budín de chocolate (~79 kcal / 100g). Se consume fresco o en mermeladas y nieves gourmet.";
         } else if (query.includes("siricote")) {
-          reply = "El <strong>Siricote</strong> (<em>Cordia dodecandra</em> / <em>K'oopté</em>) produce frutos agridulces que tradicionalmente se cocinan en almíbar para los postres tradicionales de Hanal Pixán.";
+          reply = "El <strong>Siricote</strong> (<em>Cordia dodecandra</em> / <em>K'oopté</em>) produce frutos agridulces (~62 kcal / 100g) que tradicionalmente se cocinan en almíbar para los postres tradicionales de Hanal Pixán.";
         } else if (query.includes("ramón") || query.includes("ramon")) {
-          reply = "El <strong>Ramón</strong> (<em>Brosimum alicastrum</em> / <em>Ox</em>) provee semillas ricas en proteína que se tuestan y muelen para producir harina libre de gluten y sustituto artesanal de café.";
+          reply = "El <strong>Ramón</strong> (<em>Brosimum alicastrum</em> / <em>Ox</em>) provee semillas ricas en proteína libre de gluten (~340 kcal / 100g) que se tuestan y muelen para producir harina y sustituto artesanal de café.";
         } else if (query.includes("pitahaya")) {
-          reply = "La <strong>Pitahaya</strong> (<em>Hylocereus undatus</em> / <em>Wo'</em>) es una cactácea trepadora de fruta rosa/fucsia súper jugosa y dulce, de alta cosecha estival en Quintana Roo y Yucatán.";
+          reply = "La <strong>Pitahaya</strong> (<em>Hylocereus undatus</em> / <em>Wo'</em>) es una cactácea trepadora de fruta rosa/fucsia súper jugosa y dulce (~50 kcal / 100g), de alta cosecha estival en Quintana Roo y Yucatán.";
         } else if (query.includes("chaya")) {
-          reply = "La <strong>Chaya</strong> (<em>Cnidoscolus aconitifolius</em>) es la espinaca maya. Posee 3 veces más hierro que la espinaca común. Recuerda que debe hervirse siempre de 15 a 20 minutos antes de consumirla para desactivar glucósidos cianogénicos.";
+          reply = "La <strong>Chaya</strong> (<em>Cnidoscolus aconitifolius</em>) es la espinaca maya (~42 kcal / 100g). Posee 3 veces más hierro que la espinaca común. Recuerda que debe hervirse siempre de 15 a 20 minutos antes de consumirla para desactivar glucósidos cianogénicos.";
         } else if (query.includes("flor") || query.includes("flores")) {
           reply = "En Nectar Farms cultivamos y recolectamos <strong>flores comestibles</strong> autóctonas e internacionales (flor de calabaza, flor de izote, pensamentos, caléndula, capuchinas y flor de cacao) para decoración y sabor en alta cocina.";
         } else if (query.includes("verdura") || query.includes("hortaliza") || query.includes("milpa")) {
@@ -1745,7 +1768,7 @@
         } else if (query.includes("daniel") || query.includes("seedorf")) {
           reply = "Daniel Seedorf impulsó Nectar Farms para conectar directamente a los agricultores maya de la región con los chefs de la Riviera Maya y de toda la República Mexicana.";
         } else {
-          reply = `Como agrónomo de Nectar Farms, conozco a fondo las frutas, verduras, hortalizas, flores comestibles y hongos de Yucatán y del mundo. Realizamos entregas locales y envíos a toda la República Mexicana 🇲🇽. ¿Te gustaría conocer la disponibilidad de cosecha de algún cultivo?`;
+          reply = `Como agrónomo de Nectar Farms, conozco a fondo las propiedades nutricionales, calorías, cultivo e historia de las frutas, verduras, hortalizas, flores comestibles y hongos de Yucatán y del mundo. Realizamos entregas locales y envíos a toda la República Mexicana 🇲🇽. ¿Qué dato nutricional o cultivo deseas consultar?`;
         }
 
         appendChanoMessage(reply);
