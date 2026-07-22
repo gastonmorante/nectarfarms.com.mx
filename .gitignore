@@ -5,8 +5,14 @@ token.json
 __pycache__/
 *.pyc
 
-# Scripts Python locales (pruebas y automatizaciones)
+# Scripts Python locales
 *.py
+
+# Archivos pesados de diseño original (no requeridos para el sitio web en vivo)
+*.ai
+*.jfif
+imagenes/
+logos/
 
 # Archivos de respaldo o temporales
 *_backup.html
