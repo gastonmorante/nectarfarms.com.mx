@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags for Google SEO -->
+  <title>Nectar Farms | Productos Orgánicos Nativos y Comercio Justo en Riviera Maya</title>
+  <meta name="title" content="Nectar Farms | Productos Orgánicos Nativos y Comercio Justo en Riviera Maya">
+  <meta name="description" content="Nectar Farms es la alternativa 100% local a los supermercados en Cancún, Playa del Carmen y Tulum. Chía, Naranja Sangría, hongos autóctonos y frutas orgánicas de la Península de Yucatán.">
+  <meta name="keywords" content="productos organicos Riviera Maya, frutas nativas Yucatan, Chia, Naranja Sangria, Zapote Negro, Pitahaya, Hongo Esquizofilo, comercio justo Quintana Roo, proveedores alta gastronomia Tulum, Daniel Seedorf Nectar Farms">
+  <meta name="author" content="Nectar Farms / NegocioUp">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://localhost:8080/">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:8080/">
+  <meta property="og:title" content="Nectar Farms | Productos Orgánicos Nativos y Comercio Justo">
+  <meta property="og:description" content="La alternativa 100% local a los supermercados en la Riviera Maya. Cultivamos relaciones para marcar la diferencia con especies autóctonas de Yucatán.">
+  <meta property="og:image" content="img/hero_farmers.webp">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="http://localhost:8080/">
+  <meta name="twitter:title" content="Nectar Farms | Productos Orgánicos Nativos en Riviera Maya">
+  <meta name="twitter:description" content="Productores sostenibles y comercio justo en la Península de Yucatán. Chía, Naranja Sangría, Zapote Negro, Pitahaya y Hongos nativos.">
+  <meta name="twitter:image" content="img/hero_farmers.webp">
+
+  <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AgriculturalBusiness",
+    "name": "Nectar Farms",
+    "alternateName": "Nectar Organic Farms",
+    "url": "http://localhost:8080/",
+    "logo": "http://localhost:8080/logo.webp",
+    "sameAs": [
+      "https://www.instagram.com/nectar.farms/"
+    ],
+    "description": "La alternativa 100% local a los supermercados en la Riviera Maya. Productores sostenibles de especies agrícolas, frutas y hongos autóctonos de la Península de Yucatán.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Quintana Roo",
+      "addressCountry": "MX"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Daniel Seedorf"
+    },
+    "knowsAbout": [
+      "Chía (Salvia hispanica)",
+      "Naranja Sangría (Citrus x sinensis)",
+      "Zapote Negro (Diospyros nigra)",
+      "Pitahaya (Hylocereus undatus)",
+      "Siricote (Cordia dodecandra)",
+      "Ramón (Brosimum alicastrum)",
+      "Hongo Esquizofilo (Schizophyllum commune)",
+      "Comercio Justo / Fair Trade",
+      "Alta Gastronomía Orgánica"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Catálogo de Productos Agrícolas, Frutas y Hongos Nativos de Yucatán",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Chía (Salvia hispanica)" },
+      { "@type": "ListItem", "position": 2, "name": "Zapote Negro (Tauch)" },
+      { "@type": "ListItem", "position": 3, "name": "Siricote (K'oopté)" },
+      { "@type": "ListItem", "position": 4, "name": "Ramón (Ox)" },
+      { "@type": "ListItem", "position": 5, "name": "Pitahaya (Wo')" },
+      { "@type": "ListItem", "position": 6, "name": "Huaya (Wayam)" },
+      { "@type": "ListItem", "position": 7, "name": "Kanisté (K'anixté)" },
+      { "@type": "ListItem", "position": 8, "name": "Ciruela Yucateca (Abal)" },
+      { "@type": "ListItem", "position": 9, "name": "Naranja Sangría (Pak'ál)" },
+      { "@type": "ListItem", "position": 10, "name": "Hongo Esquizofilo (X-pikín ch'o')" }
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Playfair Display & Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Tailwind Custom Colors Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandGreen: '#2BB673',
+            brandDarkGreen: '#1E5631',
+            brandCharcoal: '#2D312E',
+            brandCream: '#FBFBFA',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Animación de entrada: Árbol Creciendo (Grow Up) + Impacting Logo Reveal */
+    .hero-logo-anim {
+      animation: treeGrowUpReveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      transform-origin: bottom center;
+    }
+    @keyframes treeGrowUpReveal {
+      0% {
+        opacity: 0;
+        transform: scale(0.25, 0.12) translateY(140px);
+        filter: blur(18px) brightness(0.6);
+      }
+      38% {
+        opacity: 0.85;
+        transform: scale(0.72, 1.28) translateY(-18px);
+        filter: blur(4px) brightness(1.25);
+      }
+      68% {
+        opacity: 1;
+        transform: scale(1.08, 0.95) translateY(-4px);
+        filter: blur(0px) brightness(1.4);
+      }
+      84% {
+        transform: scale(0.98, 1.02) translateY(0);
+        filter: blur(0px) brightness(1.0);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1, 1) translateY(0);
+        filter: blur(0px) brightness(1.0);
+      }
+    }
+
+    /* Shockwave Ring Aura Effect */
+    .tree-shockwave {
+      animation: shockwavePulse 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+      opacity: 0;
+    }
+    @keyframes shockwavePulse {
+      0% {
+        opacity: 0;
+        transform: scale(0.2);
+      }
+      50% {
+        opacity: 0.65;
+        border-width: 3px;
+      }
+      100% {
+        opacity: 0;
+        transform: scale(2.4);
+        border-width: 1px;
+      }
+    }
+
+    .intro-fadeout {
+      animation: cinematicFadeOut 0.9s cubic-bezier(0.7, 0, 0.84, 0) forwards;
+      pointer-events: none;
+    }
+    @keyframes cinematicFadeOut {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0px);
+      }
+      50% {
+        opacity: 0.8;
+        transform: scale(1.08);
+        filter: blur(4px);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1.2);
+        filter: blur(14px);
+      }
+    }
+  </style>
+</head>
+<body class="bg-brandCream text-brandCharcoal font-sans antialiased selection:bg-brandGreen/20">
+
+  <!-- 1. INTRO ANIMADO CON EFECTO ÁRBOL CRECIENDO (GROW UP) E IMPACTANTE LOGO REVEAL -->
+  <div id="intro-screen" class="fixed inset-0 bg-[#0A2213] z-50 flex flex-col items-center justify-center transition-all duration-1000 overflow-hidden" aria-hidden="true">
+    <!-- Ambient Radial Backlight Glow & Shockwave Aura Ring -->
+    <div class="absolute w-[500px] md:w-[700px] h-[500px] md:h-[700px] bg-brandGreen/25 rounded-full blur-[130px] animate-pulse"></div>
+    <div class="absolute w-[320px] md:w-[480px] h-[320px] md:h-[480px] border-2 border-brandGreen/50 rounded-full tree-shockwave"></div>
+    
+    <div class="relative z-10 text-center px-6 max-w-xl mx-auto">
+      <!-- ISOLOGO PURO CON ANIMACIÓN GROW UP ÁRBOL CRECIENDO -->
+      <div class="w-44 md:w-64 h-auto mx-auto hero-logo-anim">
+        <img src="emblem.svg" alt="Isologo de Nectar Organic Farms" class="w-full h-auto object-contain filter drop-shadow-[0_20px_45px_rgba(43,182,115,0.65)]">
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER / NAV SIEMPRE VISIBLE (STICKY NAVBAR) CON MULTILENGUAJE NATIVO (ES, EN, FR, IT) -->
+  <header class="sticky top-0 z-40 bg-brandCream/95 backdrop-blur-md border-b border-brandCharcoal/10 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3.5">
+      <nav class="flex justify-between items-center" aria-label="Navegación Principal">
+        <!-- LOGO NECTAR FARMS VECTORIAL APILADO -->
+        <a href="http://localhost:8080/" class="flex items-center py-1" aria-label="Nectar Farms Inicio">
+          <img src="logo.svg" alt="Logotipo Oficial Nectar Farms" class="h-12 sm:h-14 md:h-16 w-auto object-contain max-w-[160px] sm:max-w-none">
+        </a>
+
+        <!-- MENU DESK CON TRADUCTOR MULTILENGUAJE -->
+        <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-brandCharcoal/80">
+          <a href="#filosofia" id="nav_filosofia" class="hover:text-brandGreen transition-colors">Filosofía</a>
+          <a href="#productos" id="nav_catalogo" class="hover:text-brandGreen transition-colors">Catálogo Nativo</a>
+          <a href="#vlog" id="nav_vlog" class="hover:text-brandGreen transition-colors">Vlog</a>
+          <a href="#registro" id="nav_contacto" class="hover:text-brandGreen transition-colors">Contacto</a>
+          
+          <!-- SELECTOR DE IDIOMA (DESKTOP) -->
+          <div class="relative inline-block">
+            <select id="lang-select-desktop" onchange="changeLanguage(this.value)" class="bg-white border border-brandCharcoal/15 text-xs font-semibold px-2.5 py-1.5 rounded-full focus:outline-none focus:ring-2 focus:ring-brandGreen/40 cursor-pointer shadow-sm text-brandDarkGreen">
+              <option value="es">🇪🇸 ES</option>
+              <option value="en">🇺🇸 EN</option>
+              <option value="fr">🇫🇷 FR</option>
+              <option value="it">🇮🇹 IT</option>
+            </select>
+          </div>
+
+          <!-- BOTÓN INSTAGRAM ESTÉTICO -->
+          <a href="https://www.instagram.com/nectar.farms/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 text-white px-4 py-2 rounded-full text-xs font-semibold hover:opacity-95 shadow-md transition-all hover:scale-105">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span>@nectar.farms</span>
+          </a>
+        </div>
+
+        <!-- CONTROLES MÓVILES (IDIOMA + HAMBURGUESA) -->
+        <div class="flex items-center gap-2 md:hidden">
+          <select id="lang-select-mobile" onchange="changeLanguage(this.value)" class="bg-white border border-brandCharcoal/15 text-xs font-semibold px-2 py-1 rounded-full focus:outline-none text-brandDarkGreen">
+            <option value="es">🇪🇸 ES</option>
+            <option value="en">🇺🇸 EN</option>
+            <option value="fr">🇫🇷 FR</option>
+            <option value="it">🇮🇹 IT</option>
+          </select>
+          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 text-brandDarkGreen focus:outline-none" aria-label="Abrir Menú Móvil">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- MENÚ MÓVIL DESPLEGABLE NATIVO -->
+      <div id="mobile-menu" class="hidden md:hidden pt-4 pb-6 px-2 space-y-3 bg-brandCream border-b border-brandCharcoal/10 shadow-lg rounded-b-2xl transition-all">
+        <a href="#filosofia" id="mob_filosofia" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-brandCharcoal hover:bg-brandGreen/10">Filosofía</a>
+        <a href="#productos" id="mob_catalogo" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-brandCharcoal hover:bg-brandGreen/10">Catálogo Nativo</a>
+        <a href="#vlog" id="mob_vlog" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-brandCharcoal hover:bg-brandGreen/10">Vlog</a>
+        <a href="#registro" id="mob_contacto" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-brandCharcoal hover:bg-brandGreen/10">Contacto</a>
+        <a href="https://www.instagram.com/nectar.farms/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 text-white px-5 py-2.5 rounded-full text-xs font-semibold shadow-md w-full justify-center">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          <span>Instagram @nectar.farms</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. HERO PRINCIPAL ADAPTABLE CON FOTO AUTÉNTICA DE DANIEL SEEDORF Y PRODUCTORES -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center" aria-labelledby="hero-title">
+      <div class="lg:col-span-7 space-y-6 sm:space-y-8 text-center sm:text-left">
+        <span id="hero_badge" class="inline-block bg-brandGreen/10 text-brandDarkGreen text-[11px] sm:text-xs font-semibold uppercase tracking-widest px-3.5 py-1.5 rounded-full">
+          La alternativa 100% local a los supermercados 🇲🇽
+        </span>
+        <h1 id="hero_h1" class="font-serif text-4xl sm:text-5xl lg:text-7xl text-brandDarkGreen font-semibold leading-[1.15]">
+          Cultivamos relaciones <br class="hidden sm:inline">
+          <span class="italic text-brandGreen font-normal">para marcar la diferencia.</span>
+        </h1>
+        <p id="hero_p" class="text-sm sm:text-base text-brandCharcoal/80 leading-relaxed max-w-xl mx-auto sm:mx-0">
+          Somos productores sostenibles en la Península de Yucatán. Conectamos directamente el trabajo ético y de comercio justo (Fair Trade 🇲🇽) de nuestros agricultores con los chefs y restaurantes más exigentes de Cancún, Playa del Carmen y Tulum. 
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center sm:justify-start gap-3.5">
+          <a href="#registro" id="hero_btn1" class="bg-brandDarkGreen hover:bg-brandGreen text-brandCream px-7 py-3.5 rounded-lg text-sm font-semibold transition-all duration-300 shadow-sm text-center">
+            Unirse a la Red Nectar Farms
+          </a>
+          <a href="#productos" id="hero_btn2" class="border border-brandCharcoal/20 hover:border-brandGreen hover:text-brandGreen text-brandCharcoal px-7 py-3.5 rounded-lg text-sm font-semibold transition-all duration-300 text-center">
+            Explorar Catálogo Nativo
+          </a>
+        </div>
+      </div>
+      <!-- FOTO AUTÉNTICA HERO: DANIEL SEEDORF Y PRODUCTORES EN EL CAMPO -->
+      <div class="lg:col-span-5 relative h-[340px] sm:h-[440px] lg:h-[520px] rounded-2xl overflow-hidden shadow-2xl border border-brandCharcoal/10">
+        <img src="img/hero_farmers.webp" alt="Daniel Seedorf y productores locales en los campos agrícolas de Nectar Farms en Yucatán" class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-brandDarkGreen/50 via-transparent to-transparent"></div>
+        <div class="absolute bottom-4 left-4 right-4 bg-brandDarkGreen/80 backdrop-blur-md p-3 rounded-xl border border-brandCream/15 text-white">
+          <span class="text-[10px] uppercase font-bold tracking-wider text-brandGreen block">Comercio Justo y Relaciones Directas</span>
+          <p class="text-xs font-serif italic text-brandCream/90">Daniel Seedorf junto a productores locales en los campos de Nectar Farms en la Zona Maya.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FILOSOFÍA (La Esencia de Nectar Farms) -->
+    <section id="filosofia" class="bg-[#F0F2F1] py-16 sm:py-20 px-4 sm:px-6" aria-labelledby="filosofia-title">
+      <div class="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
+        <span id="filo_badge" class="text-xs font-semibold uppercase tracking-widest text-brandGreen block">Nuestra Filosofía</span>
+        <h2 id="filo_h2" class="font-serif text-3xl sm:text-4xl md:text-5xl text-brandDarkGreen font-semibold">La única alternativa 100% local a los supermercados</h2>
+        <p id="filo_p" class="text-base sm:text-lg text-brandCharcoal/80 font-light leading-relaxed">
+          "En Nectar Farms estamos convencidos de que para transformar la alimentación regional no basta con distribuir ingredientes: <strong class="font-semibold text-brandDarkGreen">somos productores sostenibles que cultivamos relaciones para marcar la diferencia</strong>. Construimos un modelo basado en el Comercio Justo (Fair Trade 🇲🇽) que elimina intermediarios innecesarios, garantiza precios dignos para nuestros agricultores locales y asegura cosechas frescas y autóctonas para la alta gastronomía del Caribe Mexicano."
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-4">
+          <div class="bg-white p-6 rounded-xl border border-brandCharcoal/5 shadow-sm space-y-2">
+            <span id="filo_c1_title" class="block text-2xl font-serif font-bold text-brandGreen">100% Local</span>
+            <span id="filo_c1_sub" class="text-xs text-brandCharcoal/70 uppercase tracking-wider block font-semibold">Alternativa Sostenible</span>
+            <p id="filo_c1_desc" class="text-xs text-brandCharcoal/60">Frente a las cadenas de supermercados e importaciones masivas en Quintana Roo.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-brandCharcoal/5 shadow-sm space-y-2">
+            <span id="filo_c2_title" class="block text-2xl font-serif font-bold text-brandGreen">Fair Trade 🇲🇽</span>
+            <span id="filo_c2_sub" class="text-xs text-brandCharcoal/70 uppercase tracking-wider block font-semibold">Comercio Justo</span>
+            <p id="filo_c2_desc" class="text-xs text-brandCharcoal/60">Relaciones honestas y directas con los productores de la Zona Maya.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-brandCharcoal/5 shadow-sm space-y-2">
+            <span id="filo_c3_title" class="block text-2xl font-serif font-bold text-brandGreen">Bioconservación</span>
+            <span id="filo_c3_sub" class="text-xs text-brandCharcoal/70 uppercase tracking-wider block font-semibold">Identidad Maya</span>
+            <p id="filo_c3_desc" class="text-xs text-brandCharcoal/60">Preservación de especies agrícolas, frutas y hongos autóctonos de Yucatán.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SECCIÓN CATÁLOGO DE PRODUCTOS NATIVOS -->
+    <section id="productos" class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20" aria-labelledby="catalogo-title">
+      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3 sm:space-y-4">
+        <span id="cat_badge" class="text-xs font-semibold uppercase tracking-widest text-brandGreen block">Catálogo Oficial con Trazabilidad</span>
+        <h2 id="cat_h2" class="font-serif text-3xl sm:text-4xl text-brandDarkGreen font-semibold">Productos Agrícolas, Frutas y Hongos Nativos</h2>
+        <p id="cat_p" class="text-xs sm:text-sm text-brandCharcoal/70">Selección de especies autóctonas de la Península de Yucatán. Haz clic para conocer el nombre maya, clasificación botánica y ficha técnica de consulta CICY.</p>
+      </div>
+
+      <!-- Grid adaptable: 2 cols móvil / 3 cols tablet / 5 cols PC -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6" id="product-grid">
+        <!-- Los productos se inyectarán dinámicamente vía JS -->
+      </div>
+    </section>
+
+    <!-- MODAL INTERACTIVO DE PRODUCTOS NATIVOS MOVIL NATIVO -->
+    <div id="product-modal" class="fixed inset-0 bg-brandCharcoal/40 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 p-4" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+      <div class="bg-brandCream rounded-2xl p-6 sm:p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto relative shadow-2xl space-y-5 sm:space-y-6">
+        <button onclick="closeModal()" aria-label="Cerrar ventana" class="absolute top-4 right-4 text-brandCharcoal/50 hover:text-brandCharcoal text-2xl font-bold p-1">&times;</button>
+        <div class="space-y-1">
+          <div class="flex justify-between items-center pr-6">
+            <span id="modal-type" class="text-[10px] font-bold uppercase tracking-widest bg-brandGreen/10 text-brandDarkGreen px-2.5 py-1 rounded-full"></span>
+            <span id="modal-maya" class="text-xs font-serif italic text-brandGreen"></span>
+          </div>
+          <h3 id="modal-name" class="font-serif text-2xl sm:text-3xl text-brandDarkGreen font-semibold pt-1"></h3>
+          <span id="modal-sci-name" class="text-xs italic text-brandCharcoal/60 block"></span>
+        </div>
+        <div class="border-t border-b border-brandCharcoal/10 py-3 text-sm">
+          <span class="text-xs text-brandCharcoal/50 block">Origen</span>
+          <strong id="modal-origin" class="text-brandDarkGreen">Península de Yucatán</strong>
+        </div>
+        <p id="modal-desc" class="text-xs sm:text-sm text-brandCharcoal/80 leading-relaxed"></p>
+        <div class="pt-2 flex flex-col gap-2.5">
+          <a id="modal-link" href="#" target="_blank" rel="noopener" class="block text-center border border-brandGreen text-brandGreen hover:bg-brandGreen hover:text-white py-3 rounded-lg text-xs font-semibold transition-all">
+            <span id="modal_btn_tech">Consultar Ficha Técnica BOTÁNICA &rarr;</span>
+          </a>
+          <a href="#registro" onclick="closeModal()" class="block text-center bg-brandDarkGreen text-brandCream py-3 rounded-lg text-xs font-semibold hover:bg-brandGreen transition-all">
+            <span id="modal_btn_quote">Solicitar Cotización en Nectar Farms</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. VLOG Y BIOCONSERVACIÓN CON LECTOR DE ARTÍCULOS COMPLETOS -->
+    <section id="vlog" class="bg-brandDarkGreen text-brandCream py-16 sm:py-20 px-4 sm:px-6" aria-labelledby="vlog-title">
+      <div class="max-w-7xl mx-auto space-y-10 sm:space-y-12">
+        <div class="text-center max-w-xl mx-auto space-y-3 sm:space-y-4">
+          <span id="vlog_badge" class="text-xs font-semibold uppercase tracking-widest text-brandGreen block">Divulgación Gastronómica</span>
+          <h2 id="vlog_h2" class="font-serif text-3xl sm:text-4xl font-semibold text-brandGreen">El Vlog de Nectar Farms</h2>
+          <p id="vlog_p" class="text-xs sm:text-sm text-brandCream/70">Crónicas de nuestra comunidad, micología y bioconservación peninsular.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
+          <!-- Artículo 1: Chía -->
+          <article class="bg-[#194729] rounded-2xl overflow-hidden shadow-lg hover:transform hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between">
+            <div class="h-56 sm:h-64 relative">
+              <img src="img/chia.webp" alt="Semilla ancestral de Chía Salvia hispanica de Yucatán" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 sm:p-8 space-y-4">
+              <span id="vlog_a1_tag" class="text-xs text-brandGreen uppercase tracking-widest font-semibold">Cultura Gastronómica Maya</span>
+              <h3 id="vlog_a1_title" class="font-serif text-xl sm:text-2xl font-semibold">Chía (Salvia hispanica): La Semilla Sagrada Maya y el Superfood del Futuro</h3>
+              <p id="vlog_a1_p" class="text-xs sm:text-sm text-brandCream/80 leading-relaxed font-light">
+                Exploramos la historia, riqueza en Omega-3 y mucílago funcional de la Chía, una semilla prehispánica fundamental para la energía y la gastronomía de la Península de Yucatán.
+              </p>
+              <div class="pt-2">
+                <button type="button" onclick="openVlogModal(1)" class="text-xs text-brandGreen font-semibold underline hover:text-brandCream transition-colors">
+                  <span id="vlog_art1_btn">Leer artículo completo &rarr;</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 2: Hongo Esquizofilo -->
+          <article class="bg-[#194729] rounded-2xl overflow-hidden shadow-lg hover:transform hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between">
+            <div class="h-56 sm:h-64 relative">
+              <img src="img/hongo_esquizofilo.webp" alt="Hongo Esquizofilo Schizophyllum commune recolectado en Yucatán" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 sm:p-8 space-y-4">
+              <span id="vlog_a2_tag" class="text-xs text-brandGreen uppercase tracking-widest font-semibold">Micología Peninsular</span>
+              <h3 id="vlog_a2_title" class="font-serif text-xl sm:text-2xl font-semibold">X-pikín ch'o': El Hongo Oreja en la Alta Cocina Yucateca</h3>
+              <p id="vlog_a2_p" class="text-xs sm:text-sm text-brandCream/80 leading-relaxed font-light">
+                Descubre la recolección tradicional del macrohongo Schizophyllum commune tras las lluvias estivales y su integración en tamales y caldos artesanales de la región.
+              </p>
+              <div class="pt-2">
+                <button type="button" onclick="openVlogModal(2)" class="text-xs text-brandGreen font-semibold underline hover:text-brandCream transition-colors">
+                  <span id="vlog_art2_btn">Ver ensayo completo &rarr;</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL INTERACTIVO DE LECTURA DE ARTÍCULOS COMPLETOS DEL VLOG -->
+    <div id="vlog-modal" class="fixed inset-0 bg-brandCharcoal/60 backdrop-blur-md z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 p-4" role="dialog" aria-modal="true" aria-labelledby="vlog-modal-title">
+      <div class="bg-brandCream text-brandCharcoal rounded-2xl max-w-3xl w-full max-h-[92vh] overflow-y-auto relative shadow-2xl border border-brandCharcoal/10">
+        <!-- HEADER MODAL PEGAJOSO -->
+        <div class="sticky top-0 bg-brandCream/95 backdrop-blur-md px-6 py-4 border-b border-brandCharcoal/10 flex justify-between items-center z-20">
+          <div class="flex items-center gap-3">
+            <span id="vlog-modal-tag" class="text-[10px] font-bold uppercase tracking-widest bg-brandGreen/10 text-brandDarkGreen px-3 py-1 rounded-full"></span>
+            <span id="vlog-modal-readtime" class="text-xs text-brandCharcoal/60 font-medium"></span>
+          </div>
+          <button onclick="closeVlogModal()" aria-label="Cerrar artículo" class="text-brandCharcoal/60 hover:text-brandCharcoal text-2xl font-bold p-1">&times;</button>
+        </div>
+
+        <!-- CONTENIDO DEL ARTÍCULO -->
+        <div class="p-6 sm:p-10 space-y-6">
+          <div class="h-64 sm:h-80 rounded-xl overflow-hidden shadow-md">
+            <img id="vlog-modal-img" src="" alt="Artículo de Vlog Nectar Farms" class="w-full h-full object-cover">
+          </div>
+
+          <div class="space-y-3">
+            <h2 id="vlog-modal-title" class="font-serif text-3xl sm:text-4xl text-brandDarkGreen font-bold leading-tight"></h2>
+            <p id="vlog-modal-sub" class="text-base text-brandGreen font-serif italic"></p>
+          </div>
+
+          <div id="vlog-modal-body" class="space-y-5 text-sm sm:text-base text-brandCharcoal/85 leading-relaxed font-light pt-2">
+            <!-- El cuerpo completo del artículo se renderiza dinámicamente -->
+          </div>
+
+          <!-- FOOTER ARTÍCULO -->
+          <div class="pt-8 border-t border-brandCharcoal/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+              <img src="logo.svg" alt="Nectar Organic Farms" class="h-8 w-auto">
+              <span class="text-xs text-brandCharcoal/60">Publicado por el equipo de Bioconservación de Nectar Farms</span>
+            </div>
+            <a href="#registro" onclick="closeVlogModal()" class="bg-brandDarkGreen text-brandCream text-xs font-semibold px-6 py-2.5 rounded-lg hover:bg-brandGreen transition-all">
+              Solicitar Ingredientes para tu Cocina
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. FORMULARIO DINÁMICO NECTARCORE -->
+    <section id="registro" class="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20 space-y-10 sm:space-y-12" aria-labelledby="registro-title">
+      <div class="text-center space-y-3 sm:space-y-4">
+        <span id="crm_badge" class="text-xs font-semibold uppercase tracking-widest text-brandGreen block">Plataforma Centralizada</span>
+        <h2 id="crm_h2" class="font-serif text-3xl sm:text-4xl text-brandDarkGreen font-semibold">Únete a la Red Nectar Farms</h2>
+        <p id="crm_p" class="text-xs sm:text-sm text-brandCharcoal/70">Registra tus datos de forma instantánea. Nuestro sistema procesará tu información según tu perfil de cliente o productor.</p>
+      </div>
+
+      <!-- Toggle de perfil -->
+      <div class="flex justify-center p-1 bg-brandCharcoal/5 rounded-xl max-w-sm mx-auto">
+        <button id="toggle-cliente" type="button" onclick="setFormType('cliente')" class="flex-1 py-2.5 text-xs font-semibold rounded-lg bg-brandCream text-brandDarkGreen shadow-sm transition-all">Soy Cliente / Restaurante</button>
+        <button id="toggle-proveedor" type="button" onclick="setFormType('proveedor')" class="flex-1 py-2.5 text-xs font-semibold rounded-lg text-brandCharcoal/60 transition-all">Soy Productor / Proveedor</button>
+      </div>
+
+      <!-- Formulario -->
+      <form id="registro-form" class="bg-white p-6 sm:p-8 rounded-2xl border border-brandCharcoal/10 shadow-lg space-y-5 sm:space-y-6" onsubmit="enviarFormulario(event)">
+        <input type="hidden" id="form-tipo" value="cliente">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+          <div class="space-y-1">
+            <label for="form-nombre" id="lbl_nombre" class="text-xs font-semibold text-brandCharcoal/70 block">Nombre Completo</label>
+            <input required id="form-nombre" name="nombre" type="text" placeholder="Ej. Chef Carlos Ortega" class="w-full px-4 py-3 rounded-lg border border-brandCharcoal/10 focus:outline-none focus:ring-2 focus:ring-brandGreen/40 text-sm">
+          </div>
+          <div class="space-y-1">
+            <label for="form-email" id="lbl_email" class="text-xs font-semibold text-brandCharcoal/70 block">Correo Electrónico</label>
+            <input required id="form-email" name="email" type="email" placeholder="carlos@restaurante.com" class="w-full px-4 py-3 rounded-lg border border-brandCharcoal/10 focus:outline-none focus:ring-2 focus:ring-brandGreen/40 text-sm">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+          <div class="space-y-1">
+            <label for="form-telefono" id="lbl_tel" class="text-xs font-semibold text-brandCharcoal/70 block">Teléfono de Contacto</label>
+            <input required id="form-telefono" name="telefono" type="tel" placeholder="+52 984 123 4567" class="w-full px-4 py-3 rounded-lg border border-brandCharcoal/10 focus:outline-none focus:ring-2 focus:ring-brandGreen/40 text-sm">
+          </div>
+          
+          <!-- Campo Condicional Cliente -->
+          <div id="wrapper-interes" class="space-y-1">
+            <label for="form-interes" id="lbl_interes" class="text-xs font-semibold text-brandCharcoal/70 block">Producto de Interés</label>
+            <select id="form-interes" name="interes" class="w-full px-4 py-3 rounded-lg border border-brandCharcoal/10 focus:outline-none focus:ring-2 focus:ring-brandGreen/40 text-sm bg-white">
+              <option value="Chía (Salvia hispanica)">Chía (Salvia hispanica)</option>
+              <option value="Naranja Sangría (Pak'ál)">Naranja Sangría (Pak'ál)</option>
+              <option value="Zapote Negro (Tauch)">Zapote Negro (Tauch)</option>
+              <option value="Siricote (K'oopté)">Siricote (K'oopté)</option>
+              <option value="Ramón (Ox)">Ramón (Ox)</option>
+              <option value="Pitahaya (Wo')">Pitahaya (Wo')</option>
+              <option value="Huaya (Wayam)">Huaya (Wayam)</option>
+              <option value="Kanisté (K'anixté)">Kanisté (K'anixté)</option>
+              <option value="Ciruela Yucateca (Abal)">Ciruela Yucateca (Abal)</option>
+              <option value="Hongo Esquizofilo (X-pikín ch'o')">Hongo Esquizofilo (X-pikín ch'o')</option>
+              <option value="General">Contacto General / Otro</option>
+            </select>
+          </div>
+
+          <!-- Campo Condicional Proveedor (Oculto al inicio) -->
+          <div id="wrapper-cultivo" class="space-y-1 hidden">
+            <label for="form-cultivo" id="lbl_cultivo" class="text-xs font-semibold text-brandCharcoal/70 block">Método de Cultivo Principal</label>
+            <select id="form-cultivo" name="cultivo" class="w-full px-4 py-3 rounded-lg border border-brandCharcoal/10 focus:outline-none focus:ring-2 focus:ring-brandGreen/40 text-sm bg-white">
+              <option value="Orgánico">100% Orgánico certificado</option>
+              <option value="Permacultura">Permacultura / Agroecológico</option>
+              <option value="Milpa Tradicional">Milpa Tradicional Maya</option>
+              <option value="Recolección Silvestre">Recolección Silvestre Sostenible</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Segundo Campo Condicional Proveedor (Oculto al inicio) -->
+        <div id="wrapper-region" class="space-y-1 hidden">
+          <label for="form-region" id="lbl_region" class="text-xs font-semibold text-brandCharcoal/70 block">Ubicación de tu Huerto / Región</label>
+          <input id="form-region" name="region" type="text" placeholder="Ej. Felipe Carrillo Puerto, Quintana Roo" class="w-full px-4 py-3 rounded-lg border border-brandCharcoal/10 focus:outline-none focus:ring-2 focus:ring-brandGreen/40 text-sm">
+        </div>
+
+        <div class="space-y-1">
+          <label id="label-notas" for="form-notas" class="text-xs font-semibold text-brandCharcoal/70 block">Requerimientos o Mensaje</label>
+          <textarea id="form-notas" name="notas" rows="4" placeholder="Cuéntanos un poco sobre tu cocina o las cantidades estimadas que requieres..." class="w-full px-4 py-3 rounded-lg border border-brandCharcoal/10 focus:outline-none focus:ring-2 focus:ring-brandGreen/40 text-sm"></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn" class="w-full bg-brandDarkGreen hover:bg-brandGreen text-brandCream py-3.5 rounded-lg text-sm font-semibold tracking-wider transition-all duration-300">
+          <span id="btn_submit">REGISTRAR EN NECTAR FARMS</span>
+        </button>
+        
+        <p id="form-feedback" class="text-center text-xs font-medium hidden"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER RESPONSIVO -->
+  <footer class="bg-brandCharcoal text-brandCream/60 text-xs py-10 sm:py-12 px-4 sm:px-6 border-t border-brandCream/10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <img src="logo.svg" alt="Nectar Organic Farms Marca Registrada" class="h-10 sm:h-12 w-auto object-contain opacity-90 brightness-200">
+        <a href="https://www.instagram.com/nectar.farms/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 text-white px-4 py-2 rounded-full text-xs font-semibold hover:opacity-95 shadow-sm transition-all hover:scale-105">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          <span>@nectar.farms</span>
+        </a>
+      </div>
+      <p>&copy; 2026 Nectar Farms. Todos los derechos reservados. Desarrollado por NegocioUp.</p>
+    </div>
+  </footer>
+
+  <script>
+    const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxB37XJmU00uCctHsENcDvU1mUw8y4_n53UKueoMA0ERkrwkXg8kbmPakL7pUteZVJP/exec";
+
+    // TOGGLE MENU MOVIL
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // 1. MOTOR DE MULTILENGUAJE NATIVO (ES, EN, FR, IT)
+    const translations = {
+      es: {
+        nav_filosofia: "Filosofía",
+        nav_catalogo: "Catálogo Nativo",
+        nav_vlog: "Vlog",
+        nav_contacto: "Contacto",
+        hero_badge: "La alternativa 100% local a los supermercados 🇲🇽",
+        hero_h1: "Cultivamos relaciones <br class=\"hidden sm:inline\"><span class=\"italic text-brandGreen font-normal\">para marcar la diferencia.</span>",
+        hero_p: "Somos productores sostenibles en la Península de Yucatán. Conectamos directamente el trabajo ético y de comercio justo (Fair Trade 🇲🇽) de nuestros agricultores con los chefs y restaurantes más exigentes de Cancún, Playa del Carmen y Tulum.",
+        hero_btn1: "Unirse a la Red Nectar Farms",
+        hero_btn2: "Explorar Catálogo Nativo",
+        filo_badge: "Nuestra Filosofía",
+        filo_h2: "La única alternativa 100% local a los supermercados",
+        filo_p: "\"En Nectar Farms estamos convencidos de que para transformar la alimentación regional no basta con distribuir ingredientes: somos productores sostenibles que cultivamos relaciones para marcar la diferencia. Construimos un modelo basado en el Comercio Justo (Fair Trade 🇲🇽) que elimina intermediarios innecesarios...\"",
+        filo_c1_title: "100% Local",
+        filo_c1_sub: "Alternativa Sostenible",
+        filo_c1_desc: "Frente a las cadenas de supermercados e importaciones masivas en Quintana Roo.",
+        filo_c2_title: "Fair Trade 🇲🇽",
+        filo_c2_sub: "Comercio Justo",
+        filo_c2_desc: "Relaciones honestas y directas con los productores de la Zona Maya.",
+        filo_c3_title: "Bioconservación",
+        filo_c3_sub: "Identidad Maya",
+        filo_c3_desc: "Preservación de especies agrícolas, frutas y hongos autóctonos de Yucatán.",
+        cat_badge: "Catálogo Oficial con Trazabilidad",
+        cat_h2: "Productos Agrícolas, Frutas y Hongos Nativos",
+        cat_p: "Selección de especies autóctonas de la Península de Yucatán. Haz clic para conocer el nombre maya, clasificación botánica y ficha técnica CICY.",
+        vlog_badge: "Divulgación Gastronómica",
+        vlog_h2: "El Vlog de Nectar Farms",
+        vlog_p: "Crónicas de nuestra comunidad, micología y bioconservación peninsular.",
+        vlog_art1_btn: "Leer artículo completo &rarr;",
+        vlog_art2_btn: "Ver ensayo completo &rarr;",
+        crm_badge: "Plataforma Centralizada",
+        crm_h2: "Únete a la Red Nectar Farms",
+        crm_p: "Registra tus datos de forma instantánea. Nuestro sistema procesará tu información según tu perfil de cliente o productor.",
+        toggle_cliente: "Soy Cliente / Restaurante",
+        toggle_proveedor: "Soy Productor / Proveedor",
+        lbl_nombre: "Nombre Completo",
+        lbl_email: "Correo Electrónico",
+        lbl_tel: "Teléfono de Contacto",
+        lbl_interes: "Producto de Interés",
+        lbl_cultivo: "Método de Cultivo Principal",
+        lbl_region: "Ubicación de tu Huerto / Región",
+        lbl_notas: "Requerimientos o Mensaje",
+        btn_submit: "REGISTRAR EN NECTAR FARMS",
+        modal_btn_tech: "Consultar Ficha Técnica BOTÁNICA &rarr;",
+        modal_btn_quote: "Solicitar Cotización en Nectar Farms"
+      },
+      en: {
+        nav_filosofia: "Philosophy",
+        nav_catalogo: "Native Catalog",
+        nav_vlog: "Vlog",
+        nav_contacto: "Contact",
+        hero_badge: "The 100% local alternative to supermarkets 🇲🇽",
+        hero_h1: "Growing relationships <br class=\"hidden sm:inline\"><span class=\"italic text-brandGreen font-normal\">to make a real difference.</span>",
+        hero_p: "We are sustainable producers in the Yucatan Peninsula. We directly connect the ethical work and Fair Trade 🇲🇽 of our farmers with the top chefs and restaurants in Cancun, Playa del Carmen, and Tulum.",
+        hero_btn1: "Join Nectar Farms Network",
+        hero_btn2: "Explore Native Catalog",
+        filo_badge: "Our Philosophy",
+        filo_h2: "The only 100% local alternative to supermarkets",
+        filo_p: "\"At Nectar Farms we believe that transforming regional food isn't just about distributing ingredients: we are sustainable producers who grow relationships to make a difference...\"",
+        filo_c1_title: "100% Local",
+        filo_c1_sub: "Sustainable Alternative",
+        filo_c1_desc: "Versus supermarket chains and massive food imports in Quintana Roo.",
+        filo_c2_title: "Fair Trade 🇲🇽",
+        filo_c2_sub: "Fair Trade",
+        filo_c2_desc: "Honest and direct partnerships with Maya region farmers.",
+        filo_c3_title: "Bioconservation",
+        filo_c3_sub: "Mayan Identity",
+        filo_c3_desc: "Preservation of native crops, fruits, and wild mushrooms of Yucatan.",
+        cat_badge: "Official Catalog with Traceability",
+        cat_h2: "Native Crops, Fruits and Mushrooms",
+        cat_p: "Selection of native species from the Yucatan Peninsula. Click to discover Mayan names and CICY botanical specs.",
+        vlog_badge: "Gastronomic Journal",
+        vlog_h2: "Nectar Farms Vlog",
+        vlog_p: "Chronicles of our community, mycology, and peninsular bioconservation.",
+        vlog_art1_btn: "Read full article &rarr;",
+        vlog_art2_btn: "View full essay &rarr;",
+        crm_badge: "Centralized Platform",
+        crm_h2: "Join the Nectar Farms Network",
+        crm_p: "Register your contact details instantly. Our system processes your profile automatically.",
+        toggle_cliente: "I am a Client / Restaurant",
+        toggle_proveedor: "I am a Producer / Supplier",
+        lbl_nombre: "Full Name",
+        lbl_email: "Email Address",
+        lbl_tel: "Phone Number",
+        lbl_interes: "Product of Interest",
+        lbl_cultivo: "Farming Method",
+        lbl_region: "Farm Location / Region",
+        lbl_notas: "Requirements or Message",
+        btn_submit: "REGISTER IN NECTAR FARMS",
+        modal_btn_tech: "View Botanical Technical Sheet &rarr;",
+        modal_btn_quote: "Request Quote in Nectar Farms"
+      },
+      fr: {
+        nav_filosofia: "Philosophie",
+        nav_catalogo: "Catalogue Indigène",
+        nav_vlog: "Vlog",
+        nav_contacto: "Contact",
+        hero_badge: "L'alternative 100% locale aux supermarchés 🇲🇽",
+        hero_h1: "Cultiver des relations <br class=\"hidden sm:inline\"><span class=\"italic text-brandGreen font-normal\">pour faire une vraie différence.</span>",
+        hero_p: "Nous sommes des producteurs durables dans la péninsule du Yucatán. Nous relions directement le travail équitable (Commerce Équitable 🇲🇽) de nos agriculteurs aux chefs les plus exigeants de la Riviera Maya.",
+        hero_btn1: "Rejoindre Nectar Farms",
+        hero_btn2: "Explorer le Catalogue",
+        filo_badge: "Notre Philosophie",
+        filo_h2: "La seule alternative 100% locale aux supermarchés",
+        filo_p: "\"Chez Nectar Farms, nous croyons que pour transformer l'alimentation régionale, il ne suffit pas de distribuer des ingrédients : nous sommes des producteurs durables qui cultivent des relations...\"",
+        filo_c1_title: "100% Local",
+        filo_c1_sub: "Alternative Durable",
+        filo_c1_desc: "Face aux chaînes de supermarchés et aux importations massives au Quintana Roo.",
+        filo_c2_title: "Commerce Équitable 🇲🇽",
+        filo_c2_sub: "Équité Locale",
+        filo_c2_desc: "Relations directes et honnêtes avec les producteurs de la région Maya.",
+        filo_c3_title: "Bioconservation",
+        filo_c3_sub: "Identité Maya",
+        filo_c3_desc: "Préservation des cultures, fruits et champignons indigènes du Yucatán.",
+        cat_badge: "Catalogue Officiel de Traçabilité",
+        cat_h2: "Cultures, Fruits et Champignons Indigènes",
+        cat_p: "Sélection d'espèces indigènes du Yucatán. Cliquez pour découvrir les noms mayas et fiches botaniques.",
+        vlog_badge: "Chronique Gastronomique",
+        vlog_h2: "Le Vlog de Nectar Farms",
+        vlog_p: "Chroniques de notre communauté et bioconservation du Yucatán.",
+        vlog_art1_btn: "Lire l'article complet &rarr;",
+        vlog_art2_btn: "Voir l'essai complet &rarr;",
+        crm_badge: "Plateforme Centralisée",
+        crm_h2: "Rejoignez le Réseau Nectar Farms",
+        crm_p: "Enregistrez vos coordonnées instantanément selon votre profil.",
+        toggle_cliente: "Je suis Client / Restaurant",
+        toggle_proveedor: "Je suis Producteur / Fournisseur",
+        lbl_nombre: "Nom Complet",
+        lbl_email: "Adresse Électronique",
+        lbl_tel: "Numéro de Téléphone",
+        lbl_interes: "Produit d'Intérêt",
+        lbl_cultivo: "Méthode de Culture",
+        lbl_region: "Localisation / Région",
+        lbl_notas: "Message ou Besoins",
+        btn_submit: "S'INSCRIRE SUR NECTAR FARMS",
+        modal_btn_tech: "Voir Fiche Botanique &rarr;",
+        modal_btn_quote: "Demander un Devis Nectar Farms"
+      },
+      it: {
+        nav_filosofia: "Filosofia",
+        nav_catalogo: "Catalogo Nativo",
+        nav_vlog: "Vlog",
+        nav_contacto: "Contatto",
+        hero_badge: "L'alternativa 100% locale ai supermercati 🇲🇽",
+        hero_h1: "Coltiviamo relazioni <br class=\"hidden sm:inline\"><span class=\"italic text-brandGreen font-normal\">per fare la differenza.</span>",
+        hero_p: "Siamo produttori sostenibili nella Penisola dello Yucatán. Colleghiamo direttamente il lavoro etico e il Commercio Equo (Fair Trade 🇲🇽) dei nostri agricoltori con i migliori chef e ristoranti della Riviera Maya.",
+        hero_btn1: "Unisciti a Nectar Farms",
+        hero_btn2: "Esplora Catalogo Nativo",
+        filo_badge: "La Nostra Filosofia",
+        filo_h2: "L'unica alternativa 100% locale ai supermercati",
+        filo_p: "\"In Nectar Farms crediamo che per trasformare l'alimentazione regionale non basti distribuire ingredienti: siamo produttori sostenibili che coltivano relazioni...\"",
+        filo_c1_title: "100% Locale",
+        filo_c1_sub: "Alternativa Sostenibile",
+        filo_c1_desc: "Rispetto alle catene di supermercati e importazioni di massa.",
+        filo_c2_title: "Fair Trade 🇲🇽",
+        filo_c2_sub: "Commercio Equo",
+        filo_c2_desc: "Relazioni dirette e oneste con i produttori della regione Maya.",
+        filo_c3_title: "Bioconservazione",
+        filo_c3_sub: "Identità Maya",
+        filo_c3_desc: "Preservazione di colture, frutti e funghi nativi dello Yucatán.",
+        cat_badge: "Catalogo Ufficiale Tracciabile",
+        cat_h2: "Prodotti Agricoli, Frutti e Funghi Nativi",
+        cat_p: "Selezione di specie native dello Yucatán. Clicca per scoprire i nomi maya e le schede botaniche.",
+        vlog_badge: "Giornale Gastronomico",
+        vlog_h2: "Il Vlog di Nectar Farms",
+        vlog_p: "Cronache della nostra comunità e bioconservazione dello Yucatán.",
+        vlog_art1_btn: "Leggi l'articolo completo &rarr;",
+        vlog_art2_btn: "Vedi il saggio completo &rarr;",
+        crm_badge: "Piattaforma Centralizzata",
+        crm_h2: "Unisciti alla Rete Nectar Farms",
+        crm_p: "Registra i tuoi dati all'istante in base al tuo profilo.",
+        toggle_cliente: "Sono Cliente / Ristorante",
+        toggle_proveedor: "Sono Produttore / Fornitore",
+        lbl_nombre: "Nome Completo",
+        lbl_email: "Indirizzo Email",
+        lbl_tel: "Numero di Telefono",
+        lbl_interes: "Prodotto di Interesse",
+        lbl_cultivo: "Metodo di Coltivazione",
+        lbl_region: "Posizione / Regione",
+        lbl_notas: "Messaggio o Requisiti",
+        btn_submit: "REGISTRATI SU NECTAR FARMS",
+        modal_btn_tech: "Vedi Scheda Botanica &rarr;",
+        modal_btn_quote: "Richiedi Preventivo Nectar Farms"
+      }
+    };
+
+    // CONTENIDO COMPLETO DE LOS ARTÍCULOS DE VLOG EN 4 IDIOMAS (CHÍA Y HONGO ESQUIZOFILO)
+    const vlogArticles = {
+      1: {
+        img: "img/chia.webp",
+        readTime: { es: "4 min de lectura", en: "4 min read", fr: "4 min de lecture", it: "4 min di lettura" },
+        tag: { es: "Cultura Gastronómica Maya", en: "Mayan Gastronomic Culture", fr: "Culture Gastronomique Maya", it: "Cultura Gastronomica Maya" },
+        title: {
+          es: "Chía (Salvia hispanica): La Semilla Sagrada Maya y el Superfood del Futuro",
+          en: "Chía (Salvia hispanica): The Sacred Mayan Seed & the Superfood Revolution",
+          fr: "Chía (Salvia hispanica) : La Graine Sacrée Maya et la Révolution des Superaliments",
+          it: "Chía (Salvia hispanica): Il Seme Sacro Maya e la Rivoluzione dei Superfood"
+        },
+        sub: {
+          es: "Historia prehispánica, riqueza en Omega-3, mucílago funcional y su rol en la alta cocina peninsular.",
+          en: "Pre-Hispanic history, rich Omega-3 content, functional mucilage, and modern Yucatecan culinary uses.",
+          fr: "Histoire préhispanique, richesse en Oméga-3, mucilage fonctionnel et haute gastronomie.",
+          it: "Storia preispanica, ricchezza di Omega-3, mucillagine funzionale e alta cucina dello Yucatán."
+        },
+        body: {
+          es: `
+            <p>La <strong>Chía</strong> (<em>Salvia hispanica</em>), conocida históricamente en la región maya como una semilla sagrada de alto poder energético, fue uno de los pilares agrícolas y nutricionales más venerados por las civilizaciones mesoamericanas. Junto con el maíz y el frijol, la chía formaba la ración básica de los mensajeros y guerreros mayas por su capacidad única para brindar hidratación y resistencia prolongada.</p>
+            <div class="bg-brandGreen/10 border-l-4 border-brandGreen p-4 rounded-r-lg my-4 text-xs sm:text-sm">
+              <strong class="text-brandDarkGreen block font-semibold mb-1">Perfil Nutricional Extraordinario:</strong>
+              Es la fuente vegetal más rica en ácidos grasos Omega-3 (ácido alfa-linolénico ALA), además de poseer una altísima concentración de fibra soluble (mucílago), antioxidantes, calcio, magnesio y proteína vegetal.
+            </div>
+            <h3 class="font-serif text-xl text-brandDarkGreen font-bold pt-2">Mucílago Funcional y Gastronomía de Vanguardia</h3>
+            <p>Al entrar en contacto con el agua, la semilla de Chía expande una capa gelatinosa transparente llamada mucílago, capaz de absorber hasta 12 veces su peso en agua. En la cocina tradicional y moderna, este gel natural actúa como un emulsificante, espesante y estabilizador 100% orgánico, ideal para postres, vinagretas, mermeladas artesanales y refrescos típicos como el <em>Ishtak / Agua de Chía con Limón</em>.</p>
+            <h3 class="font-serif text-xl text-brandDarkGreen font-bold pt-2">Producción Sostenible en Nectar Farms</h3>
+            <p>En Nectar Farms conectamos la cosecha agroecológica de chía producida en los campos de Yucatán con chefs innovadores de Cancún, Playa del Carmen y Tulum, garantizando un grano limpio, libre de agroquímicos y de trazabilidad completa desde la siembra hasta el plato.</p>
+          `,
+          en: `
+            <p><strong>Chía</strong> (<em>Salvia hispanica</em>), historically revered by Mayan civilizations as a sacred energy seed, was an agricultural cornerstone of Mesoamerica. Alongside corn and beans, Chía sustained Mayan messengers and farmers due to its extraordinary hydration properties.</p>
+            <div class="bg-brandGreen/10 border-l-4 border-brandGreen p-4 rounded-r-lg my-4 text-xs sm:text-sm">
+              <strong class="text-brandDarkGreen block font-semibold mb-1">Exceptional Nutritional Profile:</strong>
+              The richest plant source of Omega-3 (ALA) fatty acids, loaded with soluble mucilage fiber, antioxidants, calcium, and plant protein.
+            </div>
+            <h3 class="font-serif text-xl text-brandDarkGreen font-bold pt-2">Functional Mucilage & Modern Culinary Arts</h3>
+            <p>Upon contact with liquids, Chía forms a transparent gel layer (mucilage) absorbing up to 12 times its weight in water. Top chefs in Tulum and Cancun use this natural gel as an organic emulsifier in dressings, craft jams, and botanical beverages.</p>
+            <h3 class="font-serif text-xl text-brandDarkGreen font-bold pt-2">Sustainable Agriculture at Nectar Farms</h3>
+            <p>At Nectar Farms we link agroecological Chía harvested in Yucatán directly with executive chefs across the Riviera Maya, delivering pure, traceable seeds from soil to table.</p>
+          `,
+          fr: `
+            <p>La <strong>Chía</strong> (<em>Salvia hispanica</em>), graine sacrée de la civilisation maya, est l'un des superaliments les plus vénérés d'Amérique centrale. Elle constituait la ration énergétique des messagers mayas grâce à ses propriétés hydratantes uniques.</p>
+            <div class="bg-brandGreen/10 border-l-4 border-brandGreen p-4 rounded-r-lg my-4 text-xs sm:text-sm">
+              <strong class="text-brandDarkGreen block font-semibold mb-1">Profil Nutritionnel Exceptionnel :</strong>
+              Source végétale la plus riche en acides gras Oméga-3 (ALA), riche en fibres solubles, antioxydants et calcium.
+            </div>
+            <h3 class="font-serif text-xl text-brandDarkGreen font-bold pt-2">Mucilage Fonctionnel & Haute Cuisine</h3>
+            <p>Au contact de l'eau, la graine produit un mucilage gélatineux utilisé par les chefs comme émulsifiant naturel dans les sauces, boissons botaniques et desserts.</p>
+          `,
+          it: `
+            <p>La <strong>Chía</strong> (<em>Salvia hispanica</em>), seme sacro della civiltà Maya, era una pietra miliare dell'alimentazione preispanica per la sua capacità di idratare e fornire energia prolungata.</p>
+            <div class="bg-brandGreen/10 border-l-4 border-brandGreen p-4 rounded-r-lg my-4 text-xs sm:text-sm">
+              <strong class="text-brandDarkGreen block font-semibold mb-1">Profilo Nutrizionale Straordinario:</strong>
+              La più ricca fonte vegetale di acidi grassi Omega-3 (ALA), ricca di fibre solubili, antiossidanti e calcio.
+            </div>
+            <h3 class="font-serif text-xl text-brandDarkGreen font-bold pt-2">Mucillagine Funzionale e Alta Cucina</h3>
+            <p>A contatto con i liquidi forma una gelatina naturale (mucillagine) usata dagli chef della Riviera Maya come emulsionante biologico per salse e bevande.</p>
+          `
+        }
+      },
+      2: {
+        img: "img/hongo_esquizofilo.webp",
+        readTime: { es: "5 min de lectura", en: "5 min read", fr: "5 min de lecture", it: "5 min di lettura" },
+        tag: { es: "Micología Peninsular", en: "Peninsular Mycology", fr: "Mycologie du Yucatán", it: "Micologia dello Yucatán" },
+        title: {
+          es: "X-pikín ch'o': El Hongo Oreja (Schizophyllum commune) y la Micología Silvestre Peninsular",
+          en: "X-pikín ch'o': Split-Gill Mushroom (Schizophyllum commune) & Peninsular Wild Mycology",
+          fr: "X-pikín ch'o' : Le Champignon Schizophyllum commune et la Mycologie Sauvage",
+          it: "X-pikín ch'o': Fungo Schizophyllum commune e la Micologia Selvatica"
+        },
+        sub: {
+          es: "Recolección estacional tras las lluvias mayas, perfil umami y su integración en la alta cocina silvestre.",
+          en: "Seasonal foraging after Mayan rains, natural umami profile, and wild haute cuisine.",
+          fr: "Récolte saisonnière après les pluies mayas, profil umami et haute cuisine sauvage.",
+          it: "Raccolta stagionale dopo le piogge maya, profilo umami e alta cucina selvatica."
+        },
+        body: {
+          es: `
+            <p>En el corazón de la selva maya de Yucatán y Quintana Roo, tras las primeras lluvias torrenciales del verano en junio y julio, surge uno de los macrohongos silvestres comestibles más fascinantes de Mesoamérica: el <strong><em>Schizophyllum commune</em></strong>, conocido localmente en lengua maya como <strong>X-pikín ch'o'</strong> (que se traduce como <em>"oreja de ratón"</em> debido a la forma lobulada de su sombrerillo).</p>
+            <div class="bg-brandGreen/10 border-l-4 border-brandGreen p-4 rounded-r-lg my-4 text-xs sm:text-sm">
+              <strong class="text-brandDarkGreen block font-semibold mb-1">Cualidades Micológicas y Gastronómicas:</strong>
+              Posee una textura elástica muy codiciada y una concentración natural de glutamatos que aportan un intenso sabor terroso umami a los guisos tradicionales.
+            </div>
+            <h3 class="font-serif text-xl text-brandDarkGreen font-bold pt-2">Etnomicología y Recolección Sostenible</h3>
+            <p>Tradicionalmente, las comunidades maya recolectan este hongo silvestre sobre troncos caídos de maderas duras de la selva baja. Su recolección requiere un conocimiento botánico transmitido de generación en generación para respetar el ciclo de esporulación del micelio original sin dañar el ecosistema forestal.</p>
+            <h3 class="font-serif text-xl text-brandDarkGreen font-bold pt-2">De la Selva a los Restaurantes de Autor</h3>
+            <p>Históricamente cocinado en caldos de milpa, tamales tradicionales o asado a las brasas con achiote y naranja agria, hoy en Nectar Farms facilitamos el enlace de esta joya micológica silvestre con chefs ejecutivos de la Riviera Maya, quienes lo incorporan en salteados gourmet, risottos de maíces criollos y reducciones botánicas de autor.</p>
+          `,
+          en: `
+            <p>In the heart of the Mayan jungle, after seasonal summer rains, emerges one of Mesoamerica's most fascinating wild edible mushrooms: <strong><em>Schizophyllum commune</em></strong>, locally named <strong>X-pikín ch'o'</strong> (meaning <em>"mouse ear"</em> in Mayan due to its lobed cap shape).</p>
+            <div class="bg-brandGreen/10 border-l-4 border-brandGreen p-4 rounded-r-lg my-4 text-xs sm:text-sm">
+              <strong class="text-brandDarkGreen block font-semibold mb-1">Mycological & Culinary Qualities:</strong>
+              Features a firm elastic texture and natural glutamates delivering deep umami earthiness to traditional and modern dishes.
+            </div>
+            <h3 class="font-serif text-xl text-brandDarkGreen font-bold pt-2">Sustainable Mayan Foraging</h3>
+            <p>Mayan communities harvest this mushroom from fallen hardwood logs. Foraging knowledge is passed down through generations to respect fungal sporulation and preserve jungle biodiversity.</p>
+            <h3 class="font-serif text-xl text-brandDarkGreen font-bold pt-2">Wild Gastronomy Innovation</h3>
+            <p>Historically prepared in wood-fired stews and ancestral tamales, Nectar Farms now connects wild mushroom harvesters directly with executive chefs across the Riviera Maya for gourmet risottos and botanical reductions.</p>
+          `,
+          fr: `
+            <p>Au cœur de la jungle maya, après les pluies estivales, apparaît le champignon comestible <strong><em>Schizophyllum commune</em></strong>, appelé <strong>X-pikín ch'o'</strong> en maya (<em>"oreille de souris"</em>).</p>
+            <div class="bg-brandGreen/10 border-l-4 border-brandGreen p-4 rounded-r-lg my-4 text-xs sm:text-sm">
+              <strong class="text-brandDarkGreen block font-semibold mb-1">Profil Gastronomique :</strong>
+              Texture ferme et élastique avec un goût umami boisé intense.
+            </div>
+            <h3 class="font-serif text-xl text-brandDarkGreen font-bold pt-2">Récolte Éco-responsable</h3>
+            <p>Nectar Farms valorise la cueillette sauvage durable et relie les récolteurs locaux aux grands chefs de la Riviera Maya.</p>
+          `,
+          it: `
+            <p>Nel cuore della giungla maya, dopo le piogge estive, nasce il fungo selvatico commestibile <strong><em>Schizophyllum commune</em></strong>, chiamato in maya <strong>X-pikín ch'o'</strong> (<em>"orecchio di topo"</em>).</p>
+            <div class="bg-brandGreen/10 border-l-4 border-brandGreen p-4 rounded-r-lg my-4 text-xs sm:text-sm">
+              <strong class="text-brandDarkGreen block font-semibold mb-1">Profilo Gastronomico:</strong>
+              Consistenza elastica e intenso sapore umami terroso.
+            </div>
+            <h3 class="font-serif text-xl text-brandDarkGreen font-bold pt-2">Raccolta Sostenibile</h3>
+            <p>Nectar Farms promuove la raccolta responsabile collegando i raccoglitori locali ai grandi chef della Riviera Maya.</p>
+          `
+        }
+      }
+    };
+
+    function openVlogModal(id) {
+      const art = vlogArticles[id];
+      if (!art) return;
+      
+      const currentLang = detectUserLanguage();
+      
+      document.getElementById('vlog-modal-img').src = art.img;
+      document.getElementById('vlog-modal-tag').innerText = art.tag[currentLang] || art.tag.es;
+      document.getElementById('vlog-modal-readtime').innerText = art.readTime[currentLang] || art.readTime.es;
+      document.getElementById('vlog-modal-title').innerText = art.title[currentLang] || art.title.es;
+      document.getElementById('vlog-modal-sub').innerText = art.sub[currentLang] || art.sub.es;
+      document.getElementById('vlog-modal-body').innerHTML = art.body[currentLang] || art.body.es;
+      
+      const modal = document.getElementById('vlog-modal');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+    }
+
+    function closeVlogModal() {
+      const modal = document.getElementById('vlog-modal');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    function detectUserLanguage() {
+      const saved = localStorage.getItem('nectar_lang');
+      if (saved && translations[saved]) return saved;
+      
+      const navLang = (navigator.language || (navigator.languages && navigator.languages[0]) || 'es').toLowerCase();
+      if (navLang.startsWith('en')) return 'en';
+      if (navLang.startsWith('fr')) return 'fr';
+      if (navLang.startsWith('it')) return 'it';
+      return 'es';
+    }
+
+    function changeLanguage(langCode) {
+      if (!translations[langCode]) return;
+      localStorage.setItem('nectar_lang', langCode);
+      
+      document.getElementById('lang-select-desktop').value = langCode;
+      document.getElementById('lang-select-mobile').value = langCode;
+      
+      const t = translations[langCode];
+      Object.keys(t).forEach(key => {
+        const el = document.getElementById(key);
+        if (el) {
+          el.innerHTML = t[key];
+        }
+      });
+    }
+
+    // 2. DATA OFICIAL DE LOS 10 PRODUCTOS AGRÍCOLAS, FRUTAS Y HONGOS NATIVOS DE YUCATÁN (CON CHÍA Y NARANJA SANGRÍA)
+    const productos = [
+      {
+        id: 1,
+        name: "Chía",
+        maya: "Ch'ía",
+        sci: "Salvia hispanica",
+        type: "Semilla nativa / Superfood",
+        desc: "Semilla ancestral mesoamericana de extraordinario valor nutricional. Destaca por su alta concentración de ácidos grasos Omega-3, mucílago de fibra soluble, proteínas y antioxidantes. Se consume en infusiones, refrescos tradicionales, panes y repostería gourmet.",
+        link: "https://www.cicy.mx/sitios/flora%20digital/ficha_virtual.php?especie=2540",
+        img: "img/chia.webp"
+      },
+      {
+        id: 2,
+        name: "Zapote Negro",
+        maya: "Tauch",
+        sci: "Diospyros nigra",
+        type: "Fruta",
+        desc: "Fruto de cáscara verde y pulpa negra brillante dulce al madurar. Presenta una textura sedosa muy parecida al budín de chocolate. Se consume fresco, en nieve, o mezclado con jugo de naranja agria.",
+        link: "https://www.cicy.mx/jardin-botanico/colecciones/frutales-nativos",
+        img: "img/zapote_negro.webp"
+      },
+      {
+        id: 3,
+        name: "Siricote",
+        maya: "K'oopté",
+        sci: "Cordia dodecandra",
+        type: "Fruta / Árbol maderable",
+        desc: "Árbol nativo emblemático con flores naranjas. Produce frutos amarillentos de sabor ácido-dulce que tradicionalmente se cuecen y preparan en almíbar para los postres típicos de Hanal Pixán.",
+        link: "https://www.cicy.mx/sitios/flora%20digital/ficha_virtual.php?especie=1068",
+        img: "img/siricote.webp"
+      },
+      {
+        id: 4,
+        name: "Ramón",
+        maya: "Ox",
+        sci: "Brosimum alicastrum",
+        type: "Semilla / Árbol forrajero",
+        desc: "Árbol histórico de la región. Sus semillas se secan, tuestan y muelen para obtener una harina libre de gluten con alto valor proteico, utilizada para tortillas, panes o infusión similar al café.",
+        link: "https://sds.yucatan.gob.mx/flora/fichas-flora.php",
+        img: "img/ramon.webp"
+      },
+      {
+        id: 5,
+        name: "Pitahaya",
+        maya: "Wo'",
+        sci: "Hylocereus undatus",
+        type: "Fruta (Cactácea)",
+        desc: "Cactácea trepadora que produce frutos de piel rosa/fucsia y pulpa blanca o roja cargada de pequeñas semillas comestibles. Es uno de los cultivos agrícolas más cotizados de la temporada estival.",
+        link: "https://www.intagri.com/articulos/frutales/usos-e-importancia-de-la-pitahaya-en-mexico",
+        img: "img/pitahaya.webp"
+      },
+      {
+        id: 6,
+        name: "Huaya / Huaya India",
+        maya: "Wayam",
+        sci: "Melicoccus olivaeformis",
+        type: "Fruta",
+        desc: "Fruto de cáscara verde rígida que alberga una pulpa salmón agridulce y gelatinosa alrededor de una semilla grande. Muy cotizada y consumida fresca durante los meses de verano.",
+        link: "https://bio.campeche.gob.mx/especies/melicoccus-bijugatus-jacq/",
+        img: "img/huaya.webp"
+      },
+      {
+        id: 7,
+        name: "Kanisté",
+        maya: "K'anixté",
+        sci: "Pouteria campechiana",
+        type: "Fruta",
+        desc: "Conocido también como 'fruta huevo'. Tiene piel amarilla y una pulpa de consistencia cremosa, similar a la yema de huevo cocida o la calabaza dulce, rica en carotenos.",
+        link: "https://www.mexicodesconocido.com.mx/estudiantes-y-profesores-al-rescate-del-arbol-de-kaniste-casi-extinto-en-yucatan.html",
+        img: "img/kaniste.webp"
+      },
+      {
+        id: 8,
+        name: "Ciruela Yucateca / Abal",
+        maya: "Abal",
+        sci: "Spondias purpurea",
+        type: "Fruta",
+        desc: "Variedad regional de ciruela de monte. Se consume tanto verde (con sabor ácido, sal y chile) como totalmente madura (roja o amarilla, dulce y jugosa) entre la primavera y el inicio del verano.",
+        link: "https://24horasyucatan.mx/2025/05/22/ciruela-yucateca-fruta-unica-de-temporada/",
+        img: "img/ciruela_yucateca.webp"
+      },
+      {
+        id: 9,
+        name: "Naranja Sangría",
+        maya: "Pak'ál",
+        sci: "Citrus x sinensis var. sangria",
+        type: "Fruta cítrica nativa",
+        desc: "Cítrico autóctono de pulpa roja escarlata intensa y jugo ácido-dulce aromático. Su perfil de flavonoides y antocianinas le otorga su color rubí característico. Es indispensable en adobos gastronómicos, vinagretas y coctelería de autor.",
+        link: "https://www.cicy.mx/jardin-botanico/colecciones/frutales-nativos",
+        img: "img/naranja_sangria.webp"
+      },
+      {
+        id: 10,
+        name: "Hongo Esquizofilo / Oreja",
+        maya: "X-pikín ch'o'",
+        sci: "Schizophyllum commune",
+        type: "Hongo silvestre comestible",
+        desc: "Uno de los macrohongos silvestres comestibles más comunes de la selva maya peninsular. Nace en troncos caídos tras las lluvias y se recolecta tradicionalmente para guisados, tamales y caldos.",
+        link: "https://www.cicy.mx/Documentos/CICY/Desde_Herbario/2024/2024-05-02-MUitzil-Macrohongos-del-Parque-Ecologico-Metropolitano-del-Sur-de-Merida.pdf",
+        img: "img/hongo_esquizofilo.webp"
+      }
+    ];
+
+    // 3. DETECTAR CARGA E INICIALIZAR IDIOMA Y PRODUCTOS
+    window.addEventListener('DOMContentLoaded', () => {
+      // Aplicar idioma detectado
+      const userLang = detectUserLanguage();
+      changeLanguage(userLang);
+
+      // Inyectar productos nativos en la cuadrícula
+      const grid = document.getElementById('product-grid');
+      productos.forEach(p => {
+        grid.innerHTML += `
+          <div onclick="openModal(${p.id})" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer transition-all duration-300 border border-brandCharcoal/10 flex flex-col justify-between">
+            <div class="h-36 sm:h-40 bg-gray-100 overflow-hidden relative">
+              <img src="${p.img}" alt="${p.name} (${p.maya}) ${p.sci} producto orgánico de Nectar Farms" class="w-full h-full object-cover hover:scale-105 transition-all duration-500" loading="lazy">
+              <span class="absolute top-2 right-2 bg-brandDarkGreen/90 text-brandCream text-[9px] font-bold px-2 py-0.5 rounded-full shadow-sm">
+                ${p.maya}
+              </span>
+            </div>
+            <div class="p-3.5 sm:p-4 space-y-1">
+              <span class="text-[9px] uppercase tracking-wider font-semibold text-brandGreen block">${p.type}</span>
+              <h3 class="font-serif font-bold text-xs sm:text-sm text-brandDarkGreen leading-snug">${p.name}</h3>
+              <span class="text-[10px] italic text-brandCharcoal/60 block truncate">${p.sci}</span>
+            </div>
+          </div>
+        `;
+      });
+
+      // Desvanecer Intro tras 2.8 segundos
+      setTimeout(() => {
+        const intro = document.getElementById('intro-screen');
+        if (intro) {
+          intro.classList.add('intro-fadeout');
+          setTimeout(() => intro.remove(), 900);
+        }
+      }, 2800);
+    });
+
+    // 4. CONTROL DEL MODAL INTERACTIVO DE PRODUCTOS NATIVOS
+    const modal = document.getElementById('product-modal');
+    function openModal(id) {
+      const p = productos.find(prod => prod.id === id);
+      if (!p) return;
+      document.getElementById('modal-type').innerText = p.type;
+      document.getElementById('modal-maya').innerText = `Maya: ${p.maya}`;
+      document.getElementById('modal-name').innerText = p.name;
+      document.getElementById('modal-sci-name').innerText = p.sci;
+      document.getElementById('modal-desc').innerText = p.desc;
+      document.getElementById('modal-link').href = p.link;
+      
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeModal() {
+      modal.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    // 5. CONTROL DE FORMULARIO DINÁMICO (CLIENTE VS PROVEEDOR)
+    function setFormType(type) {
+      const toggleC = document.getElementById('toggle-cliente');
+      const toggleP = document.getElementById('toggle-proveedor');
+      const formTipo = document.getElementById('form-tipo');
+      
+      const wInteres = document.getElementById('wrapper-interes');
+      const wCultivo = document.getElementById('wrapper-cultivo');
+      const wRegion = document.getElementById('wrapper-region');
+      const labelNotas = document.getElementById('label-notas');
+      const textNotas = document.getElementById('form-notas');
+
+      formTipo.value = type;
+
+      if (type === 'cliente') {
+        toggleC.className = "flex-1 py-2.5 text-xs font-semibold rounded-lg bg-brandCream text-brandDarkGreen shadow-sm transition-all";
+        toggleP.className = "flex-1 py-2.5 text-xs font-semibold rounded-lg text-brandCharcoal/60 transition-all";
+        
+        wInteres.classList.remove('hidden');
+        wCultivo.classList.add('hidden');
+        wRegion.classList.add('hidden');
+        
+        labelNotas.innerText = "Requerimientos o Mensaje";
+        textNotas.placeholder = "Cuéntanos un poco sobre tu cocina o las cantidades estimadas que requieres...";
+      } else {
+        toggleP.className = "flex-1 py-2.5 text-xs font-semibold rounded-lg bg-brandCream text-brandDarkGreen shadow-sm transition-all";
+        toggleC.className = "flex-1 py-2.5 text-xs font-semibold rounded-lg text-brandCharcoal/60 transition-all";
+        
+        wInteres.classList.add('hidden');
+        wCultivo.classList.remove('hidden');
+        wRegion.classList.remove('hidden');
+        
+        labelNotas.innerText = "Detalles de tu Producción";
+        textNotas.placeholder = "Indícanos los volúmenes de cosecha actuales, tiempos de entrega y métodos tradicionales que utilizas...";
+      }
+    }
+
+    // 6. ENVÍO DEL FORMULARIO AL WEBHOOK
+    async function enviarFormulario(event) {
+      event.preventDefault();
+      
+      const feedback = document.getElementById('form-feedback');
+      const submitBtn = document.getElementById('submit-btn');
+      
+      submitBtn.disabled = true;
+      submitBtn.innerText = "PROCESANDO REGISTRO...";
+      feedback.classList.add('hidden');
+
+      const tipo = document.getElementById('form-tipo').value;
+      const nombre = document.getElementById('form-nombre').value;
+      const email = document.getElementById('form-email').value;
+      const telefono = document.getElementById('form-telefono').value;
+      
+      let payload = {};
+
+      if (tipo === 'cliente') {
+        payload = {
+          nombre: nombre,
+          email: email,
+          telefono: telefono,
+          interes: document.getElementById('form-interes').value,
+          notas: document.getElementById('form-notas').value,
+          origen: "Web - Cliente"
+        };
+      } else {
+        const cultivo = document.getElementById('form-cultivo').value;
+        const region = document.getElementById('form-region').value;
+        const notasProduccion = document.getElementById('form-notas').value;
+        payload = {
+          nombre: nombre,
+          email: email,
+          telefono: telefono,
+          interes: "Registro de Proveedor",
+          notas: `Método: ${cultivo}. Región: ${region}. Detalles: ${notasProduccion}`,
+          origen: "Web - Proveedor"
+        };
+      }
+
+      try {
+        await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        feedback.innerText = "¡Registro exitoso! Tus datos han sido enviados en tiempo real a Nectar Farms.";
+        feedback.className = "text-center text-xs font-medium text-brandGreen mt-4 block";
+        document.getElementById('registro-form').reset();
+        setFormType('cliente');
+
+      } catch (error) {
+        feedback.innerText = "Hubo un problema de conexión. Por favor, inténtalo de nuevo.";
+        feedback.className = "text-center text-xs font-medium text-red-600 mt-4 block";
+        console.error(error);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = "REGISTRAR EN NECTAR FARMS";
+      }
+    }
+  </script>
+</body>
+</html>

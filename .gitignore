@@ -1,0 +1,14 @@
+# Entorno virtual y credenciales privadas
+.venv/
+credentials.json
+token.json
+__pycache__/
+*.pyc
+
+# Scripts Python locales (pruebas y automatizaciones)
+*.py
+
+# Archivos de respaldo o temporales
+*_backup.html
+.tempmediaStorage/
+.user_uploaded/
