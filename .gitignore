@@ -18,3 +18,5 @@ logos/
 *_backup.html
 .tempmediaStorage/
 .user_uploaded/
+*.zip
+*.pdf
