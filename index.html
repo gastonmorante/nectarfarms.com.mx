@@ -153,10 +153,10 @@
       font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
     }
 
-    /* ================= 100% FAITHFUL AE ROOT-TO-LEAF ANIMATION ================= */
+    /* ================= PREMIUM CONTINUOUS LOGO GROWTH ANIMATION ================= */
     .ae-intro-container {
-      width: 220px;
-      height: 350px;
+      width: 230px;
+      height: 365px;
       position: relative;
       margin: 0 auto;
       display: flex;
@@ -164,61 +164,81 @@
       justify-content: center;
     }
 
-    /* Center Divider Reveal (0.0s - 0.6s) */
-    .anim-clip-divider {
-      transform-origin: 322.5px 512px;
-      transform: scaleX(0);
-      animation: aeDividerExpand 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.1s forwards;
-    }
-    @keyframes aeDividerExpand {
-      to { transform: scaleX(1); }
-    }
-
-    /* Roots Clip: Expands downwards from center split (0.1s - 1.8s) */
-    .anim-clip-roots {
-      transform-origin: 322.5px 512px;
-      transform: scaleY(0);
-      animation: aeRootsUnfurl 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
-    }
-    @keyframes aeRootsUnfurl {
-      0% { transform: scaleY(0) scaleX(0.4); opacity: 0; }
-      30% { opacity: 1; }
-      100% { transform: scaleY(1) scaleX(1); opacity: 1; }
+    /* Continuous Bottom-to-Top Growth Reveal (0.2s - 3.8s) */
+    .anim-exact-growth-logo {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+      transform-origin: bottom center;
+      transform: scale(0.96);
+      opacity: 0;
+      animation: aeSmoothPlantGrowth 3.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
     }
 
-    /* Leaves Clip: Grows upwards from center split (1.2s - 3.2s) */
-    .anim-clip-leaves {
-      transform-origin: 322.5px 512px;
-      transform: scaleY(0);
-      animation: aeLeavesGrow 1.8s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
-    }
-    @keyframes aeLeavesGrow {
-      0% { transform: scaleY(0) scaleX(0.5); opacity: 0; }
-      30% { opacity: 1; }
-      100% { transform: scaleY(1) scaleX(1); opacity: 1; }
+    @keyframes aeSmoothPlantGrowth {
+      0% {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+        transform: scale(0.95);
+        opacity: 0;
+        filter: blur(8px);
+      }
+      15% {
+        opacity: 1;
+        filter: blur(3px);
+      }
+      50% {
+        clip-path: polygon(0% 48%, 100% 48%, 100% 100%, 0% 100%);
+        transform: scale(0.98);
+        filter: blur(0px);
+      }
+      100% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0px);
+      }
     }
 
-    /* Shimmer Sweep & Glow Aura (3.2s - 5.0s) */
+    /* Soft Luxury Radiance Aura (3.6s - 5.5s) */
     .anim-exact-glow {
       filter: drop-shadow(0 0 0px rgba(46, 157, 102, 0));
-      animation: aeExactRadiance 1.8s ease-in-out 3.2s forwards;
+      animation: aeLuxuryRadiance 2.2s cubic-bezier(0.25, 1, 0.5, 1) 3.2s forwards;
     }
-    @keyframes aeExactRadiance {
+    @keyframes aeLuxuryRadiance {
       0% { filter: drop-shadow(0 0 0px rgba(46, 157, 102, 0)); }
-      50% { filter: drop-shadow(0 0 35px rgba(46, 157, 102, 0.9)) drop-shadow(0 0 70px rgba(122, 251, 177, 0.5)); }
-      100% { filter: drop-shadow(0 0 22px rgba(46, 157, 102, 0.65)); }
+      50% { filter: drop-shadow(0 0 30px rgba(46, 157, 102, 0.75)) drop-shadow(0 0 55px rgba(122, 251, 177, 0.4)); }
+      100% { filter: drop-shadow(0 0 20px rgba(46, 157, 102, 0.5)); }
     }
 
-    .ae-shimmer-mask {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: linear-gradient(110deg, transparent 35%, rgba(255, 255, 255, 0.45) 50%, transparent 65%);
-      transform: translateX(-120%);
-      animation: aeShimmerSweep 1.3s cubic-bezier(0.4, 0, 0.2, 1) 3.4s forwards;
+    /* Ambient Pulsing Backlight */
+    .tree-shockwave {
+      animation: shockwavePulse 3.0s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+      opacity: 0;
     }
-    @keyframes aeShimmerSweep {
-      to { transform: translateX(120%); }
+    @keyframes shockwavePulse {
+      0% { opacity: 0; transform: scale(0.3); }
+      50% { opacity: 0.5; border-width: 2px; }
+      100% { opacity: 0; transform: scale(2.2); border-width: 1px; }
+    }
+
+    .intro-fadeout {
+      animation: cinematicFadeOut 1.0s cubic-bezier(0.7, 0, 0.84, 0) forwards;
+      pointer-events: none;
+    }
+    @keyframes cinematicFadeOut {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0px);
+      }
+      50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+        filter: blur(6px);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1.1);
+        filter: blur(16px);
+      }
     }
 
     /* Shockwave Pulse Ring */
@@ -283,32 +303,16 @@
 </head>
 <body class="font-body-md text-on-surface antialiased selection:bg-brandGreen/20">
 
-  <!-- 1. INTRO ANIMADO CON EL LOGO 100% FIEL Y EXACTO CON CRECIMIENTO DE RAÍZ A HOJA (5 SEGUNDOS) -->
+  <!-- 1. INTRO ANIMADO CON EL LOGO 100% FIEL (CRECIMIENTO ULTRA CLEAN & SMOOTH - 5.5 SEGUNDOS) -->
   <div id="intro-screen" class="fixed inset-0 bg-[#06190E] z-50 flex flex-col items-center justify-center transition-all duration-1000 overflow-hidden" aria-hidden="true">
-    <!-- Ambient Radial Glows -->
-    <div class="absolute w-[600px] md:w-[800px] h-[600px] md:h-[800px] bg-[#2E9D66]/20 rounded-full blur-[140px] animate-pulse"></div>
-    <div class="absolute w-[340px] md:w-[500px] h-[340px] md:h-[500px] border border-[#2E9D66]/40 rounded-full tree-shockwave"></div>
+    <!-- Ambient Soft Radial Glows -->
+    <div class="absolute w-[650px] md:w-[850px] h-[650px] md:h-[850px] bg-[#2E9D66]/20 rounded-full blur-[140px] animate-pulse"></div>
+    <div class="absolute w-[360px] md:w-[520px] h-[360px] md:h-[520px] border border-[#2E9D66]/30 rounded-full tree-shockwave"></div>
 
     <div class="relative z-10 text-center px-6 max-w-xl mx-auto">
       <div class="ae-intro-container anim-exact-glow">
-        <svg viewBox="0 0 645 1024" class="w-full h-full max-w-[240px] md:max-w-[280px] mx-auto filter drop-shadow-[0_15px_35px_rgba(46,157,102,0.4)]">
-          <defs>
-            <clipPath id="exact-logo-growth-clip">
-              <!-- Center Divider Reveal -->
-              <rect class="anim-clip-divider" x="0" y="490" width="645" height="44" />
-              
-              <!-- Roots Growth Mask (0.1s - 1.8s) -->
-              <rect class="anim-clip-roots" x="0" y="512" width="645" height="512" />
-
-              <!-- Leaves & Stem Growth Mask (1.2s - 3.2s) -->
-              <rect class="anim-clip-leaves" x="0" y="0" width="645" height="512" />
-            </clipPath>
-          </defs>
-
-          <!-- EL LOGO EXACTO ORIGINAL INALTERADO DE LA IMAGEN ADJUNTADA POR EL USUARIO -->
-          <image href="logo.png" width="645" height="1024" clip-path="url(#exact-logo-growth-clip)" />
-        </svg>
-        <div class="ae-shimmer-mask"></div>
+        <!-- LOGO EXACTO ORIGINAL INALTERADO CON REVELADO ULTRA FLUIDO DESDE LA RAÍZ (SIN DIVISORES NI SLASHES) -->
+        <img src="logo.png" alt="Nectar Farms" class="anim-exact-growth-logo w-full h-auto object-contain max-w-[230px] md:max-w-[270px] mx-auto filter drop-shadow-[0_15px_35px_rgba(46,157,102,0.35)]">
       </div>
     </div>
   </div>
@@ -1524,9 +1528,9 @@
         const intro = document.getElementById('intro-screen');
         if (intro) {
           intro.classList.add('intro-fadeout');
-          setTimeout(() => intro.remove(), 900);
+          setTimeout(() => intro.remove(), 1000);
         }
-      }, 5000);
+      }, 5500);
     });
 
     // 4. CONTROL DEL MODAL INTERACTIVO DE PRODUCTOS NATIVOS
