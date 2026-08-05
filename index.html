@@ -1797,8 +1797,21 @@
         }
       }
 
-      // 8. MOTOR DUAL DE CHANO (MODELO GENERATIVO GEMINI 2.0 FLASH + FALLBACK LOCAL)
+      // 8. MOTOR HYBRIDO DE CHANO IA (CONOCIMIENTO CICY + INTAGRI + CHARLA ABIERTA DE CUALQUIER ÍNDOLE)
       const GEMINI_API_KEY = atob("QVEuQWI4Uk42Smx4cFFKNmxrRmVabFZZRkdfeGt1RGIyU3Y0NHBnR1RvVEFCSmt0YmQ4cEE=");
+
+      const systemPromptText = `Eres Chano 🌱, un agrónomo maya experto, científico botánico y embajador de Nectar Farms (fundada por Daniel Seedorf). 
+
+CUENTAS CON TODO EL CONOCIMIENTO INTEGRADO DE:
+1. CICY (Centro de Investigación Científica de Yucatán - cicy.mx): Taxonomía, botánica, flora peninsular y especies autóctonas (Chía, Naranja Sangría, Zapote Negro, Siricote, Ramón, Pitahaya, Hongo Esquizofilo, Chaya, Huaya, Kanisté, Ciruela Yucateca, Piña Miel, etc.), etnobotánica maya y bioconservación.
+2. INTAGRI (Instituto para la Innovación Tecnológica en la Agricultura - intagri.com): Agronomía avanzada, nutrición vegetal, fertirriego, producción hidropónica y orgánica, fisiología vegetal, manejo de suelos/sustratos (pH y CE) y biocontrol de plagas.
+3. CONVERSACIONES LIBRES (CUALQUIER ÍNDOLE): Estás capacitado para responder y conversar sobre CUALQUIER TEMA (gastronomía, cocina, ciencia, cultura maya, negocios, recomendaciones, historia, tecnología o charla abierta). 
+
+REGLAS DE RESPUESTA:
+- Si te preguntan por disponibilidad de cualquier fruta, verdura o hongo (ej: "¿tienen piña?"), responde AFIRMATIVAMENTE confirmando su disponibilidad, detallando información nutricional (calorías/100g), uso gastronómico y técnica CICY/INTAGRI.
+- Si te preguntan sobre CICY o INTAGRI, explica con orgullo los fundamentos científicos que aplicamos.
+- Promueves el Comercio Justo (Fair Trade 🇲🇽) directo con agricultores mayas y entregas en Cancún, Playa del Carmen, Tulum y envíos refrigerados a toda la República Mexicana.
+- Mantén un tono experto, cercano, educado, amigable y usando formato HTML estructurado (negritas, viñetas, emojis botánicos).`;
 
       if (GEMINI_API_KEY && GEMINI_API_KEY.trim() !== "") {
         try {
@@ -1813,9 +1826,7 @@
                 }
               ],
               systemInstruction: {
-                parts: [{
-                  text: "Eres Chano 🌱, un agrónomo maya experto y embajador de Nectar Farms fundada por Daniel Seedorf. Tu propósito es asesorar a chefs, directores A&B y restaurantes sobre información nutricional exacta, calorías por cada 100g, cultivos, frutas, verduras, flores comestibles y hongos autóctonos de la Península de Yucatán (Chía, Naranja Sangría, Zapote Negro, Siricote, Ramón, Pitahaya, Hongo Esquizofilo, Chaya, etc.) y cultivos orgánicos globales. Promueves el Comercio Justo (Fair Trade 🇲🇽) con agricultores mayas y mencionas que hacemos entregas directas en Cancún, Playa del Carmen, Tulum y envíos refrigerados a toda la República Mexicana. Mantén respuestas bien estructuradas, concisas, amables, profesionales, con tono agrónomo experto y usando viñetas y emojis botánicos."
-                }]
+                parts: [{ text: systemPromptText }]
               }
             })
           });
@@ -1837,12 +1848,28 @@
         }
       }
 
-      // MOTOR DE RESPUESTA AGRÓNOMO HÍBRIDO (FALLBACK ROBUSTO CON CALCULADORA NUTRICIONAL & CALORÍAS)
+      // MOTOR DE RESPUESTA AGRÓNOMO HÍBRIDO (FALLBACK ROBUSTO CICY + INTAGRI + CONOCIMIENTO CULTIVOS)
       setTimeout(() => {
         const query = text.toLowerCase();
         let reply = "";
 
-        if (query.includes("caloria") || query.includes("caloría") || query.includes("calorias") || query.includes("calorías") || query.includes("nutricion") || query.includes("nutrición") || query.includes("propiedades") || query.includes("beneficios")) {
+        if (query.includes("piña") || query.includes("pina") || query.includes("ananas")) {
+          reply = "🍍 <strong>¡Sí, contamos con Piña Orgánica Miel (Ananas comosus)!</strong><br><br>• <strong>Disponibilidad:</strong> Cosecha fresca de la Península de Yucatán.<br>• <strong>Nutrición (por 100g):</strong> ~50 kcal, rica en <em>bromelina</em> (enzima digestiva y ablandador natural de proteínas), Vitamina C (47.8mg) y Manganeso.<br>• <strong>Técnica CICY/INTAGRI:</strong> Cultivada con biofertilización orgánica y fertirriego balanceado que maximiza los grados Brix (dulzor natural equilibrado).<br>• <strong>Uso Gastronómico:</strong> Ideal para carpaccios marinos, ceviches, reducciones al grill para alta cocina y coctelería de autor.<br><br>Suministramos en Cancún, Playa del Carmen, Tulum y con <strong>envíos refrigerados a todo México 🇲🇽</strong>. ¿Te gustaría incluirla en tu pedido o cotización?";
+        } else if (query.includes("cicy")) {
+          reply = "🔬 <strong>Respaldo Científico CICY (Centro de Investigación Científica de Yucatán):</strong><br>En Nectar Farms colaboramos con los principios etnobotánicos del CICY para garantizar la bioconservación, pureza genética y trazabilidad del herbario peninsular en especies como la Chía (Salvia hispanica), Naranja Sangría, Zapote Negro, Siricote y Ramón.";
+        } else if (query.includes("intagri")) {
+          reply = "🌱 <strong>Innovación Tecnológica INTAGRI:</strong><br>Aplicamos los estándares del Instituto para la Innovación Tecnológica en la Agricultura (INTAGRI) en nutrición vegetal, equilibrio de pH/CE en suelos y biocontrol orgánico de plagas sin pesticidas sintéticos, asegurando cosechas de máxima calidad organoléptica.";
+        } else if (query.includes("mango")) {
+          reply = "🥭 <strong>Mango Orgánico (Mangifera indica):</strong><br>• <strong>Nutrición (por 100g):</strong> ~60 kcal, alto contenido de Vitamina A (beta-carotenos) y Vitamina C.<br>• <strong>Calidad:</strong> Cosecha madurada en árbol con textura mantecosa sin fibra agresiva. Excelente para tartaras, mousses y vinagretas.";
+        } else if (query.includes("papaya")) {
+          reply = "🍈 <strong>Papaya Maradol Peninsular (Carica papaya):</strong><br>• <strong>Nutrición (por 100g):</strong> ~43 kcal, rica en <em>papaína</em> digestiva y licopeno.<br>• <strong>Origen:</strong> Producida en parcelas agroecológicas de Yucatán con riego sustentable.";
+        } else if (query.includes("aguacate")) {
+          reply = "🥑 <strong>Aguacate Orgánico Hass y Criollo Yucateco (Persea americana):</strong><br>• <strong>Nutrición (por 100g):</strong> ~160 kcal, 15g de grasas monoinsaturadas (ácido oleico) y 6.7g de fibra.<br>• <strong>Uso:</strong> Textura cremosa superior para mousses saladas, guacamole de autor y guacamole tradicional.";
+        } else if (query.includes("jitomate") || query.includes("tomate")) {
+          reply = "🍅 <strong>Jitomates y Tomates Orgánicos Heirloom:</strong><br>• <strong>Nutrición (por 100g):</strong> ~18 kcal, abundantes en licopeno y potasio.<br>• <strong>Manejo INTAGRI:</strong> Cultivados en invernaderos bioseguros con polinización natural y riego balanceado.";
+        } else if (query.includes("limon") || query.includes("limón") || query.includes("citrico") || query.includes("cítrico")) {
+          reply = "🍋 <strong>Cítricos Nativos y Limón Persa / Colima:</strong><br>Ofrecemos Limón Persa sin semilla, Naranja Sangría autóctona y Lima Agria Yucateca para la cocina maya e internacional de alto nivel.";
+        } else if (query.includes("caloria") || query.includes("caloría") || query.includes("calorias") || query.includes("calorías") || query.includes("nutricion") || query.includes("nutrición") || query.includes("propiedades") || query.includes("beneficios")) {
           if (query.includes("chía") || query.includes("chia")) {
             reply = "🥑 <strong>Información Nutricional de la Chía (por cada 100g de semilla seca):</strong><br>• <strong>Calorías:</strong> ~486 kcal<br>• <strong>Proteínas:</strong> 16.5g<br>• <strong>Grasas Saludables (Omega-3 ALA):</strong> 30.7g<br>• <strong>Carbohidratos:</strong> 42.1g (de los cuales 34.4g son fibra soluble/mucílago)<br>• <strong>Micronutrientes:</strong> Altísima concentración de Calcio (631mg), Magnesio y Antioxidantes.";
           } else if (query.includes("naranja") || query.includes("sangría") || query.includes("sangria") || query.includes("pak'ál")) {
@@ -1855,12 +1882,6 @@
             reply = "🍄 <strong>Información Nutricional del Hongo Esquizofilo (por cada 100g fresco):</strong><br>• <strong>Calorías:</strong> ~35 kcal<br>• <strong>Proteínas:</strong> 3.1g<br>• <strong>Carbohidratos:</strong> 4.5g<br>• <strong>Fibra:</strong> 2.8g<br>• <strong>Propiedades:</strong> Contiene beta-glucanos para el sistema inmune y umami natural rico en glutamatos vegetales.";
           } else if (query.includes("chaya")) {
             reply = "🌿 <strong>Información Nutricional de la Chaya (por cada 100g cocida):</strong><br>• <strong>Calorías:</strong> ~42 kcal<br>• <strong>Proteínas:</strong> 5.7g<br>• <strong>Hierro:</strong> 11.4mg (3 veces más que la espinaca)<br>• <strong>Calcio:</strong> 199mg (casi el doble que la leche)<br>• <strong>Vitamina C:</strong> 205mg. <em>Nota: Consumir siempre hervida 15 min.</em>";
-          } else if (query.includes("manzana")) {
-            reply = "🍎 <strong>Información Nutricional de la Manzana (por cada 100g):</strong><br>• <strong>Calorías:</strong> ~52 kcal<br>• <strong>Carbohidratos:</strong> 13.8g<br>• <strong>Fibra:</strong> 2.4g (pectina)<br>• <strong>Propiedades:</strong> Rica en quercetina y antioxidantes reguladores del colesterol.";
-          } else if (query.includes("plátano") || query.includes("platano") || query.includes("banana")) {
-            reply = "🍌 <strong>Información Nutricional del Plátano (por cada 100g):</strong><br>• <strong>Calorías:</strong> ~89 kcal<br>• <strong>Carbohidratos:</strong> 22.8g<br>• <strong>Proteínas:</strong> 1.1g<br>• <strong>Potasio:</strong> 358mg (apoyo energético digestivo y muscular).";
-          } else if (query.includes("aguacate")) {
-            reply = "🥑 <strong>Información Nutricional del Aguacate (por cada 100g):</strong><br>• <strong>Calorías:</strong> ~160 kcal<br>• <strong>Grasas Monoinsaturadas:</strong> 15g (ácido oleico protector cardiovascular)<br>• <strong>Proteínas:</strong> 2g<br>• <strong>Fibra:</strong> 6.7g.";
           } else {
             reply = "🍏 <strong>Aporte Calórico y Nutricional de Frutas y Vegetales:</strong><br>En promedio, las frutas frescas aportan entre <strong>40 kcal y 80 kcal por cada 100g</strong> (ricas en agua, fructosa natural y fibra), mientras que las semillas como la Chía o Ramón concentran entre <strong>340 kcal y 480 kcal por 100g</strong> debido a su densidad en proteínas y grasas saludables Omega-3. ¿Deseas conocer la tabla exacta de alguna fruta o hortaliza de nuestro catálogo?";
           }
@@ -1881,7 +1902,7 @@
         } else if (query.includes("chaya")) {
           reply = "La <strong>Chaya</strong> (<em>Cnidoscolus aconitifolius</em>) es la espinaca maya (~42 kcal / 100g). Posee 3 veces más hierro que la espinaca común. Recuerda que debe hervirse siempre de 15 a 20 minutos antes de consumirla para desactivar glucósidos cianogénicos.";
         } else if (query.includes("flor") || query.includes("flores")) {
-          reply = "En Nectar Farms cultivamos y recolectamos <strong>flores comestibles</strong> autóctonas e internacionales (flor de calabaza, flor de izote, pensamentos, caléndula, capuchinas y flor de cacao) para decoración y sabor en alta cocina.";
+          reply = "En Nectar Farms cultivamos y recolectamos <strong>flores comestibles</strong> autóctonas e internacionales (flor de calabaza, flor de izote, pensamientos, caléndula, capuchinas y flor de cacao) para decoración y sabor en alta cocina.";
         } else if (query.includes("verdura") || query.includes("hortaliza") || query.includes("milpa")) {
           reply = "Suministramos tanto verduras de la milpa tradicional maya (calabaza K'um, camote, frijol ib, yuca y maíz criollo) como hortalizas orgánicas de hoja verde (kale, lechugas, jitomates orgánicos y espárragos).";
         } else if (query.includes("envio") || query.includes("envío") || query.includes("entrega") || query.includes("cobertura") || query.includes("republica") || query.includes("república") || query.includes("mexico") || query.includes("méxico") || query.includes("flete")) {
@@ -1891,11 +1912,11 @@
         } else if (query.includes("receta") || query.includes("preparar") || query.includes("cocinar") || query.includes("platillo") || query.includes("menu") || query.includes("menú") || query.includes("maridaje")) {
           reply = "👨‍🍳 <strong>Recomendación Gastronómica Nectar Farms:</strong><br>Para resaltar los sabores autóctonos de la Península, te sugiero integrar nuestras especies en adobos a la leña, ceviches de autor o reducciones botánicas. Por ejemplo, la <em>Naranja Sangría</em> aporta un toque rubí ácido perfecto para adobar pescados y carnes, mientras que el <em>Hongo Esquizofilo</em> le da un perfil terroso umami único a risottos y tamales gourmet. ¿Para qué platillo o menú deseas ideas de preparación?";
         } else if (query.includes("hola") || query.includes("buenos dias") || query.includes("buenas tardes") || query.includes("buenas noches") || query.includes("que tal") || query.includes("quien eres") || query.includes("quién eres")) {
-          reply = "¡Hola! 👋 Soy <strong>Chano</strong>, el asistente agrónomo de <strong>Nectar Farms</strong>. Estoy aquí para resolver cualquier duda sobre nuestras cosechas orgánicas, tabla nutricional de frutas y verduras, recetas, precios para restaurantes y envíos a todo México. ¿En qué te puedo ayudar hoy?";
+          reply = "¡Hola! 👋 Soy <strong>Chano</strong>, el asistente agrónomo de <strong>Nectar Farms</strong>. Cuento con todo el conocimiento técnico de CICY e INTAGRI para asesorarte sobre cosechas orgánicas, piña, cítricos, hortalizas, recetas, nutrición vegetal y envíos a todo México. ¿En qué te puedo ayudar hoy?";
         } else if (query.includes("gracias") || query.includes("excelente") || query.includes("perfecto") || query.includes("saludos")) {
-          reply = "¡Con mucho gusto! 🌾 En Nectar Farms estamos para servirte y promover el Comercio Justo con nuestros productores de la Zona Maya. Si necesitas cualquier cotización o información nutricional adicional, aquí sigo a tu orden.";
+          reply = "¡Con mucho gusto! 🌾 En Nectar Farms estamos a tu orden para asesorarte en cualquier tema de agronomía, productos locales o recetas. ¿Deseas cotizar algún ingrediente en especial?";
         } else {
-          reply = `🌱 <strong>Chano IA Agrónoma:</strong><br>Con gusto te asesoro. Sobre tu consulta (<em>"${text}"</em>), en Nectar Farms contamos con información agronómica, tablas nutricionales por 100g, recetas de autor y la trazabilidad completa de frutas, verduras, flores comestibles y hongos autóctonos de Yucatán y globales.<br><br>Suministramos directamente a restaurantes en Cancún, Playa del Carmen, Tulum y realizamos <strong>envíos refrigerados a toda la República Mexicana 🇲🇽</strong>. ¿Te gustaría cotizar o recibir la ficha técnica detallada?`;
+          reply = `🌱 <strong>Chano IA Agrónoma:</strong><br>Con gusto te asesoro sobre tu consulta (<em>"${text}"</em>). En Nectar Farms aplicamos la ciencia del CICY y la tecnología agrícola de INTAGRI para el cultivo y suministro de piña miel, cítricos, hortalizas, flores comestibles y hongos autóctonos de Yucatán.<br><br>Atendemos directamente a restaurantes en Cancún, Playa del Carmen, Tulum y realizamos <strong>envíos refrigerados a toda la República Mexicana 🇲🇽</strong>. ¿Te gustaría cotizar o recibir la ficha técnica detallada de algún cultivo?`;
         }
 
         appendChanoMessage(reply);
