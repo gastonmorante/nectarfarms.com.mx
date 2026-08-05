@@ -153,136 +153,57 @@
       font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
     }
 
-    /* ================= AFTER EFFECTS GRADE ROOT-TO-LEAF ANIMATION ================= */
+    /* ================= 100% FAITHFUL AE ROOT-TO-LEAF ANIMATION ================= */
     .ae-intro-container {
       width: 220px;
-      height: 330px;
+      height: 350px;
       position: relative;
       margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    /* 1. Outer Oval Frames & Center Divider */
-    .anim-top-frame {
-      stroke-dasharray: 650;
-      stroke-dashoffset: 650;
-      animation: aeDrawTopFrame 1.4s cubic-bezier(0.25, 1, 0.5, 1) 0.8s forwards;
+    /* Center Divider Reveal (0.0s - 0.6s) */
+    .anim-clip-divider {
+      transform-origin: 322.5px 512px;
+      transform: scaleX(0);
+      animation: aeDividerExpand 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.1s forwards;
     }
-    @keyframes aeDrawTopFrame {
-      to { stroke-dashoffset: 0; }
-    }
-
-    .anim-bottom-frame {
-      stroke-dasharray: 650;
-      stroke-dashoffset: 650;
-      opacity: 0;
-      animation: aeDrawBottomFrame 1.4s cubic-bezier(0.25, 1, 0.5, 1) 0.5s forwards;
-    }
-    @keyframes aeDrawBottomFrame {
-      0% { stroke-dashoffset: 650; opacity: 0; }
-      15% { opacity: 1; }
-      100% { stroke-dashoffset: 0; opacity: 1; }
+    @keyframes aeDividerExpand {
+      to { transform: scaleX(1); }
     }
 
-    .anim-divider {
-      stroke-dasharray: 200;
-      stroke-dashoffset: 200;
-      animation: aeDrawDivider 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.4s forwards;
+    /* Roots Clip: Expands downwards from center split (0.1s - 1.8s) */
+    .anim-clip-roots {
+      transform-origin: 322.5px 512px;
+      transform: scaleY(0);
+      animation: aeRootsUnfurl 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
     }
-    @keyframes aeDrawDivider {
-      to { stroke-dashoffset: 0; }
-    }
-
-    /* 2. Root System (Sprouts downward from 0s to 1.8s) */
-    .anim-taproot {
-      stroke-dasharray: 220;
-      stroke-dashoffset: 220;
-      animation: aeDrawTaproot 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
-    }
-    @keyframes aeDrawTaproot {
-      to { stroke-dashoffset: 0; }
+    @keyframes aeRootsUnfurl {
+      0% { transform: scaleY(0) scaleX(0.4); opacity: 0; }
+      30% { opacity: 1; }
+      100% { transform: scaleY(1) scaleX(1); opacity: 1; }
     }
 
-    .anim-root-branch {
-      stroke-dasharray: 140;
-      stroke-dashoffset: 140;
-      animation: aeDrawRootBranch 1.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    /* Leaves Clip: Grows upwards from center split (1.2s - 3.2s) */
+    .anim-clip-leaves {
+      transform-origin: 322.5px 512px;
+      transform: scaleY(0);
+      animation: aeLeavesGrow 1.8s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
     }
-    .root-delay-1 { animation-delay: 0.3s; }
-    .root-delay-2 { animation-delay: 0.6s; }
-    .root-delay-3 { animation-delay: 0.9s; }
-    .root-delay-4 { animation-delay: 1.1s; }
-
-    @keyframes aeDrawRootBranch {
-      to { stroke-dashoffset: 0; }
+    @keyframes aeLeavesGrow {
+      0% { transform: scaleY(0) scaleX(0.5); opacity: 0; }
+      30% { opacity: 1; }
+      100% { transform: scaleY(1) scaleX(1); opacity: 1; }
     }
 
-    .anim-dashed-contour {
-      stroke-dasharray: 450;
-      stroke-dashoffset: 450;
-      animation: aeDrawDashedContour 1.4s cubic-bezier(0.25, 1, 0.5, 1) 1.2s forwards;
-    }
-    @keyframes aeDrawDashedContour {
-      to { stroke-dashoffset: 0; }
-    }
-
-    /* 3. Plant Stem & Leaves (Grows upward from 1.2s to 3.5s) */
-    .anim-stem {
-      stroke-dasharray: 120;
-      stroke-dashoffset: 120;
-      animation: aeGrowStem 1.2s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
-    }
-    @keyframes aeGrowStem {
-      to { stroke-dashoffset: 0; }
-    }
-
-    .anim-leaf {
-      transform-origin: 100px 85px;
-      transform: scale(0);
-      opacity: 0;
-      animation: aeUnfurlLeaf 1.0s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-    }
-    .leaf-center { animation-delay: 1.8s; }
-    .leaf-left { transform-origin: 95px 85px; animation-delay: 2.1s; }
-    .leaf-right { transform-origin: 105px 85px; animation-delay: 2.3s; }
-
-    @keyframes aeUnfurlLeaf {
-      0% { transform: scale(0); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    .anim-leaf-vein {
-      stroke-dasharray: 80;
-      stroke-dashoffset: 80;
-      animation: aeDrawVein 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-    }
-    .vein-center { animation-delay: 2.2s; }
-    .vein-left { animation-delay: 2.4s; }
-    .vein-right { animation-delay: 2.5s; }
-
-    @keyframes aeDrawVein {
-      to { stroke-dashoffset: 0; }
-    }
-
-    /* 4. Dots & Accents */
-    .anim-dot {
-      transform: scale(0);
-      transform-origin: center;
-      opacity: 0;
-      animation: aePopDot 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-    }
-    .dots-delay-top { animation-delay: 2.7s; }
-    .dots-delay-bottom { animation-delay: 1.6s; }
-
-    @keyframes aePopDot {
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    /* 5. Shimmer Sweep & Glow Aura (3.4s - 5.0s) */
-    .anim-logo-glow {
+    /* Shimmer Sweep & Glow Aura (3.2s - 5.0s) */
+    .anim-exact-glow {
       filter: drop-shadow(0 0 0px rgba(46, 157, 102, 0));
-      animation: aeLogoRadiance 1.8s ease-in-out 3.2s forwards;
+      animation: aeExactRadiance 1.8s ease-in-out 3.2s forwards;
     }
-    @keyframes aeLogoRadiance {
+    @keyframes aeExactRadiance {
       0% { filter: drop-shadow(0 0 0px rgba(46, 157, 102, 0)); }
       50% { filter: drop-shadow(0 0 35px rgba(46, 157, 102, 0.9)) drop-shadow(0 0 70px rgba(122, 251, 177, 0.5)); }
       100% { filter: drop-shadow(0 0 22px rgba(46, 157, 102, 0.65)); }
@@ -294,7 +215,7 @@
       pointer-events: none;
       background: linear-gradient(110deg, transparent 35%, rgba(255, 255, 255, 0.45) 50%, transparent 65%);
       transform: translateX(-120%);
-      animation: aeShimmerSweep 1.3s cubic-bezier(0.4, 0, 0.2, 1) 3.6s forwards;
+      animation: aeShimmerSweep 1.3s cubic-bezier(0.4, 0, 0.2, 1) 3.4s forwards;
     }
     @keyframes aeShimmerSweep {
       to { transform: translateX(120%); }
@@ -362,100 +283,30 @@
 </head>
 <body class="font-body-md text-on-surface antialiased selection:bg-brandGreen/20">
 
-  <!-- 1. INTRO ANIMADO CON EFECTO DE CRECIMIENTO DE PLANTA/RAÍZ NIVEL AFTER EFFECTS (5 SEGUNDOS) -->
+  <!-- 1. INTRO ANIMADO CON EL LOGO 100% FIEL Y EXACTO CON CRECIMIENTO DE RAÍZ A HOJA (5 SEGUNDOS) -->
   <div id="intro-screen" class="fixed inset-0 bg-[#06190E] z-50 flex flex-col items-center justify-center transition-all duration-1000 overflow-hidden" aria-hidden="true">
     <!-- Ambient Radial Glows -->
     <div class="absolute w-[600px] md:w-[800px] h-[600px] md:h-[800px] bg-[#2E9D66]/20 rounded-full blur-[140px] animate-pulse"></div>
     <div class="absolute w-[340px] md:w-[500px] h-[340px] md:h-[500px] border border-[#2E9D66]/40 rounded-full tree-shockwave"></div>
 
     <div class="relative z-10 text-center px-6 max-w-xl mx-auto">
-      <div class="ae-intro-container anim-logo-glow">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" class="w-full h-full">
+      <div class="ae-intro-container anim-exact-glow">
+        <svg viewBox="0 0 645 1024" class="w-full h-full max-w-[240px] md:max-w-[280px] mx-auto filter drop-shadow-[0_15px_35px_rgba(46,157,102,0.4)]">
           <defs>
-            <style>
-              .logo-green-stroke { stroke: #2E9D66; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-              .logo-green-fill { fill: #2E9D66; }
-              .logo-white-stroke { stroke: #FFFFFF; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-              .logo-white-fill { fill: #FFFFFF; }
-            </style>
+            <clipPath id="exact-logo-growth-clip">
+              <!-- Center Divider Reveal -->
+              <rect class="anim-clip-divider" x="0" y="490" width="645" height="44" />
+              
+              <!-- Roots Growth Mask (0.1s - 1.8s) -->
+              <rect class="anim-clip-roots" x="0" y="512" width="645" height="512" />
+
+              <!-- Leaves & Stem Growth Mask (1.2s - 3.2s) -->
+              <rect class="anim-clip-leaves" x="0" y="0" width="645" height="512" />
+            </clipPath>
           </defs>
 
-          <!-- TOP FRAME (White Fill, Green Border) -->
-          <path class="logo-green-stroke anim-top-frame" d="M 100 12 C 40 12, 12 65, 12 145 L 188 145 C 188 65, 160 12, 100 12 Z" stroke-width="7" fill="#FFFFFF" />
-
-          <!-- BOTTOM FRAME (Solid Green Fill, Green Border) -->
-          <path class="logo-green-stroke logo-green-fill anim-bottom-frame" d="M 12 155 C 12 235, 40 288, 100 288 C 160 288, 188 235, 188 155 Z" stroke-width="7" />
-
-          <!-- DIVIDER LINE -->
-          <line class="logo-green-stroke anim-divider" x1="12" y1="150" x2="188" y2="150" stroke-width="7" />
-
-          <!-- ================= TOP PLANT EMBLEM ================= -->
-          <g id="intro-plant-group">
-            <!-- Center Stem -->
-            <path class="logo-green-stroke anim-stem" d="M 100 146 L 100 68" stroke-width="6" />
-
-            <!-- Center Top Leaf -->
-            <g class="anim-leaf leaf-center">
-              <path class="logo-green-stroke" d="M 100 42 C 86 58, 93 84, 100 84 C 107 84, 114 58, 100 42 Z" stroke-width="5" fill="#FFFFFF" />
-              <path class="logo-green-stroke anim-leaf-vein vein-center" d="M 100 44 L 100 84" stroke-width="5" />
-            </g>
-
-            <!-- Left Leaf -->
-            <g class="anim-leaf leaf-left">
-              <path class="logo-green-stroke" d="M 56 82 C 60 62, 92 78, 98 86 C 92 96, 65 100, 56 82 Z" stroke-width="5" fill="#FFFFFF" />
-              <path class="logo-green-stroke anim-leaf-vein vein-left" d="M 61 82 L 96 86" stroke-width="5" />
-            </g>
-
-            <!-- Right Leaf -->
-            <g class="anim-leaf leaf-right">
-              <path class="logo-green-stroke" d="M 144 82 C 140 62, 108 78, 102 86 C 108 96, 135 100, 144 82 Z" stroke-width="5" fill="#FFFFFF" />
-              <path class="logo-green-stroke anim-leaf-vein vein-right" d="M 139 82 L 104 86" stroke-width="5" />
-            </g>
-
-            <!-- Top Left 3-Dot Cluster -->
-            <g class="logo-green-fill anim-dot dots-delay-top" style="transform-origin: 68px 69px;">
-              <circle cx="68" cy="64" r="3" />
-              <circle cx="62" cy="74" r="3" />
-              <circle cx="74" cy="74" r="3" />
-            </g>
-
-            <!-- Top Right 3-Dot Cluster -->
-            <g class="logo-green-fill anim-dot dots-delay-top" style="transform-origin: 132px 69px;">
-              <circle cx="132" cy="64" r="3" />
-              <circle cx="126" cy="74" r="3" />
-              <circle cx="138" cy="74" r="3" />
-            </g>
-          </g>
-
-          <!-- ================= BOTTOM ROOTS EMBLEM ================= -->
-          <g id="intro-roots-group">
-            <!-- Main Center Taproot -->
-            <path class="logo-white-stroke anim-taproot" d="M 100 154 L 100 248" stroke-width="6" />
-
-            <!-- Root Level 1 (Top Branches) -->
-            <path class="logo-white-stroke anim-root-branch root-delay-1" d="M 100 178 L 64 186 M 64 186 L 48 181 M 64 186 L 56 196" stroke-width="4.5" />
-            <path class="logo-white-stroke anim-root-branch root-delay-1" d="M 100 178 L 136 186 M 136 186 L 152 181 M 136 186 L 144 196" stroke-width="4.5" />
-
-            <!-- Root Level 2 (Middle Branches) -->
-            <path class="logo-white-stroke anim-root-branch root-delay-2" d="M 100 198 L 70 208 M 70 208 L 50 202 M 70 208 L 64 220" stroke-width="4" />
-            <path class="logo-white-stroke anim-root-branch root-delay-2" d="M 100 198 L 130 208 M 130 208 L 150 202 M 130 208 L 136 220" stroke-width="4" />
-
-            <!-- Root Level 3 (Lower Branches) -->
-            <path class="logo-white-stroke anim-root-branch root-delay-3" d="M 100 218 L 82 228 M 82 228 L 70 238 M 82 228 L 76 244" stroke-width="3.5" />
-            <path class="logo-white-stroke anim-root-branch root-delay-3" d="M 100 218 L 118 228 M 118 228 L 130 238 M 118 228 L 124 244" stroke-width="3.5" />
-
-            <!-- Root Tips -->
-            <path class="logo-white-stroke anim-root-branch root-delay-4" d="M 100 240 L 92 256 M 92 256 L 86 264" stroke-width="3" />
-            <path class="logo-white-stroke anim-root-branch root-delay-4" d="M 100 240 L 108 256 M 108 256 L 114 264" stroke-width="3" />
-            <path class="logo-white-stroke anim-root-branch root-delay-4" d="M 100 248 L 100 268" stroke-width="3" />
-
-            <!-- Inner Dashed Contour Line -->
-            <path class="logo-white-stroke anim-dashed-contour" d="M 38 192 C 38 245, 60 270, 100 270 C 140 270, 162 245, 162 192" stroke-width="4" stroke-dasharray="10,8" opacity="0.95" />
-
-            <!-- Bottom Accent Dots -->
-            <circle class="logo-white-fill anim-dot dots-delay-bottom" cx="158" cy="195" r="3.5" style="transform-origin: 158px 195px;" />
-            <circle class="logo-white-fill anim-dot dots-delay-bottom" cx="42" cy="195" r="3.5" style="transform-origin: 42px 195px;" />
-          </g>
+          <!-- EL LOGO EXACTO ORIGINAL INALTERADO DE LA IMAGEN ADJUNTADA POR EL USUARIO -->
+          <image href="logo.png" width="645" height="1024" clip-path="url(#exact-logo-growth-clip)" />
         </svg>
         <div class="ae-shimmer-mask"></div>
       </div>
