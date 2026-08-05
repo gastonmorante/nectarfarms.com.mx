@@ -1,3 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 645 1024" width="100%" height="100%">
-  <image href="logo.png" width="645" height="1024" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <!-- UNTOUCHED PLANT EMBLEM IMAGE -->
+  <image href="logo.png" x="135" y="10" width="130" height="206" />
+
+  <!-- TYPOGRAPHY: NECTAR FARMS (Positioned with 39px breathing room, no tagline) -->
+  <text x="200" y="255" text-anchor="middle" font-family="'Inter', 'Montserrat', 'Playfair Display', sans-serif" font-weight="800" font-size="22" fill="#161D18" letter-spacing="5">NECTAR FARMS</text>
 </svg>
