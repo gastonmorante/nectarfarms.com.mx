@@ -18,7 +18,7 @@
   <meta property="og:url" content="http://localhost:8080/">
   <meta property="og:title" content="Nectar Farms | Productos Orgánicos Nativos y Comercio Justo">
   <meta property="og:description" content="La alternativa 100% local a los supermercados en la Riviera Maya. Cultivamos relaciones para marcar la diferencia con especies autóctonas de Yucatán.">
-  <meta property="og:image" content="img/hero_farmers.webp">
+  <meta property="og:image" content="hero_nectar.webp">
 
   <!-- Google Fonts: Playfair Display, Inter & Material Symbols -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -411,7 +411,7 @@
       </div>
       <!-- FOTO AUTÉNTICA HERO: DANIEL SEEDORF Y PRODUCTORES EN EL CAMPO -->
       <div class="lg:col-span-5 relative h-[360px] sm:h-[460px] lg:h-[520px] rounded-sm overflow-hidden shadow-2xl border border-outline-variant">
-        <img src="img/hero_farmers.webp" alt="Daniel Seedorf y productores locales en los campos agrícolas de Nectar Farms en Yucatán" class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+        <img src="hero_nectar.webp" alt="Daniel Seedorf y productores locales en los campos agrícolas de Nectar Farms en Yucatán" class="w-full h-full object-cover object-[35%_center] hover:scale-105 transition-all duration-700">
         <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
         <div class="absolute bottom-4 left-4 right-4 bg-brandDarkGreen/85 backdrop-blur-md p-4 rounded-sm border border-white/15 text-white space-y-1">
           <span class="font-label-caps text-[10px] tracking-wider text-primary-fixed font-bold block">COMERCIO JUSTO Y RELACIONES DIRECTAS</span>
@@ -1245,127 +1245,267 @@
       });
     }
 
-    // 2. DATA OFICIAL DE LOS 10 PRODUCTOS AGRÍCOLAS, FRUTAS Y HONGOS NATIVOS DE YUCATÁN
+    // 2. DATA OFICIAL DE LOS 20 PRODUCTOS ESTRELLA DE NECTAR FARMS
     const productos = [
       {
         id: 1,
-        name: "Chía",
-        maya: "Ch'ía",
-        sci: "Salvia hispanica",
-        type: "Semilla nativa / Superfood",
-        origin: "Península de Yucatán",
-        season: "Todo el año",
-        desc: "Semilla ancestral mesoamericana de extraordinario valor nutricional. Destaca por su alta concentración de ácidos grasos Omega-3, mucílago de fibra soluble, proteínas y antioxidantes. Se consume en infusiones, refrescos tradicionales, panes y repostería gourmet.",
-        link: "https://www.cicy.mx/sitios/flora%20digital/ficha_virtual.php?especie=2540",
-        img: "img/chia.webp"
+        name: "Porcini",
+        maya: "Boletus",
+        sci: "Boletus sp.",
+        type: "Hongo Silvestre",
+        origin: "Bosques del Altiplano Central",
+        season: "Julio - Septiembre",
+        temp: "Julio - Septiembre",
+        desc: "Hongo silvestre de sabor terroso y a nuez profunda, con una textura carnosa sumamente codiciada en salsas y risottos de alta cocina.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1634045542718-45be5d36b802?auto=format&fit=crop&w=400&q=75"
       },
       {
         id: 2,
-        name: "Zapote Negro",
-        maya: "Tauch",
-        sci: "Diospyros nigra",
-        type: "Fruta Nativa",
-        origin: "Zona Maya, Yucatán",
-        season: "Otoño - Invierno",
-        desc: "Fruto de cáscara verde y pulpa negra brillante dulce al madurar. Presenta una textura sedosa muy parecida al budín de chocolate. Se consume fresco, en nieve, o mezclado con jugo de naranja agria.",
-        link: "https://www.cicy.mx/jardin-botanico/colecciones/frutales-nativos",
-        img: "img/zapote_negro.webp"
+        name: "Lobster",
+        maya: "Hypomyces",
+        sci: "Hypomyces lactifluorum",
+        type: "Hongo Silvestre",
+        origin: "Bosques de Michoacán",
+        season: "Agosto - Octubre",
+        temp: "Agosto - Octubre",
+        desc: "Hongo silvestre parasitado de un llamativo color naranja brillante. Ofrece un sutil aroma que evoca mariscos y una textura firme muy crujiente.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=75"
       },
       {
         id: 3,
-        name: "Siricote",
-        maya: "K'oopté",
-        sci: "Cordia dodecandra",
-        type: "Fruta / Árbol maderable",
-        origin: "Selva Baja, Yucatán",
-        season: "Primavera - Verano",
-        desc: "Árbol nativo emblemático con flores naranjas. Produce frutos amarillentos de sabor ácido-dulce que tradicionalmente se cuecen y preparan en almíbar para los postres típicos de Hanal Pixán.",
-        link: "https://www.cicy.mx/sitios/flora%20digital/ficha_virtual.php?especie=1068",
-        img: "img/siricote.webp"
+        name: "Hongo Azul",
+        maya: "Añil Maya",
+        sci: "Lactarius indigo",
+        type: "Hongo Silvestre",
+        origin: "Sierras de Hidalgo",
+        season: "Julio - Septiembre",
+        temp: "Julio - Septiembre",
+        desc: "Una joya visual de color añil metálico. Posee un sabor suave y terroso con láminas firmes que mantienen su color azul único al cocinarse.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=400&q=75"
       },
       {
         id: 4,
-        name: "Ramón",
-        maya: "Ox",
-        sci: "Brosimum alicastrum",
-        type: "Semilla / Árbol ancestral",
-        origin: "Bosque Agroecológico",
-        season: "Todo el año",
-        desc: "Árbol histórico de la región. Sus semillas se secan, tuestan y muelen para obtener una harina libre de gluten con alto valor proteico, utilizada para tortillas, panes o infusión similar al café.",
-        link: "https://sds.yucatan.gob.mx/flora/fichas-flora.php",
-        img: "img/ramon.webp"
+        name: "Duraznillo",
+        maya: "Cantharellus",
+        sci: "Cantharellus cibarius",
+        type: "Hongo Silvestre",
+        origin: "Sierra de Oaxaca",
+        season: "Julio - Septiembre",
+        temp: "Julio - Septiembre",
+        desc: "Sabor sutilmente afrutado que recuerda al chabacano. Su hermoso color amarillo dorado y textura elástica lo hacen el preferido de los chefs.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1610444585141-8f5b89eb0df6?auto=format&fit=crop&w=400&q=75"
       },
       {
         id: 5,
-        name: "Pitahaya",
-        maya: "Wo'",
-        sci: "Hylocereus undatus",
-        type: "Fruta (Cactácea)",
-        origin: "Tihosuco, Q. Roo",
-        season: "Verano (Jun - Sep)",
-        desc: "Cactácea trepadora que produce frutos de piel rosa/fucsia y pulpa blanca o roja cargada de pequeñas semillas comestibles. Es uno de los cultivos agrícolas más cotizados de la temporada estival.",
-        link: "https://www.intagri.com/articulos/frutales/usos-e-importancia-de-la-pitahaya-en-mexico",
-        img: "img/pitahaya.webp"
+        name: "Rovellón",
+        maya: "Lactarius",
+        sci: "Lactarius deliciosus",
+        type: "Hongo Silvestre",
+        origin: "Bosques templados del centro",
+        season: "Otoño (Octubre - Noviembre)",
+        temp: "Otoño (Octubre - Noviembre)",
+        desc: "Hongo de color naranja encendido con círculos concéntricos. Textura muy consistente y un sabor umami profundo con notas ligeramente picantes.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=400&q=75"
       },
       {
         id: 6,
-        name: "Huaya / Huaya India",
-        maya: "Wayam",
-        sci: "Melicoccus olivaeformis",
-        type: "Fruta Silvestre",
-        origin: "Península de Yucatán",
-        season: "Verano",
-        desc: "Fruto de cáscara verde rígida que alberga una pulpa salmón agridulce y gelatinosa alrededor de una semilla grande. Muy cotizada y consumida fresca durante los meses de verano.",
-        link: "https://bio.campeche.gob.mx/especies/melicoccus-bijugatus-jacq/",
-        img: "img/huaya.webp"
+        name: "Clavito",
+        maya: "Lyophyllum",
+        sci: "Lyophyllum decastes",
+        type: "Hongo Silvestre",
+        origin: "Sierra de Toluca",
+        season: "Agosto - Septiembre",
+        temp: "Agosto - Septiembre",
+        desc: "Crece en densos racimos. Su textura es excepcionalmente firme y elástica, lo que lo hace perfecto para guisos y braseados de cocción larga.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=400&q=75"
       },
       {
         id: 7,
-        name: "Kanisté",
-        maya: "K'anixté",
-        sci: "Pouteria campechiana",
-        type: "Fruta Nativa",
-        origin: "Huertos Mayas",
-        season: "Otoño",
-        desc: "Conocido también como 'fruta huevo'. Tiene piel amarilla y una pulpa de consistencia cremosa, similar a la yema de huevo cocida o la calabaza dulce, rica en carotenos.",
-        link: "https://www.mexicodesconocido.com.mx/estudiantes-y-profesores-al-rescate-del-arbol-de-kaniste-casi-extinto-en-yucatan.html",
-        img: "img/kaniste.webp"
+        name: "Tecomate",
+        maya: "Amanita Real",
+        sci: "Amanita caesarea",
+        type: "Hongo Silvestre",
+        origin: "Bosques húmedos de México",
+        season: "Junio - Septiembre",
+        temp: "Junio - Septiembre",
+        desc: "El hongo de los césares. Sombrero naranja brillante y láminas amarillas. Sabor dulce, delicado y ligeramente almendrado, ideal crudo en carpaccio.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1594911774802-8822a707cbb3?auto=format&fit=crop&w=400&q=75"
       },
       {
         id: 8,
-        name: "Ciruela Yucateca / Abal",
-        maya: "Abal",
-        sci: "Spondias purpurea",
-        type: "Fruta de Monte",
-        origin: "Milpa Maya",
-        season: "Primavera - Verano",
-        desc: "Variedad regional de ciruela de monte. Se consume tanto verde (con sabor ácido, sal y chile) como totalmente madura (roja o amarilla, dulce y jugosa) entre la primavera y el inicio del verano.",
-        link: "https://24horasyucatan.mx/2025/05/22/ciruela-yucateca-fruta-unica-de-temporada/",
-        img: "img/ciruela_yucateca.webp"
+        name: "Mantecado",
+        maya: "Rubescens",
+        sci: "Amanita rubescens",
+        type: "Hongo Silvestre",
+        origin: "Bosques templados de pino",
+        season: "Julio - Septiembre",
+        temp: "Julio - Septiembre",
+        desc: "Hongo de sombrero pardo que enrojece al corte. Ofrece una textura mantecosa tras la cocción y un rico perfil de sabor que recuerda a frutos secos.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=400&q=75"
       },
       {
         id: 9,
-        name: "Naranja Sangría",
-        maya: "Pak'ál",
-        sci: "Citrus x sinensis var. sangria",
-        type: "Fruta cítrica nativa",
-        origin: "Oxkutzcab, Yucatán",
-        season: "Invierno - Primavera",
-        desc: "Cítrico autóctono de pulpa roja escarlata intensa y jugo ácido-dulce aromático. Su perfil de flavonoides y antocianinas le otorga su color rubí característico. Es indispensable en adobos gastronómicos, vinagretas y coctelería de autor.",
-        link: "https://www.cicy.mx/jardin-botanico/colecciones/frutales-nativos",
-        img: "img/naranja_sangria.webp"
+        name: "Hongo Coral",
+        maya: "Ramaria",
+        sci: "Ramaria sp.",
+        type: "Hongo Silvestre",
+        origin: "Zonas montañosas de México",
+        season: "Julio - Septiembre",
+        temp: "Julio - Septiembre",
+        desc: "Hermosa estructura ramificada que recuerda a un coral marino. Textura tierna con puntas ligeramente crujientes, de sabor suave y terroso.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1628359419163-e380f6813e33?auto=format&fit=crop&w=400&q=75"
       },
       {
         id: 10,
-        name: "Hongo Esquizofilo / Oreja",
-        maya: "X-pikín ch'o'",
-        sci: "Schizophyllum commune",
-        type: "Hongo silvestre comestible",
-        origin: "Selva Alta Maya",
-        season: "Temporada de Lluvias",
-        desc: "Uno de los macrohongos silvestres comestibles más comunes de la selva maya peninsular. Nace en troncos caídos tras las lluvias y se recolecta tradicionalmente para guisados, tamales y caldos.",
-        link: "https://www.cicy.mx/Documentos/CICY/Desde_Herbario/2024/2024-05-02-MUitzil-Macrohongos-del-Parque-Ecologico-Metropolitano-del-Sur-de-Merida.pdf",
-        img: "img/hongo_esquizofilo.webp"
+        name: "Morilla",
+        maya: "Morchella",
+        sci: "Morchella sp.",
+        type: "Hongo Silvestre",
+        origin: "Faldas de los volcanes de México",
+        season: "Primavera (Marzo - Mayo)",
+        temp: "Primavera (Marzo - Mayo)",
+        desc: "Estructura alveolar icónica. Posee un sabor sumamente complejo, terroso y ahumado. Es considerado el hongo rey para salsas y reducciones.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1629814479904-80340c2627cb?auto=format&fit=crop&w=400&q=75"
+      },
+      {
+        id: 11,
+        name: "Matsutake",
+        maya: "Tricholoma",
+        sci: "Tricholoma magnivelare",
+        type: "Hongo Silvestre",
+        origin: "Bosques de Oaxaca",
+        season: "Septiembre - Noviembre",
+        temp: "Septiembre - Noviembre",
+        desc: "Altamente valorado por su aroma especiado inigualable con notas a canela y pino. Sabor intenso, textura masticable y gran presencia en el plato.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=400&q=75"
+      },
+      {
+        id: 12,
+        name: "Anonna San Pablo",
+        maya: "Ts'almuy",
+        sci: "Annona reticulata",
+        type: "Fruta Exótica",
+        origin: "Huertos de Yucatán",
+        season: "Invierno - Primavera",
+        temp: "Invierno - Primavera",
+        desc: "Fruta exótica de piel reticulada y pulpa cremosa de dulzura sutil y matices ácidos, excelente para la elaboración de sorbetes y postres helados.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1588691334812-bf9dd9d1877f?auto=format&fit=crop&w=400&q=75"
+      },
+      {
+        id: 13,
+        name: "Saramuyo",
+        maya: "Dzamuy",
+        sci: "Annona squamosa",
+        type: "Fruta Exótica",
+        origin: "Zonas tropicales de Yucatán",
+        season: "Julio - Octubre",
+        temp: "Julio - Octubre",
+        desc: "Conocida como manzana de azúcar. Su pulpa segmentada es sumamente dulce, aromática y de textura tersa, ideal para creaciones de repostería fina.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=75"
+      },
+      {
+        id: 14,
+        name: "Hongos de Recolección",
+        maya: "Silvestres",
+        sci: "Boletus / Amanita sp.",
+        type: "Hongos Silvestres",
+        origin: "Bosques y valles de México",
+        season: "Temporada de lluvias",
+        temp: "Temporada de lluvias",
+        desc: "Una selección artesanal de hongos silvestres frescos recolectados a mano por expertos locales, que captura la biodiversidad de la temporada.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=400&q=75"
+      },
+      {
+        id: 15,
+        name: "Naranja Sangría",
+        maya: "Pak'ál",
+        sci: "Citrus sinensis var. Sangria",
+        type: "Cítrico Nativo",
+        origin: "Huertos cítricos de Yucatán",
+        season: "Noviembre - Febrero",
+        temp: "Noviembre - Febrero",
+        desc: "Variedad de naranja de pulpa rojiza debido a antioxidantes naturales. Ofrece un sabor dulce y complejo con notas a frambuesa, ideal para mixología.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=400&q=75"
+      },
+      {
+        id: 16,
+        name: "Manzana Pearly Pink",
+        maya: "Manzana Rosa",
+        sci: "Malus domestica",
+        type: "Fruta Selecta",
+        origin: "Cultivos seleccionados",
+        season: "Otoño",
+        temp: "Otoño",
+        desc: "Manzana de piel aperlada rosada y pulpa sumamente crujiente, con un balance perfecto entre una acidez refrescante y notas dulces.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=400&q=75"
+      },
+      {
+        id: 17,
+        name: "Kaniste",
+        maya: "K'anixté",
+        sci: "Pouteria campechana",
+        type: "Fruta Nativa",
+        origin: "Península de Yucatán",
+        season: "Diciembre - Marzo",
+        temp: "Diciembre - Marzo",
+        desc: "Fruta de pulpa amarilla densa y cremosa que recuerda a la yema de huevo o al camote dulce. Sabor exótico, dulce y untuoso al paladar.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=400&q=75"
+      },
+      {
+        id: 18,
+        name: "Mix de Mostazas",
+        maya: "Hojas Vivas",
+        sci: "Brassica juncea",
+        type: "Hojas & Brotes",
+        origin: "Huertos verticales Nectar",
+        season: "Todo el año",
+        temp: "Todo el año",
+        desc: "Mezcla de hojas jóvenes de mostaza (Miz america, fresse y ruby streaks) con colores morados y verdes y un perfil de sabor picante.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=400&q=75"
+      },
+      {
+        id: 19,
+        name: "Ube",
+        maya: "Camote Púrpura",
+        sci: "Dioscorea purpurea",
+        type: "Tubérculo Especial",
+        origin: "Invernaderos NectarCore",
+        season: "Otoño - Invierno",
+        temp: "Otoño - Invierno",
+        desc: "Tubérculo de un color púrpura vibrante. Textura suave al cocer y sabor dulce con sutiles notas a vainilla, muy cotizado en repostería estética.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=400&q=75"
+      },
+      {
+        id: 20,
+        name: "Espinaca de Okinawa",
+        maya: "Bicolor Maya",
+        sci: "Gynura bicolor",
+        type: "Hortaliza Funcional",
+        origin: "Cultivo hidropónico Nectar",
+        season: "Todo el año",
+        temp: "Todo el año",
+        desc: "Hojas bicolor excepcionales (verdes en el haz y morado intenso en el envés). Aporte estético único con un sabor herbal y notas a piñón.",
+        link: "https://www.nectarfarms.com.mx/#productos",
+        img: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=75"
       }
     ];
 
@@ -1802,20 +1942,41 @@
       }
 
       // 8. MOTOR HYBRIDO DE CHANO IA (CONOCIMIENTO CICY + INTAGRI + CHARLA ABIERTA DE CUALQUIER ÍNDOLE)
+      // 8. MOTOR HYBRIDO DE CHANO IA (SOMMELIER GASTRONÓMICO + 20 ESPECIES + CICY & INTAGRI)
       const GEMINI_API_KEY = atob("QVEuQWI4Uk42Smx4cFFKNmxrRmVabFZZRkdfeGt1RGIyU3Y0NHBnR1RvVEFCSmt0YmQ4cEE=");
 
-      const systemPromptText = `Eres Chano 🌱, un agrónomo maya experto, científico botánico y embajador de Nectar Farms (fundada por Daniel Seedorf). 
+      const systemPromptText = `Eres "Chano", el agente de ventas experto, sommelier gastronómico y asesor botánico de Nectar Farms. Tu personalidad es sumamente culta, elegante, apasionada por la agricultura regenerativa y empática con los chefs de alta cocina y directores de alimentos y bebidas.
 
-CUENTAS CON TODO EL CONOCIMIENTO INTEGRADO DE:
-1. CICY (Centro de Investigación Científica de Yucatán - cicy.mx): Taxonomía, botánica, flora peninsular y especies autóctonas (Chía, Naranja Sangría, Zapote Negro, Siricote, Ramón, Pitahaya, Hongo Esquizofilo, Chaya, Huaya, Kanisté, Ciruela Yucateca, Piña Miel, etc.), etnobotánica maya y bioconservación.
-2. INTAGRI (Instituto para la Innovación Tecnológica en la Agricultura - intagri.com): Agronomía avanzada, nutrición vegetal, fertirriego, producción hidropónica y orgánica, fisiología vegetal, manejo de suelos/sustratos (pH y CE) y biocontrol de plagas.
-3. CONVERSACIONES LIBRES (CUALQUIER ÍNDOLE): Estás capacitado para responder y conversar sobre CUALQUIER TEMA (gastronomía, cocina, ciencia, cultura maya, negocios, recomendaciones, historia, tecnología o charla abierta). 
+      **TUS TRES PILARES DE ACCIÓN:**
+      1. **Conocimiento Absoluto:** Eres un experto en las propiedades organolépticas, estacionales, orígenes geográficos, nombres científicos y perfiles medicinales/funcionales de las 20 especies de Nectar Farms.
+      2. **Venta Consultiva e Inspiración:** No solo vendes ingredientes, inspiras técnicas culinarias (reducciones, emulsiones, deshidratados, fermentos, maridajes) y conectas a los chefs con el valor del Comercio Justo y la trazabilidad.
+      3. **Conversión Rigurosa de Leads:** Tu objetivo prioritario al interactuar con chefs, directores de A&B o compradores es conseguir sus datos de contacto (Nombre, Restaurante/Hotel, Email y Teléfono/WhatsApp) para coordinar el envío de una **Muestra de Cortesía** o el Catálogo Mayorista personalizado con Daniel.
 
-REGLAS DE RESPUESTA:
-- Si te preguntan por disponibilidad de cualquier fruta, verdura o hongo (ej: "¿tienen piña?"), responde AFIRMATIVAMENTE confirmando su disponibilidad, detallando información nutricional (calorías/100g), uso gastronómico y técnica CICY/INTAGRI.
-- Si te preguntan sobre CICY o INTAGRI, explica con orgullo los fundamentos científicos que aplicamos.
-- Promueves el Comercio Justo (Fair Trade 🇲🇽) directo con agricultores mayas y entregas en Cancún, Playa del Carmen, Tulum y envíos refrigerados a toda la República Mexicana.
-- Mantén un tono experto, cercano, educado, amigable y usando formato HTML estructurado (negritas, viñetas, emojis botánicos).`;
+      **CATÁLOGO OFICIAL DE 20 ESPECIES (Tu Base de Conocimiento Inviolable):**
+      1. **Porcini (Boletus sp.):** Bosques del Altiplano Central. Jul - Sep. Sabor terroso y nuez profunda, carnoso. Prebiótico. Risotto trufado y costras deshidratadas.
+      2. **Lobster (Hypomyces lactifluorum):** Bosques de Michoacán. Ago - Oct. Naranja brillante, aroma a mariscos, textura crujiente. Antioxidante. Sauté en mantequilla de avellana.
+      3. **Hongo Azul (Lactarius indigo):** Sierras de Hidalgo. Jul - Sep. Añil metálico, terroso suave. Antimicrobiano. Carpaccio fúngico con cítricos y sal de Colima.
+      4. **Duraznillo (Cantharellus cibarius):** Sierra de Oaxaca. Jul - Sep. Afrutado a chabacano, elástico dorado. Vitamina D. Reducción con chalotas y tomillo.
+      5. **Rovellón (Lactarius deliciosus):** Bosques templados. Oct - Nov. Umami profundo, anillos concéntricos. Antiinflamatorio. Parrilla de leña con chimichurri.
+      6. **Clavito (Lyophyllum decastes):** Sierra de Toluca. Ago - Sep. Textura elástica firme. Regulación glucosa. Estofados largos y encurtidos.
+      7. **Tecomate (Amanita caesarea):** Bosques húmedos. Jun - Sep. Sombrero naranja, dulce y almendrado. Carpaccio en crudo con queso curado.
+      8. **Mantecado (Amanita rubescens):** Bosques templados de pino. Jul - Sep. Mantecoso tras cocción, notas a frutos secos. Salteado vivo con mantequilla clarificada.
+      9. **Hongo Coral (Ramaria sp.):** Zonas montañosas. Jul - Sep. Ramificado coralino, tierno y crujiente. Tempura con mayonesa de ajo negro.
+      10. **Morilla (Morchella sp.):** Faldas de los volcanes. Mar - May. Alveolar, ahumado complejo. Salsa clásica a la crema y cognac.
+      11. **Matsutake (Tricholoma magnivelare):** Bosques de Oaxaca. Sep - Nov. Especiado a canela y pino, firme. Adaptógeno inmune. Caldo Dobin Mushi o grill con yuzu.
+      12. **Anonna San Pablo (Annona reticulata):** Huertos de Yucatán. Invierno - Primavera. Cremosa dulce y ácida. Sorbetes y mousses con albahaca.
+      13. **Saramuyo (Annona squamosa):** Yucatán. Jul - Oct. Manzana de azúcar tersa y dulce. Repostería fina y sorbetes con menta.
+      14. **Hongos de Recolección (Boletus / Amanita sp.):** Valles y bosques. Temporada lluvias. Recolección artesanal a mano. Estofados con epazote.
+      15. **Naranja Sangría (Citrus sinensis var. Sangria):** Oxkutzcab, Yucatán. Nov - Feb. Pulpa roja rubí, antocianinas, notas a frambuesa. Reducciones y mixología.
+      16. **Manzana Pearly Pink (Malus domestica):** Cultivos seleccionados. Otoño. Piel aperlada rosada, crujiente agridulce. Ensaladas Waldorf y maridajes de queso.
+      17. **Kaniste (Pouteria campechana):** Península de Yucatán. Dic - Mar. Fruta huevo untuosa y dulce como camote. Cheesecake sin cocción.
+      18. **Mix de Mostazas (Brassica juncea):** Huertos verticales Nectar. Todo el año. Moradas y verdes, toque picante. Contraste en platos fuertes.
+      19. **Ube (Dioscorea purpurea):** Invernaderos NectarCore. Otoño - Invierno. Púrpura vibrante, notas a vainilla y coco. Purés dulces y helados.
+      20. **Espinaca de Okinawa (Gynura bicolor):** Cultivo hidropónico Nectar. Todo el año. Bicolor verde y morado, herbal a piñón. Tempuras y ensaladas vivas.
+
+      **PAUTAS DE CONVERSACIÓN:**
+      - Si el usuario muestra interés en cualquier especie, dale detalles de textura, técnica y ofrécele coordinar una muestra de cortesía para su cocina con Daniel.
+      - Mantén un tono elegante, apasionado, empático y estructurado en HTML con <strong>, <em> y viñetas.`;
 
       if (GEMINI_API_KEY && GEMINI_API_KEY.trim() !== "") {
         try {
@@ -1848,79 +2009,33 @@ REGLAS DE RESPUESTA:
             return;
           }
         } catch (e) {
-          console.warn("Transicionando a motor agrónomo alternativo Chano:", e);
+          console.warn("Transicionando a motor sommelier alternativo Chano:", e);
         }
       }
 
-      // MOTOR DE RESPUESTA AGRÓNOMO HÍBRIDO (FALLBACK ROBUSTO CICY + INTAGRI + CONOCIMIENTO CULTIVOS)
+      // MOTOR DE RESPUESTA SOMMELIER BOTÁNICO HÍBRIDO (FALLBACK 20 ESPECIES NECTAR FARMS)
       setTimeout(() => {
         const query = text.toLowerCase();
         let reply = "";
 
-        if (query.includes("piña") || query.includes("pina") || query.includes("ananas")) {
-          reply = "🍍 <strong>¡Sí, contamos con Piña Orgánica Miel (Ananas comosus)!</strong><br><br>• <strong>Disponibilidad:</strong> Cosecha fresca de la Península de Yucatán.<br>• <strong>Nutrición (por 100g):</strong> ~50 kcal, rica en <em>bromelina</em> (enzima digestiva y ablandador natural de proteínas), Vitamina C (47.8mg) y Manganeso.<br>• <strong>Técnica CICY/INTAGRI:</strong> Cultivada con biofertilización orgánica y fertirriego balanceado que maximiza los grados Brix (dulzor natural equilibrado).<br>• <strong>Uso Gastronómico:</strong> Ideal para carpaccios marinos, ceviches, reducciones al grill para alta cocina y coctelería de autor.<br><br>Suministramos en Cancún, Playa del Carmen, Tulum y con <strong>envíos refrigerados a todo México 🇲🇽</strong>. ¿Te gustaría incluirla en tu pedido o cotización?";
-        } else if (query.includes("cicy")) {
-          reply = "🔬 <strong>Respaldo Científico CICY (Centro de Investigación Científica de Yucatán):</strong><br>En Nectar Farms colaboramos con los principios etnobotánicos del CICY para garantizar la bioconservación, pureza genética y trazabilidad del herbario peninsular en especies como la Chía (Salvia hispanica), Naranja Sangría, Zapote Negro, Siricote y Ramón.";
-        } else if (query.includes("intagri")) {
-          reply = "🌱 <strong>Innovación Tecnológica INTAGRI:</strong><br>Aplicamos los estándares del Instituto para la Innovación Tecnológica en la Agricultura (INTAGRI) en nutrición vegetal, equilibrio de pH/CE en suelos y biocontrol orgánico de plagas sin pesticidas sintéticos, asegurando cosechas de máxima calidad organoléptica.";
-        } else if (query.includes("mango")) {
-          reply = "🥭 <strong>Mango Orgánico (Mangifera indica):</strong><br>• <strong>Nutrición (por 100g):</strong> ~60 kcal, alto contenido de Vitamina A (beta-carotenos) y Vitamina C.<br>• <strong>Calidad:</strong> Cosecha madurada en árbol con textura mantecosa sin fibra agresiva. Excelente para tartaras, mousses y vinagretas.";
-        } else if (query.includes("papaya")) {
-          reply = "🍈 <strong>Papaya Maradol Peninsular (Carica papaya):</strong><br>• <strong>Nutrición (por 100g):</strong> ~43 kcal, rica en <em>papaína</em> digestiva y licopeno.<br>• <strong>Origen:</strong> Producida en parcelas agroecológicas de Yucatán con riego sustentable.";
-        } else if (query.includes("aguacate")) {
-          reply = "🥑 <strong>Aguacate Orgánico Hass y Criollo Yucateco (Persea americana):</strong><br>• <strong>Nutrición (por 100g):</strong> ~160 kcal, 15g de grasas monoinsaturadas (ácido oleico) y 6.7g de fibra.<br>• <strong>Uso:</strong> Textura cremosa superior para mousses saladas, guacamole de autor y guacamole tradicional.";
-        } else if (query.includes("jitomate") || query.includes("tomate")) {
-          reply = "🍅 <strong>Jitomates y Tomates Orgánicos Heirloom:</strong><br>• <strong>Nutrición (por 100g):</strong> ~18 kcal, abundantes en licopeno y potasio.<br>• <strong>Manejo INTAGRI:</strong> Cultivados en invernaderos bioseguros con polinización natural y riego balanceado.";
-        } else if (query.includes("limon") || query.includes("limón") || query.includes("citrico") || query.includes("cítrico")) {
-          reply = "🍋 <strong>Cítricos Nativos y Limón Persa / Colima:</strong><br>Ofrecemos Limón Persa sin semilla, Naranja Sangría autóctona y Lima Agria Yucateca para la cocina maya e internacional de alto nivel.";
-        } else if (query.includes("caloria") || query.includes("caloría") || query.includes("calorias") || query.includes("calorías") || query.includes("nutricion") || query.includes("nutrición") || query.includes("propiedades") || query.includes("beneficios")) {
-          if (query.includes("chía") || query.includes("chia")) {
-            reply = "🥑 <strong>Información Nutricional de la Chía (por cada 100g de semilla seca):</strong><br>• <strong>Calorías:</strong> ~486 kcal<br>• <strong>Proteínas:</strong> 16.5g<br>• <strong>Grasas Saludables (Omega-3 ALA):</strong> 30.7g<br>• <strong>Carbohidratos:</strong> 42.1g (de los cuales 34.4g son fibra soluble/mucílago)<br>• <strong>Micronutrientes:</strong> Altísima concentración de Calcio (631mg), Magnesio y Antioxidantes.";
-          } else if (query.includes("naranja") || query.includes("sangría") || query.includes("sangria") || query.includes("pak'ál")) {
-            reply = "🍊 <strong>Información Nutricional de la Naranja Sangría (por cada 100g):</strong><br>• <strong>Calorías:</strong> ~47 kcal<br>• <strong>Proteínas:</strong> 0.9g<br>• <strong>Carbohidratos:</strong> 11.7g (azúcares naturales del fruto)<br>• <strong>Fibra:</strong> 2.4g<br>• <strong>Antioxidantes:</strong> Rica en Vitamina C (53mg) y Antocianinas (flavonoides rubí).";
-          } else if (query.includes("zapote") || query.includes("tauch")) {
-            reply = "🖤 <strong>Información Nutricional del Zapote Negro (por cada 100g):</strong><br>• <strong>Calorías:</strong> ~79 kcal<br>• <strong>Proteínas:</strong> 1.5g<br>• <strong>Carbohidratos:</strong> 20g<br>• <strong>Fibra:</strong> 3.2g<br>• <strong>Vitamina C:</strong> Posee casi 4 veces más Vitamina C que la naranja convencional (~190mg).";
-          } else if (query.includes("pitahaya") || query.includes("wo'")) {
-            reply = "🌺 <strong>Información Nutricional de la Pitahaya (por cada 100g):</strong><br>• <strong>Calorías:</strong> ~50 kcal<br>• <strong>Proteínas:</strong> 1.1g<br>• <strong>Carbohidratos:</strong> 11g<br>• <strong>Fibra:</strong> 3g<br>• <strong>Propiedades:</strong> Excelente fruto hidratante rico en hierro, fósforo y captina (cardiotónico natural).";
-          } else if (query.includes("hongo") || query.includes("esquizofilo") || query.includes("oreja")) {
-            reply = "🍄 <strong>Información Nutricional del Hongo Esquizofilo (por cada 100g fresco):</strong><br>• <strong>Calorías:</strong> ~35 kcal<br>• <strong>Proteínas:</strong> 3.1g<br>• <strong>Carbohidratos:</strong> 4.5g<br>• <strong>Fibra:</strong> 2.8g<br>• <strong>Propiedades:</strong> Contiene beta-glucanos para el sistema inmune y umami natural rico en glutamatos vegetales.";
-          } else if (query.includes("chaya")) {
-            reply = "🌿 <strong>Información Nutricional de la Chaya (por cada 100g cocida):</strong><br>• <strong>Calorías:</strong> ~42 kcal<br>• <strong>Proteínas:</strong> 5.7g<br>• <strong>Hierro:</strong> 11.4mg (3 veces más que la espinaca)<br>• <strong>Calcio:</strong> 199mg (casi el doble que la leche)<br>• <strong>Vitamina C:</strong> 205mg. <em>Nota: Consumir siempre hervida 15 min.</em>";
-          } else {
-            reply = "🍏 <strong>Aporte Calórico y Nutricional de Frutas y Vegetales:</strong><br>En promedio, las frutas frescas aportan entre <strong>40 kcal y 80 kcal por cada 100g</strong> (ricas en agua, fructosa natural y fibra), mientras que las semillas como la Chía o Ramón concentran entre <strong>340 kcal y 480 kcal por 100g</strong> debido a su densidad en proteínas y grasas saludables Omega-3. ¿Deseas conocer la tabla exacta de alguna fruta o hortaliza de nuestro catálogo?";
-          }
-        } else if (query.includes("chía") || query.includes("chia") || query.includes("omega")) {
-          reply = "La <strong>Chía</strong> (<em>Salvia hispanica</em> / <em>Ch'ía</em>) es una semilla ancestral de la Península rica en Omega-3 (ALA) y mucílago soluble. Contiene <strong>486 kcal por cada 100g</strong> y 34g de fibra. Al hidratarse crea un gel natural idóneo para emulsiones, vinagretas orgánicas y bebidas típicas.";
-        } else if (query.includes("naranja") || query.includes("sangría") || query.includes("sangria") || query.includes("pak'ál")) {
-          reply = "La <strong>Naranja Sangría</strong> (<em>Citrus x sinensis var. sangria</em> / <em>Pak'ál</em>) es un cítrico autóctono de pulpa roja escarlata muy rica en antocianinas (~47 kcal / 100g). Es altamente cotizada para adobos gastronómicos, ceviches y coctelería de autor.";
-        } else if (query.includes("hongo") || query.includes("esquizofilo") || query.includes("oreja") || query.includes("x-pikín")) {
-          reply = "El <strong>Hongo Esquizofilo</strong> (<em>Schizophyllum commune</em> / <em>X-pikín ch'o'</em>) es un macrohongo silvestre maya (~35 kcal / 100g) recolectado en troncos de madera dura tras las lluvias estivales. Posee una textura elástica única e intenso sabor terroso umami para tamales y risottos.";
-        } else if (query.includes("zapote")) {
-          reply = "El <strong>Zapote Negro</strong> (<em>Diospyros nigra</em> / <em>Tauch</em>) destaca por su pulpa negra cremosa dulce similar al budín de chocolate (~79 kcal / 100g). Se consume fresco o en mermeladas y nieves gourmet.";
-        } else if (query.includes("siricote")) {
-          reply = "El <strong>Siricote</strong> (<em>Cordia dodecandra</em> / <em>K'oopté</em>) produce frutos agridulces (~62 kcal / 100g) que tradicionalmente se cocinan en almíbar para los postres tradicionales de Hanal Pixán.";
-        } else if (query.includes("ramón") || query.includes("ramon")) {
-          reply = "El <strong>Ramón</strong> (<em>Brosimum alicastrum</em> / <em>Ox</em>) provee semillas ricas en proteína libre de gluten (~340 kcal / 100g) que se tuestan y muelen para producir harina y sustituto artesanal de café.";
-        } else if (query.includes("pitahaya")) {
-          reply = "La <strong>Pitahaya</strong> (<em>Hylocereus undatus</em> / <em>Wo'</em>) es una cactácea trepadora de fruta rosa/fucsia súper jugosa y dulce (~50 kcal / 100g), de alta cosecha estival en Quintana Roo y Yucatán.";
-        } else if (query.includes("chaya")) {
-          reply = "La <strong>Chaya</strong> (<em>Cnidoscolus aconitifolius</em>) es la espinaca maya (~42 kcal / 100g). Posee 3 veces más hierro que la espinaca común. Recuerda que debe hervirse siempre de 15 a 20 minutos antes de consumirla para desactivar glucósidos cianogénicos.";
-        } else if (query.includes("flor") || query.includes("flores")) {
-          reply = "En Nectar Farms cultivamos y recolectamos <strong>flores comestibles</strong> autóctonas e internacionales (flor de calabaza, flor de izote, pensamientos, caléndula, capuchinas y flor de cacao) para decoración y sabor en alta cocina.";
-        } else if (query.includes("verdura") || query.includes("hortaliza") || query.includes("milpa")) {
-          reply = "Suministramos tanto verduras de la milpa tradicional maya (calabaza K'um, camote, frijol ib, yuca y maíz criollo) como hortalizas orgánicas de hoja verde (kale, lechugas, jitomates orgánicos y espárragos).";
-        } else if (query.includes("envio") || query.includes("envío") || query.includes("entrega") || query.includes("cobertura") || query.includes("republica") || query.includes("república") || query.includes("mexico") || query.includes("méxico") || query.includes("flete")) {
-          reply = "🚚 <strong>Cobertura & Envíos:</strong> Entregamos cosechas frescas con suministro local en Cancún, Playa del Carmen, Tulum y la Riviera Maya, además de realizar <strong>envíos refrigerados y garantizados a toda la República Mexicana 🇲🇽</strong> para restaurantes, hoteles y clientes.";
-        } else if (query.includes("comercio justo") || query.includes("fair trade") || query.includes("precio") || query.includes("modelo")) {
-          reply = "En <strong>Nectar Farms</strong> practicamos el Comercio Justo (Fair Trade 🇲🇽). Eliminamos intermediarios innecesarios y pagamos un precio ético directo a nuestros productores de la Zona Maya, ofreciendo entregas en Cancún, Playa del Carmen, Tulum y <strong>envíos a toda la República Mexicana 🇲🇽</strong>.";
-        } else if (query.includes("receta") || query.includes("preparar") || query.includes("cocinar") || query.includes("platillo") || query.includes("menu") || query.includes("menú") || query.includes("maridaje")) {
-          reply = "👨‍🍳 <strong>Recomendación Gastronómica Nectar Farms:</strong><br>Para resaltar los sabores autóctonos de la Península, te sugiero integrar nuestras especies en adobos a la leña, ceviches de autor o reducciones botánicas. Por ejemplo, la <em>Naranja Sangría</em> aporta un toque rubí ácido perfecto para adobar pescados y carnes, mientras que el <em>Hongo Esquizofilo</em> le da un perfil terroso umami único a risottos y tamales gourmet. ¿Para qué platillo o menú deseas ideas de preparación?";
-        } else if (query.includes("hola") || query.includes("buenos dias") || query.includes("buenas tardes") || query.includes("buenas noches") || query.includes("que tal") || query.includes("quien eres") || query.includes("quién eres")) {
-          reply = "¡Hola! 👋 Soy <strong>Chano</strong>, el asistente agrónomo de <strong>Nectar Farms</strong>. Cuento con todo el conocimiento técnico de CICY e INTAGRI para asesorarte sobre cosechas orgánicas, piña, cítricos, hortalizas, recetas, nutrición vegetal y envíos a todo México. ¿En qué te puedo ayudar hoy?";
-        } else if (query.includes("gracias") || query.includes("excelente") || query.includes("perfecto") || query.includes("saludos")) {
-          reply = "¡Con mucho gusto! 🌾 En Nectar Farms estamos a tu orden para asesorarte en cualquier tema de agronomía, productos locales o recetas. ¿Deseas cotizar algún ingrediente en especial?";
+        if (query.includes("porcini") || query.includes("boletus")) {
+          reply = "🍄 <strong>Porcini Silvestre (Boletus sp.):</strong><br>• <strong>Origen:</strong> Bosques del Altiplano Central (Julio - Septiembre).<br>• <strong>Perfil:</strong> Sabor terroso y a nuez profunda con textura carnosa.<br>• <strong>Sugerencia Culinaria:</strong> Risotto trufado al parmesano reggiano o costra deshidratada para solomillo.<br><br>¿Te gustaría que <strong>Daniel</strong> te envíe una muestra de cortesía a tu cocina?";
+        } else if (query.includes("lobster") || query.includes("marisco")) {
+          reply = "🦞 <strong>Lobster Mushroom (Hypomyces lactifluorum):</strong><br>• <strong>Origen:</strong> Bosques de Michoacán (Agosto - Octubre).<br>• <strong>Perfil:</strong> Tonalidad naranja brillante, textura crujiente y notas marinas.<br>• <strong>Sugerencia Culinaria:</strong> Sauté en mantequilla de avellana sobre brioche tostado o tacos gourmet de autor.<br><br>¿Coordinamos un lote para tu restaurante?";
+        } else if (query.includes("azul") || query.includes("indigo") || query.includes("índigo")) {
+          reply = "💙 <strong>Hongo Azul (Lactarius indigo):</strong><br>• <strong>Origen:</strong> Sierras de Hidalgo (Julio - Septiembre).<br>• <strong>Perfil:</strong> Azul añil metálico único, sabor suave y láminas firmes.<br>• <strong>Sugerencia:</strong> Carpaccio fúngico con vinagreta de Naranja Sangría y flor de sal de Colima.";
+        } else if (query.includes("morilla") || query.includes("morchella")) {
+          reply = "👑 <strong>Morilla Silvestre (Morchella sp.):</strong><br>• <strong>Origen:</strong> Faldas de los volcanes de México (Marzo - Mayo).<br>• <strong>Perfil:</strong> Estructura alveolar icónica con sabor complejo, terroso y ahumado.<br>• <strong>Sugerencia:</strong> Salsa clásica a la crema y cognac para cortes finos o rellenas de farsa de ave.";
+        } else if (query.includes("matsutake")) {
+          reply = "🌲 <strong>Matsutake (Tricholoma magnivelare):</strong><br>• <strong>Origen:</strong> Bosques de Oaxaca (Septiembre - Noviembre).<br>• <strong>Perfil:</strong> Inconfundible aroma especiado a canela y pino, textura firme masticable.<br>• <strong>Sugerencia:</strong> Caldo tradicional Dobin Mushi o asado entero al grill con gotas de yuzu.";
+        } else if (query.includes("naranja") || query.includes("sangria") || query.includes("sangría")) {
+          reply = "🍊 <strong>Naranja Sangría (Citrus sinensis var. Sangria):</strong><br>• <strong>Origen:</strong> Huertos de Oxkutzcab, Yucatán (Noviembre - Febrero).<br>• <strong>Perfil:</strong> Pulpa rubí rica en antocianinas con notas a frambuesa y acidez elegante.<br>• <strong>Uso:</strong> Reducciones para pato glaseado, ceviches botánicos y coctelería de autor.";
+        } else if (query.includes("muestra") || query.includes("probar") || query.includes("catalogo") || query.includes("catálogo") || query.includes("precio") || query.includes("mayorista")) {
+          reply = "📦 <strong>Muestras de Cortesía & Catálogo Mayorista Nectar Farms:</strong><br>Con gusto coordinamos con <strong>Daniel</strong> el envío de un lote de degustación a tu cocina (Cancún, Playa del Carmen, Tulum o envíos refrigerados a todo México 🇲🇽).<br><br>Por favor compárteme tu <strong>Nombre, Restaurante y Teléfono de WhatsApp</strong> para agendarlo de inmediato.";
+        } else if (query.includes("hola") || query.includes("buenos dias") || query.includes("buenas tardes") || query.includes("que tal")) {
+          reply = "¡Hola! 👋 Soy <strong>Chano</strong>, sommelier gastronómico y asesor botánico de <strong>Nectar Farms</strong>. Cuento con la base completa de nuestras <strong>20 especies silvestres, hongos y frutos nativos</strong> para inspirar tu menú. ¿Qué ingrediente o técnica deseas explorar hoy?";
         } else {
-          reply = `🌱 <strong>Chano IA Agrónoma:</strong><br>Con gusto te asesoro sobre tu consulta (<em>"${text}"</em>). En Nectar Farms aplicamos la ciencia del CICY y la tecnología agrícola de INTAGRI para el cultivo y suministro de piña miel, cítricos, hortalizas, flores comestibles y hongos autóctonos de Yucatán.<br><br>Atendemos directamente a restaurantes en Cancún, Playa del Carmen, Tulum y realizamos <strong>envíos refrigerados a toda la República Mexicana 🇲🇽</strong>. ¿Te gustaría cotizar o recibir la ficha técnica detallada de algún cultivo?`;
+          reply = `🌱 <strong>Chano Sommelier Nectar Farms:</strong><br>Con gusto te asesoro sobre <em>"${text}"</em>. En Nectar Farms suministramos 20 especies selectas (Porcini, Lobster, Hongo Azul, Matsutake, Morillas, Naranja Sangría, Ube, Espinaca de Okinawa y más) recolectadas con trazabilidad total y Comercio Justo 🇲🇽.<br><br>¿Te gustaría recibir nuestra ficha técnica o coordinar una muestra de cortesía con Daniel?`;
         }
 
         appendChanoMessage(reply);

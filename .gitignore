@@ -5,8 +5,11 @@ token.json
 __pycache__/
 *.pyc
 
-# Scripts Python locales
-*.py
+# Scripts Python de respaldo NectarCore permitidos
+!crear_estructura_sheets.py
+!poblar_datos_semilla.py
+!radar_prospeccion.py
+!test_integracion_nectarcore.py
 
 # Archivos pesados de diseño original (no requeridos para el sitio web en vivo)
 *.ai
